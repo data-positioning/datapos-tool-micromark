@@ -42,18 +42,22 @@ export default class MicromarkTool {
         return {
             enter: {
                 codeFenced(this: PresenterCompileContext) /* The entire fenced code block starts. */ {
+                    console.log(1111);
                     this.buffer();
                     this._blockData = { codeContent: [], lang: '', meta: '' }; // Temporary state for this fenced code block.
                 },
                 codeFencedFence() /* The opening fence line. */ {},
                 codeFencedFenceSequence() /* The opening fence characters (```). */ {},
                 codeFencedFenceInfo(this: PresenterCompileContext, token: Token) /* The language identifier (json, javascript...). */ {
+                    console.log(2222);
                     this._blockData.lang = this.sliceSerialize(token);
                 },
                 codeFencedFenceMeta(this: PresenterCompileContext, token: Token) /* The metadata after the language identifier (datapos-visual). */ {
+                    console.log(3333);
                     this._blockData.meta = this.sliceSerialize(token);
                 },
                 codeFlowValue(this: PresenterCompileContext, token: Token) /* Each line/chunk of actual code content. */ {
+                    console.log(4444);
                     this._blockData.codeContent.push(this.sliceSerialize(token));
                 }
             },
