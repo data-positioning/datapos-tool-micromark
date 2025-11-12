@@ -45,11 +45,12 @@ export default class MicromarkTool {
                     console.log(1111);
                     this.buffer();
                     this._blockData = { codeContent: [], lang: '', meta: '' }; // Temporary state for this fenced code block.
+                    console.log(1111, this._blockData);
                 },
                 codeFencedFence() /* The opening fence line. */ {},
                 codeFencedFenceSequence() /* The opening fence characters (```). */ {},
                 codeFencedFenceInfo(this: PresenterCompileContext, token: Token) /* The language identifier (json, javascript...). */ {
-                    console.log(2222);
+                    console.log(2222, this._blockData);
                     this._blockData.lang = this.sliceSerialize(token);
                 },
                 codeFencedFenceMeta(this: PresenterCompileContext, token: Token) /* The metadata after the language identifier (datapos-visual). */ {
