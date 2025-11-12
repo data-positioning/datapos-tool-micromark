@@ -1,6 +1,5 @@
-# Data Positioning default git ignore configuration.
-dist-scripts
+# Data Positioning public git ignore configuration.
 node_modules
-*.local
+.env
 .npmrc
 **/.DS_Store
