@@ -3,7 +3,7 @@
     "license": "MIT",
     "private": true,
     "type": "module",
-    "version": "0.1.860",
+    "version": "0.1.861",
     "dependencies": {
         "micromark": "^4.0.2",
         "micromark-extension-gfm": "^3.0.0",

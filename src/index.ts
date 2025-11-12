@@ -16,6 +16,7 @@ import Prism from 'prismjs';
 interface PresenterCompileContext extends CompileContext {
     _blockData: { codeContent: string[]; lang: string; meta: string };
 }
+type BlockData = { codeContent: string[]; lang: string; meta: string };
 
 // Constants
 const ESCAPE_MAP: Record<string, string> = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
@@ -23,7 +24,7 @@ const ESCAPE_MAP: Record<string, string> = { '&': '&amp;', '<': '&lt;', '>': '&g
 // Classes - Micromark tool.
 export default class MicromarkTool {
     private options: Options;
-
+    private blockDataMap = new WeakMap<CompileContext, BlockData>();
     constructor() {
         this.options = {
             allowDangerousHtml: false,
@@ -39,27 +40,31 @@ export default class MicromarkTool {
 
     // Utilities - Create presenter code block.
     private createPresenterCodeBlockHtmlExtension(): HtmlExtension {
+        const map = this.blockDataMap;
         return {
             enter: {
                 codeFenced(this: PresenterCompileContext) /* The entire fenced code block starts. */ {
                     console.log(1111);
                     this.buffer();
-                    this._blockData = { codeContent: [], lang: '', meta: '' }; // Temporary state for this fenced code block.
-                    console.log(1111, this._blockData);
+                    // this._blockData = { codeContent: [], lang: '', meta: '' }; // Temporary state for this fenced code block.
+                    // console.log(1111, this._blockData);
+                    map.set(this, { codeContent: [], lang: '', meta: '' });
                 },
                 codeFencedFence() /* The opening fence line. */ {},
                 codeFencedFenceSequence() /* The opening fence characters (```). */ {},
                 codeFencedFenceInfo(this: PresenterCompileContext, token: Token) /* The language identifier (json, javascript...). */ {
                     console.log(2222, this._blockData);
-                    this._blockData.lang = this.sliceSerialize(token);
+                    const data = map.get(this)!;
+                    data.lang = this.sliceSerialize(token);
                 },
                 codeFencedFenceMeta(this: PresenterCompileContext, token: Token) /* The metadata after the language identifier (datapos-visual). */ {
-                    console.log(3333);
-                    this._blockData.meta = this.sliceSerialize(token);
+                    const data = map.get(this)!;
+                    data.meta = this.sliceSerialize(token);
                 },
                 codeFlowValue(this: PresenterCompileContext, token: Token) /* Each line/chunk of actual code content. */ {
                     console.log(4444);
-                    this._blockData.codeContent.push(this.sliceSerialize(token));
+                    const data = map.get(this)!;
+                    data.codeContent.push(this.sliceSerialize(token));
                 }
             },
             exit: {
@@ -69,11 +74,12 @@ export default class MicromarkTool {
                 codeFencedFenceSequence() /* The closing fence characters (```). */ {},
                 codeFencedFence() /* The closing fence line. */ {},
                 codeFenced(this: PresenterCompileContext) /* The entire code block is complete, replacement can happen now. */ {
-                    const { codeContent, lang, meta } = this._blockData || { codeContent: [], lang: '', meta: '' };
+                    // const { codeContent, lang, meta } = this._blockData || { codeContent: [], lang: '', meta: '' };
+                    const data = map.get(this)!;
                     this.resume(); // Discard the captured code text.
-                    const rawContent = codeContent.join('\n');
-                    const language = lang || 'plain';
-                    const metaAttr = meta || '';
+                    const rawContent = data.codeContent.join('\n');
+                    const language = data.lang || 'plain';
+                    const metaAttr = data.meta || '';
                     let html = '';
                     if (language === 'json' && metaAttr === 'datapos-visual') {
                         html = `<div class="${metaAttr}" data-options="${encodeURIComponent(rawContent)}"></div>`;
