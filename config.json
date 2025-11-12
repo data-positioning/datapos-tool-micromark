@@ -1,5 +1,5 @@
 {
-    "id": "datapos-tool-micromark",
+    "id": "@datapos/datapos-tool-micromark",
     "label": {
         "en-gb": "Micromark Tool"
     },
@@ -8,5 +8,5 @@
     },
     "statusId": "alpha",
     "typeId": "tool",
-    "version": "0.1.865"
+    "version": "0.1.866"
 }

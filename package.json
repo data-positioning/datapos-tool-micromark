@@ -1,9 +1,9 @@
 {
-    "name": "datapos-tool-micromark",
+    "name": "@datapos/datapos-tool-micromark",
     "license": "MIT",
-    "private": true,
+    "private": false,
     "type": "module",
-    "version": "0.1.865",
+    "version": "0.1.866",
     "dependencies": {
         "micromark": "^4.0.2",
         "micromark-extension-gfm": "^3.0.0",
@@ -39,7 +39,7 @@
         "document": "npm run _document:licenceReport && npm run _document:licenceCheck",
         "format": "prettier --write src/",
         "lint": "eslint .",
-        "publish:toNPM": "node -e \"import('@datapos/datapos-development').then(m => m.echoScriptNotImplemented('Publish'))\"",
+        "publish:toNPM": "npm publish --access public",
         "release": "npm run sync:withGitHub && npm run build && npm run _upload:moduleToR2 && npm run _upload:moduleConfigToDO",
         "sync:withGitHub": "npm run bump:version && npm run buildConfig && node -e \"import('@datapos/datapos-development').then(m => m.syncWithGitHub())\"",
         "test": "node -e \"import('@datapos/datapos-development').then(m => m.echoScriptNotImplemented('Test'))\"",

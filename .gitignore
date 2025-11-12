@@ -1,5 +1,4 @@
 # Data Positioning default git ignore configuration.
-dist
 dist-scripts
 node_modules
 *.local
