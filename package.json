@@ -1,9 +1,29 @@
 {
     "name": "@datapos/datapos-tool-micromark",
+    "version": "0.1.868",
+    "description": "A TypeScript library containing common declarations and utilities used across other Data Positioning repositories.",
     "license": "MIT",
     "private": false,
     "type": "module",
-    "version": "0.1.867",
+    "homepage": "https://www.datapos.app",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/data-positioning/datapos-tool-micromark.git"
+    },
+    "bugs": {
+        "url": "https://github.com/data-positioning/datapos-tool-micromark/issues"
+    },
+    "module": "./dist/datapos-tool-micromark.es.js",
+    "types": "./dist/types/src/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/datapos-tool-micromark.es.js",
+            "types": "./dist/types/src/index.d.ts"
+        }
+    },
+    "files": [
+        "dist"
+    ],
     "dependencies": {
         "micromark": "^4.0.2",
         "micromark-extension-gfm": "^3.0.0",
