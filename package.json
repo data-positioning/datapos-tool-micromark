@@ -1,0 +1,49 @@
+{
+    "name": "datapos-tool-micromark",
+    "license": "MIT",
+    "private": true,
+    "type": "module",
+    "version": "0.1.853",
+    "dependencies": {
+        "micromark": "^4.0.2",
+        "prismjs": "^1.30.0"
+    },
+    "devDependencies": {
+        "@datapos/datapos-development": "^0.3.84",
+        "@types/node": "^24.10.1",
+        "@types/prismjs": "^1.26.5",
+        "@typescript-eslint/eslint-plugin": "^8.46.4",
+        "@typescript-eslint/parser": "^8.46.4",
+        "eslint": "^9.39.1",
+        "eslint-plugin-import": "^2.32.0",
+        "jiti": "^2.6.1",
+        "license-report": "^6.8.1",
+        "license-report-check": "^0.1.2",
+        "npm-check-updates": "^19.1.2",
+        "prettier": "^3.6.2",
+        "retire": "^5.3.0",
+        "typescript": "^5.9.3",
+        "vite": "^7.2.2",
+        "vite-plugin-dts": "^4.5.4"
+    },
+    "scripts": {
+        "audit": "npm audit",
+        "build": "vite build",
+        "buildConfig": "node -e \"import('@datapos/datapos-development').then(m => m.buildConfig())\"",
+        "bump:version": "node -e \"import('@datapos/datapos-development').then(m => m.bumpVersion())\"",
+        "check": "npm outdated; npm-check-updates -i && retire",
+        "document": "npm run _document:licenceReport && npm run _document:licenceCheck",
+        "format": "prettier --write src/",
+        "lint": "eslint .",
+        "publish:toNPM": "node -e \"import('@datapos/datapos-development').then(m => m.echoScriptNotImplemented('Publish'))\"",
+        "release": "npm run sync:withGitHub && npm run build && npm run _upload:moduleToR2 && npm run _upload:moduleConfigToDO",
+        "sync:withGitHub": "npm run bump:version && npm run buildConfig && node -e \"import('@datapos/datapos-development').then(m => m.syncWithGitHub())\"",
+        "test": "node -e \"import('@datapos/datapos-development').then(m => m.echoScriptNotImplemented('Test'))\"",
+        "update:dataPosDeps": "npm run _update:developDeps",
+        "_document:licenceReport": "license-report --only=prod,peer > LICENSES.json",
+        "_document:licenceCheck": "license-report-check --source ./LICENSES.json --allowed 'MIT' --allowed 'n/a' --allowed 'Apache-2.0' --output=table",
+        "_update:developDeps": "npm install --save-dev @datapos/datapos-development@latest",
+        "_upload:moduleConfigToDO": "node -e \"import('@datapos/datapos-development').then(m => m.uploadModuleConfigToDO())\"",
+        "_upload:moduleToR2": "node -e \"import('@datapos/datapos-development').then(m => m.uploadModuleToR2('datapos-engine-eu/presenters'))\""
+    }
+}

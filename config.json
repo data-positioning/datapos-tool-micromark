@@ -1,0 +1,12 @@
+{
+    "id": "datapos-tool-micromark",
+    "label": {
+        "en-gb": "Micromark Tool"
+    },
+    "description": {
+        "en-gb": "..."
+    },
+    "statusId": "alpha",
+    "typeId": "tool",
+    "version": "0.0.001"
+}
