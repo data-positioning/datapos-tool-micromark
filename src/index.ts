@@ -57,7 +57,7 @@ export default class MicromarkTool {
                     this.enterCodeFlowValue = (token: Token) => /* Each line/chunk of actual code content. */ {
                         blockData.codeContent.push(this.sliceSerialize(token));
                     };
-                    this.this.exitCodeFlowValue = () => /*  Done capturing the code. */ {};
+                    this.exitCodeFlowValue = () => /*  Done capturing the code. */ {};
                     this.exitCodeFencedFenceMeta = () => /* Done processing the metadata. */ {};
                     this.exitCodeFencedFenceInfo = () => /* Done processing the language identifier. */ {};
                     this.exitCodeFencedFenceSequence = () => /* The closing fence characters (```). */ {};
