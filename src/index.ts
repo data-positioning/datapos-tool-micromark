@@ -68,7 +68,7 @@ export default class MicromarkTool {
                     let html = '';
                     if (language === 'json' && metaAttr === 'datapos-visual') {
                         html = `<div class="${metaAttr}" data-options="${encodeURIComponent(rawContent)}"></div>`;
-                    } else if (Prism.languages[language]) {
+                    } else if (Prism?.languages[language]) {
                         const highlighted = Prism.highlight(rawContent, Prism.languages[language], language);
                         html = `<pre class="language-${language}"><code>${highlighted}</code></pre>`;
                     } else {
