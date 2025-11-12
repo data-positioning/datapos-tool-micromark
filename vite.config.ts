@@ -7,6 +7,7 @@ import config from './config.json';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 import { resolve } from 'path';
+import { visualizer } from 'rollup-plugin-visualizer';
 
 // Exposures - Configuration.
 export default defineConfig({
@@ -19,7 +20,15 @@ export default defineConfig({
             fileName: (format) => `${config.id}.${format}.js`
         },
         rollupOptions: {
-            external: [/^https:\/\/engine-eu\.datapos\.app\//]
+            external: [/^https:\/\/engine-eu\.datapos\.app\//],
+            plugins: [
+                visualizer({
+                    filename: 'dist/stats/index.html', // HTML report
+                    open: true, // automatically opens in browser
+                    gzipSize: true, // optional: shows gzip sizes
+                    brotliSize: true // optional: shows brotli sizes
+                })
+            ]
         },
         target: 'ESNext'
     },
