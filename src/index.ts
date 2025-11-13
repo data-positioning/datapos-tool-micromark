@@ -27,7 +27,7 @@ const ESCAPE_MAP: Record<string, string> = { '&': '&amp;', '<': '&lt;', '>': '&g
 // }
 
 // Classes - Micromark tool.
-export default class MicromarkTool {
+class MicromarkTool {
     private options: Options;
 
     constructor() {
@@ -93,3 +93,5 @@ export default class MicromarkTool {
         };
     }
 }
+
+export { MicromarkTool };

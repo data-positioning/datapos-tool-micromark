@@ -16531,5 +16531,5 @@ class vo {
   }
 }
 export {
-  vo as default
+  vo as MicromarkTool
 };

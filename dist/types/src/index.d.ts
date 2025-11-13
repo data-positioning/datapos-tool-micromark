@@ -1,9 +1,10 @@
 /**
  * Micromark tool class.
  */
-export default class MicromarkTool {
+declare class MicromarkTool {
     private options;
     constructor();
     render(markdown: string): string;
     private createPresenterCodeBlockHtmlExtension;
 }
+export { MicromarkTool };

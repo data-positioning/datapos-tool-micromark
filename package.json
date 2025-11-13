@@ -1,6 +1,6 @@
 {
     "name": "@datapos/datapos-tool-micromark",
-    "version": "0.1.885",
+    "version": "0.1.886",
     "description": "A TypeScript library containing common declarations and utilities used across other Data Positioning repositories.",
     "license": "MIT",
     "private": false,
@@ -25,7 +25,6 @@
         "dist"
     ],
     "dependencies": {
-        "katex": "^0.16.25",
         "micromark": "^4.0.2",
         "micromark-extension-gfm": "^3.0.0",
         "micromark-extension-math": "^3.1.0",
