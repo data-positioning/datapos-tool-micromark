@@ -2,7 +2,8 @@
  * Micromark tool class.
  */
 
-import 'katex/dist/katex.min.css';
+// import 'katex/dist/katex.min.css';
+import katexCss from 'katex/dist/katex.min.css?url';
 
 // Dependencies - Micromark.
 import { micromark } from 'micromark';
@@ -18,6 +19,14 @@ import Prism from 'prismjs';
 
 // Constants
 const ESCAPE_MAP: Record<string, string> = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
+
+if (!document.querySelector('link[data-katex]')) {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = katexCss;
+    link.dataset.katex = 'true';
+    document.head.appendChild(link);
+}
 
 // Classes - Micromark tool.
 export default class MicromarkTool {

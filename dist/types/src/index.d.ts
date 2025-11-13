@@ -1,3 +1,6 @@
+/**
+ * Micromark tool class.
+ */
 export default class MicromarkTool {
     private options;
     constructor();
