@@ -25,8 +25,8 @@ export default class MicromarkTool {
     constructor() {
         this.options = {
             allowDangerousHtml: false,
-            extensions: [gfm(), math()],
-            htmlExtensions: [gfmHtml(), mathHtml(), this.createPresenterCodeBlockHtmlExtension()]
+            extensions: [gfm()],
+            htmlExtensions: [gfmHtml(), this.createPresenterCodeBlockHtmlExtension()]
         };
     }
 
