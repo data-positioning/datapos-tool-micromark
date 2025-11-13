@@ -17,14 +17,14 @@ import Prism from 'prismjs';
 // Constants
 const ESCAPE_MAP: Record<string, string> = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
 
-// if (typeof document === 'undefined') return; // SSR-safe
-// if (document.querySelector('link[data-katex]')) return; // only once
-
-const link = document.createElement('link');
-link.rel = 'stylesheet';
-link.href = 'https://engine-eu.datapos.app/tools/v0.1.882/katex.min.css';
-link.dataset.katex = 'true';
-document.head.appendChild(link);
+// // Initialisation
+// if (typeof document !== 'undefined' && !document.querySelector('link[data-katex]')) {
+//     const link = document.createElement('link');
+//     link.rel = 'stylesheet';
+//     link.href = 'https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css';
+//     link.dataset.katex = 'true';
+//     document.head.appendChild(link);
+// }
 
 // Classes - Micromark tool.
 export default class MicromarkTool {
