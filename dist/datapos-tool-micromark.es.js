@@ -3568,31 +3568,6 @@ function Zi(n) {
     Vi()
   ]);
 }
-Prism.languages.json = {
-  property: {
-    pattern: /(^|[^\\])"(?:\\.|[^\\"\r\n])*"(?=\s*:)/,
-    lookbehind: !0,
-    greedy: !0
-  },
-  string: {
-    pattern: /(^|[^\\])"(?:\\.|[^\\"\r\n])*"(?!\s*:)/,
-    lookbehind: !0,
-    greedy: !0
-  },
-  comment: {
-    pattern: /\/\/.*|\/\*[\s\S]*?(?:\*\/|$)/,
-    greedy: !0
-  },
-  number: /-?\b\d+(?:\.\d+)?(?:e[+-]?\d+)?\b/i,
-  punctuation: /[{}[\],]/,
-  operator: /:/,
-  boolean: /\b(?:false|true)\b/,
-  null: {
-    pattern: /\bnull\b/,
-    alias: "keyword"
-  }
-};
-Prism.languages.webmanifest = Prism.languages.json;
 var lt = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : typeof global < "u" ? global : typeof self < "u" ? self : {};
 function Xi(n) {
   return n && n.__esModule && Object.prototype.hasOwnProperty.call(n, "default") ? n.default : n;
@@ -4750,6 +4725,31 @@ function Ji() {
 }
 var Ki = Ji();
 const Lt = /* @__PURE__ */ Xi(Ki);
+Prism.languages.json = {
+  property: {
+    pattern: /(^|[^\\])"(?:\\.|[^\\"\r\n])*"(?=\s*:)/,
+    lookbehind: !0,
+    greedy: !0
+  },
+  string: {
+    pattern: /(^|[^\\])"(?:\\.|[^\\"\r\n])*"(?!\s*:)/,
+    lookbehind: !0,
+    greedy: !0
+  },
+  comment: {
+    pattern: /\/\/.*|\/\*[\s\S]*?(?:\*\/|$)/,
+    greedy: !0
+  },
+  number: /-?\b\d+(?:\.\d+)?(?:e[+-]?\d+)?\b/i,
+  punctuation: /[{}[\],]/,
+  operator: /:/,
+  boolean: /\b(?:false|true)\b/,
+  null: {
+    pattern: /\bnull\b/,
+    alias: "keyword"
+  }
+};
+Prism.languages.webmanifest = Prism.languages.json;
 typeof globalThis < "u" && (globalThis.Prism = Lt);
 console.log(1111, Lt);
 console.log(2222, globalThis);

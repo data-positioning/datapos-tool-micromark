@@ -10,10 +10,9 @@ import { math, mathHtml } from 'micromark-extension-math'; // Adds 148.88KB when
 
 // Dependencies - Prism.
 import Prism from 'prismjs';
+
+// Dependencies - Prism languages. Must be after Prism import.
 import 'prismjs/components/prism-json.js';
-if (typeof globalThis !== 'undefined') {
-    globalThis.Prism = Prism;
-}
 console.log(1111, Prism);
 console.log(2222, globalThis);
 
@@ -27,8 +26,8 @@ export default class MicromarkTool {
     constructor() {
         this.options = {
             allowDangerousHtml: false,
-            extensions: [gfm()],
-            htmlExtensions: [gfmHtml(), this.createPresenterCodeBlockHtmlExtension()]
+            extensions: [gfm(), math()],
+            htmlExtensions: [gfmHtml(), mathHtml(), this.createPresenterCodeBlockHtmlExtension()]
         };
     }
 
@@ -71,11 +70,10 @@ export default class MicromarkTool {
                     const language = blockData.lang || 'plain';
                     const metaAttr = blockData.meta || '';
                     let html = '';
-                    console.log(3333, globalThis);
                     if (language === 'json' && metaAttr === 'datapos-visual') {
                         html = `<div class="${metaAttr}" data-options="${encodeURIComponent(rawContent)}"></div>`;
-                    } else if (globalThis.Prism?.languages[language]) {
-                        const highlighted = globalThis.Prism.highlight(rawContent, globalThis.Prism.languages[language], language);
+                    } else if (Prism?.languages[language]) {
+                        const highlighted = Prism.highlight(rawContent, Prism.languages[language], language);
                         html = `<pre class="language-${language}"><code>${highlighted}</code></pre>`;
                     } else {
                         const escaped = rawContent.replace(/[&<>"']/g, (char: string) => ESCAPE_MAP[char]);
