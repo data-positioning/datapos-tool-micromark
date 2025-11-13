@@ -22,7 +22,7 @@ const ESCAPE_MAP: Record<string, string> = { '&': '&amp;', '<': '&lt;', '>': '&g
 
 const link = document.createElement('link');
 link.rel = 'stylesheet';
-link.href = 'https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css';
+link.href = 'https://engine-eu.datapos.app/tools/v0.1.882/katex.min.css';
 link.dataset.katex = 'true';
 document.head.appendChild(link);
 
