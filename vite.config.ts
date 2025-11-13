@@ -24,7 +24,7 @@ export default defineConfig({
             plugins: [
                 visualizer({
                     filename: 'dist/stats/index.html', // HTML report.
-                    open: true, // Automatically opens in browser.
+                    open: false, // Automatically opens in browser.
                     gzipSize: true, // Show gzip sizes.
                     brotliSize: true // Show brotli sizes.
                 })

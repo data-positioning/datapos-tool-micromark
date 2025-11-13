@@ -11,7 +11,9 @@ import { math, mathHtml } from 'micromark-extension-math'; // Adds 148.88KB when
 // Dependencies - Prism.
 import 'prismjs/components/prism-json.js';
 import Prism from 'prismjs';
-
+if (typeof globalThis !== 'undefined') {
+    globalThis.Prism = Prism;
+}
 console.log(1111, Prism);
 console.log(2222, globalThis);
 
