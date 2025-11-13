@@ -2,6 +2,8 @@
  * Micromark tool class.
  */
 
+import 'katex/dist/katex.min.css';
+
 // Dependencies - Micromark.
 import { micromark } from 'micromark';
 import type { CompileContext, HtmlExtension, Options, Token } from 'micromark-util-types';
@@ -12,7 +14,7 @@ import { math, mathHtml } from 'micromark-extension-math'; // Adds 148.88KB when
 import Prism from 'prismjs';
 
 // Dependencies - Prism languages. Must be after Prism import.
-import 'prismjs/components/prism-json.js';
+// import 'prismjs/components/prism-json.js'; // TODO: Example usage if required in the future.
 
 // Constants
 const ESCAPE_MAP: Record<string, string> = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
