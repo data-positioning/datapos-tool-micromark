@@ -23,7 +23,7 @@ export default defineConfig({
             external: [/^https:\/\/engine-eu\.datapos\.app\//],
             plugins: [
                 visualizer({
-                    filename: 'dist/stats/index.html', // HTML report.
+                    filename: 'stats/index.html', // HTML report.
                     open: false, // Automatically opens in browser.
                     gzipSize: true, // Show gzip sizes.
                     brotliSize: true // Show brotli sizes.
