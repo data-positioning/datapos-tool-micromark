@@ -9,8 +9,8 @@ import { gfm, gfmHtml } from 'micromark-extension-gfm'; // Adds 21.2KB when gzip
 import { math, mathHtml } from 'micromark-extension-math'; // Adds 148.88KB when gzipped. Base 79.16KB.
 
 // Dependencies - Prism.
-import 'prismjs/components/prism-json.js';
 import Prism from 'prismjs';
+import 'prismjs/components/prism-json.js';
 if (typeof globalThis !== 'undefined') {
     globalThis.Prism = Prism;
 }
