@@ -13,8 +13,6 @@ import Prism from 'prismjs';
 
 // Dependencies - Prism languages. Must be after Prism import.
 import 'prismjs/components/prism-json.js';
-console.log(1111, Prism);
-console.log(2222, globalThis);
 
 // Constants
 const ESCAPE_MAP: Record<string, string> = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
