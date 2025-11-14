@@ -1,5 +1,8 @@
 /**
  * Micromark tool class.
+ *
+ * TODO:
+ * Make loading of extensions and highlighting of code blocks optional?
  */
 
 // Dependencies - Micromark.
