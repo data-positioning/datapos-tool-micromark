@@ -24,6 +24,10 @@ The following list details the repository management commands implementation by 
 | syncWithGitHub | alt+ctrl+shift+s  | Synchronise local repository with the main GitHub repository.                                                   |
 | update         | alt+ctrl+shift+l  | Install the latest version of Data Positioning dependencies.                                                    |
 
+## Bundle Analysis
+
+View the [bundle report](https://data-positioning.github.io/datapos-micromark-tool/stats/index.html) to analyze the bundle composition and module sizes (generated with rollup-plugin-visualizer).
+
 ## Compliance
 
 The following badge reflects FOSSA's assessment of this repository's open-source license compliance.
