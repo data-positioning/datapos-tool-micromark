@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 
-A TypeScript library that implements a wrapper around Micromark and Prism. This allows a single instance of these tools to be shared across multiple presenters.
+A TypeScript wrapper for Micromark and Prism that implements the Data Positioning document-rendering interface. It improves browser memory efficiency by sharing a single Micromark/Prism instance across all informers and presenters and loading optional modules on demand.
 
 ## Installation
 
