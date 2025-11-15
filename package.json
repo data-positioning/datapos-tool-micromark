@@ -1,6 +1,6 @@
 {
     "name": "@datapos/datapos-tool-micromark",
-    "version": "0.1.888",
+    "version": "0.1.889",
     "description": "A TypeScript library containing common declarations and utilities used across other Data Positioning repositories.",
     "license": "MIT",
     "private": false,
@@ -31,7 +31,7 @@
         "prismjs": "^1.30.0"
     },
     "devDependencies": {
-        "@datapos/datapos-development": "^0.3.91",
+        "@datapos/datapos-development": "^0.3.93",
         "@types/node": "^24.10.1",
         "@types/prismjs": "^1.26.5",
         "@typescript-eslint/eslint-plugin": "^8.46.4",
@@ -61,12 +61,12 @@
         "release": "npm run _bump:version && npm run _build:config && npm run build && npm run sync:withGitHub && npm run _upload && npm run publish:toNPM",
         "sync:withGitHub": "node -e \"import('@datapos/datapos-development').then(m => m.syncWithGitHub())\"",
         "test": "node -e \"import('@datapos/datapos-development').then(m => m.echoScriptNotImplemented('Test'))\"",
-        "update:dataPosDeps": "npm run _update:developDeps",
+        "update:dataPosDeps": "npm run _update:developDep",
         "_bump:version": "node -e \"import('@datapos/datapos-development').then(m => m.bumpVersion())\"",
         "_build:config": "node -e \"import('@datapos/datapos-development').then(m => m.buildConfig())\"",
         "_document:licenceReport": "license-report --only=prod,peer > LICENSES.json",
         "_document:licenceCheck": "license-report-check --source ./LICENSES.json --allowed 'MIT' --allowed 'n/a' --allowed 'Apache-2.0' --output=table",
-        "_update:developDeps": "npm install --save-dev @datapos/datapos-development@latest",
+        "_update:developDep": "npm install --save-dev @datapos/datapos-development@latest",
         "_upload": "npm run _upload:moduleToR2 && npm run _upload:moduleConfigToDO",
         "_upload:moduleConfigToDO": "node -e \"import('@datapos/datapos-development').then(m => m.uploadModuleConfigToDO())\"",
         "_upload:moduleToR2": "node -e \"import('@datapos/datapos-development').then(m => m.uploadModuleToR2('datapos-engine-eu/tools/micromark'))\""
