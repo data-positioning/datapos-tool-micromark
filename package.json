@@ -1,6 +1,6 @@
 {
     "name": "@data-positioning/datapos-tool-micromark",
-    "version": "0.1.897",
+    "version": "0.1.898",
     "description": "A TypeScript library containing common declarations and utilities used across other Data Positioning repositories.",
     "license": "MIT",
     "private": false,
@@ -8,7 +8,7 @@
     "homepage": "https://www.datapos.app",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/data-positioning/datapos-tool-micromark.git"
+        "url": "https://github.com/data-positioning/datapos-tool-micromark.git"
     },
     "bugs": {
         "url": "https://github.com/data-positioning/datapos-tool-micromark/issues"
