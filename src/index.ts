@@ -9,8 +9,8 @@ import { gfm, gfmHtml } from 'micromark-extension-gfm'; // Adds 21.2KB when gzip
 
 // Dependencies - Speed Highlight.
 import { highlightElement, loadLanguage } from '@speed-highlight/core';
-import lightThemeUrl from '@speed-highlight/core/themes/github-light.css?url';
-import darkThemeUrl from '@speed-highlight/core/themes/github-dark.css?url';
+import lightThemeUrl from '@speed-highlight/core/themes/github-light.css?raw';
+import darkThemeUrl from '@speed-highlight/core/themes/github-dark.css?raw';
 
 console.log(1111, lightThemeUrl);
 console.log(2222, darkThemeUrl);
