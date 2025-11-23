@@ -13,9 +13,13 @@
  */
 declare class MicromarkTool {
     private readonly options;
+    private themeIds;
+    private themeCss;
     constructor();
     render(markdown: string): string;
     highlight(): void;
+    switchTheme(mode: 'light' | 'dark'): void;
+    private injectThemes;
     private createPresenterCodeBlockHtmlExtension;
 }
 export { MicromarkTool };

@@ -6,7 +6,7 @@
 import config from './config.json';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
-import { resolve } from 'path';
+import { resolve } from 'node:path';
 import { visualizer } from 'rollup-plugin-visualizer';
 
 // Exposures - Configuration.
