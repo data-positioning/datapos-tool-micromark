@@ -3780,7 +3780,7 @@ class Su {
   }
   highlight() {
     document.querySelectorAll('div[class^="shj-lang-"]').forEach((e) => {
-      (/shj-lang-([^\s]+)/.exec(e.className) || [])[1] && (e.style.setProperty("font-family", "'Fira Code', 'Fira Mono', monospace", "important"), bu(e, "js", "multiline", { hideLineNumbers: !0 }));
+      (/shj-lang-([^\s]+)/.exec(e.className) || [])[1] && (bu(e, "js", "multiline", { hideLineNumbers: !0 }), e.style.setProperty("font-family", "'Fira Code', 'Fira Mono', monospace", "important"));
     });
   }
   switchTheme(e) {
