@@ -1,8 +1,5 @@
 /**
  * Micromark tool class.
- *
- * TODO:
- * Make loading of extensions and highlighting of code blocks optional?
  */
 
 // Dependencies - Micromark.
@@ -10,29 +7,26 @@ import { micromark } from 'micromark';
 import type { CompileContext, HtmlExtension, Options, Token } from 'micromark-util-types';
 import { gfm, gfmHtml } from 'micromark-extension-gfm'; // Adds 21.2KB when gzipped. Base 79.16KB.
 
-// Dependencies - Prism.
-// import Prism from 'prismjs';
-// Dependencies - Prism languages. Must be after Prism import.
-// import 'prismjs/components/prism-json.js'; // TODO: Example usage if required in the future.
-
-// Dependencies - Speed Highlight JS.
+// Dependencies - Speed Highlight.
 import { highlightElement, loadLanguage } from '@speed-highlight/core';
 
 // Constants
 const ESCAPE_MAP: Record<string, string> = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
 
-// // Initialisation
-// if (typeof document !== 'undefined' && !document.querySelector('link[data-katex]')) {
-//     const link = document.createElement('link');
-//     link.rel = 'stylesheet';
-//     link.href = 'https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css';
-//     link.dataset.katex = 'true';
-//     document.head.appendChild(link);
-// }
+/** Example code for dynamically loading css file.
+ *
+ * if (typeof document !== 'undefined' && !document.querySelector('link[data-katex]')) {
+ *     const link = document.createElement('link');
+ *     link.rel = 'stylesheet';
+ *     link.href = 'https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css';
+ *     link.dataset.katex = 'true';
+ *     document.head.appendChild(link);
+ * }
+ */
 
 // Classes - Micromark tool.
 class MicromarkTool {
-    private options: Options;
+    private readonly options: Options;
 
     constructor() {
         this.options = {
@@ -85,14 +79,8 @@ class MicromarkTool {
                         html = `<div class="${metaAttr}" data-options="${encodeURIComponent(rawContent)}"></div>`;
                     } else if (language === 'json' && metaAttr === 'datapos-highcharts') {
                         html = `<div class="${metaAttr}" data-options="${encodeURIComponent(rawContent)}"></div>`;
-                        // } else if (Prism?.languages[language]) {
-                        //     const highlighted = Prism.highlight(rawContent, Prism.languages[language], language);
-                        //     html = `<pre class="language-${language}"><code>${highlighted}</code></pre>`;
-                        // } else {
-                        //     const escaped = rawContent.replace(/[&<>"']/g, (char: string) => ESCAPE_MAP[char]);
-                        //     html = `<pre class="language-text"><code>${escaped}</code></pre>`;
                     } else {
-                        const safeLang = language.replace(/[^a-z0-9_-]/gi, '');
+                        const safeLang = language.replaceAll(/[^a-z0-9_-]/gi, '');
                         html = `<div class="shj-lang-${safeLang}">${escapeHtml(rawContent)}</div>`;
                     }
                     this.raw(html);
@@ -104,7 +92,7 @@ class MicromarkTool {
 }
 
 function escapeHtml(str: string): string {
-    return str.replace(/[&<>"']/g, (char) => ESCAPE_MAP[char]);
+    return str.replaceAll(/[&<>"']/g, (char) => ESCAPE_MAP[char]);
 }
 
 export { MicromarkTool };
