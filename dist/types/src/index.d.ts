@@ -6,6 +6,7 @@ declare class MicromarkTool {
     private readonly themeIds;
     private readonly themeCss;
     constructor();
+    private injectCodeFont;
     render(markdown: string): string;
     highlight(): void;
     switchTheme(mode: 'light' | 'dark'): void;
