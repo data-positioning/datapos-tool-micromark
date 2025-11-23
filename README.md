@@ -1,7 +1,7 @@
 # Data Positioning Micromark Tool
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
-[![npm version](https://img.shields.io/npm/v/@data-positioning/datapos-tool-micromark)](https://www.npmjs.com/package/@data-positioning/datapos-tool-micromark)
+[![npm version](https://img.shields.io/npm/v/@datapos/datapos-tool-micromark)](https://www.npmjs.com/package/@datapos/datapos-tool-micromark)
 
 A TypeScript wrapper for Micromark and Prism that implements the Data Positioning document-rendering interface. It improves browser memory efficiency by sharing a single Micromark/Prism instance across all informers and presenters and loading optional modules on demand.
 
