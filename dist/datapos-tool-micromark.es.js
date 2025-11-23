@@ -3847,7 +3847,7 @@ function yu(t) {
   });
 }
 function Eu() {
-  return typeof window > "u" ? "light" : globalThis.window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  return typeof globalThis.window > "u" ? "light" : globalThis.window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 }
 export {
   Su as MicromarkTool
