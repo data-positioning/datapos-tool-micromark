@@ -43,10 +43,14 @@ class MicromarkTool {
 
     highlight(): void {
         document.querySelectorAll<HTMLDivElement>('div[class^="shj-lang-"]').forEach((elm) => {
+            console.log(1111, elm);
             const lang = elm.className.match(/shj-lang-([^\s]+)/)?.[1];
+            console.log(2222, lang);
             if (lang) {
                 // loadLanguage(lang); // load language definition
+                console.log(3333);
                 highlightElement(elm, 'js'); // highlight using known language
+                console.log(4444);
             }
         });
     }

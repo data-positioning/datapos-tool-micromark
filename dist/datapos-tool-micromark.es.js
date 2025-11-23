@@ -3775,7 +3775,9 @@ class xl {
   }
   highlight() {
     document.querySelectorAll('div[class^="shj-lang-"]').forEach((e) => {
-      e.className.match(/shj-lang-([^\s]+)/)?.[1] && pl(e, "js");
+      console.log(1111, e);
+      const n = e.className.match(/shj-lang-([^\s]+)/)?.[1];
+      console.log(2222, n), n && (console.log(3333), pl(e, "js"), console.log(4444));
     });
   }
   // Utilities - Create presenter code block.
