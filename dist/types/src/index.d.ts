@@ -15,6 +15,7 @@ declare class MicromarkTool {
     private readonly options;
     constructor();
     render(markdown: string): string;
+    highlight(): void;
     private createPresenterCodeBlockHtmlExtension;
 }
 export { MicromarkTool };

@@ -41,6 +41,16 @@ class MicromarkTool {
         return micromark(markdown, this.options);
     }
 
+    highlight(): void {
+        document.querySelectorAll<HTMLDivElement>('div[class^="shj-lang-"]').forEach((elm) => {
+            const lang = elm.className.match(/shj-lang-([^\s]+)/)?.[1];
+            if (lang) {
+                // loadLanguage(lang); // load language definition
+                highlightElement(elm, 'js'); // highlight using known language
+            }
+        });
+    }
+
     // Utilities - Create presenter code block.
     private createPresenterCodeBlockHtmlExtension(): HtmlExtension {
         let currentBlockData: { codeContent: string[]; lang: string; meta: string } | undefined = undefined;
@@ -79,6 +89,12 @@ class MicromarkTool {
                         html = `<div class="${metaAttr}" data-options="${encodeURIComponent(rawContent)}"></div>`;
                     } else if (language === 'json' && metaAttr === 'datapos-highcharts') {
                         html = `<div class="${metaAttr}" data-options="${encodeURIComponent(rawContent)}"></div>`;
+                        // } else if (Prism?.languages[language]) {
+                        //     const highlighted = Prism.highlight(rawContent, Prism.languages[language], language);
+                        //     html = `<pre class="language-${language}"><code>${highlighted}</code></pre>`;
+                        // } else {
+                        //     const escaped = rawContent.replace(/[&<>"']/g, (char: string) => ESCAPE_MAP[char]);
+                        //     html = `<pre class="language-text"><code>${escaped}</code></pre>`;
                     } else {
                         const safeLang = language.replaceAll(/[^a-z0-9_-]/gi, '');
                         html = `<div class="shj-lang-${safeLang}">${escapeHtml(rawContent)}</div>`;
