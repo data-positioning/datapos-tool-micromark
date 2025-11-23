@@ -63,6 +63,7 @@ class MicromarkTool {
     }
 
     switchTheme(mode: 'light' | 'dark') {
+        console.log(3333, mode);
         const id = (mode === 'light' ? this.themeIds.light : this.themeIds.dark) as 'theme-light' | 'theme-dark';
         switchInlineTheme(id);
     }
@@ -147,13 +148,17 @@ function injectStyle(cssText: string, id: string): HTMLStyleElement | undefined 
 }
 
 function switchInlineTheme(id: 'theme-light' | 'theme-dark') {
+    console.log(4444, id);
     document.querySelectorAll<HTMLStyleElement>('style[data-dynamic]').forEach((style) => {
+        console.log(5555, style);
         style.disabled = style.id !== id;
     });
 }
 
 function getPreferredTheme(): 'light' | 'dark' {
-    if (typeof window === 'undefined') return 'dark';
+    console.log(1111);
+    if (typeof window === 'undefined') return 'light';
+    console.log(2222);
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 }
 

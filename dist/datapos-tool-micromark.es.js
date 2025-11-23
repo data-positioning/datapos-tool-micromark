@@ -3785,6 +3785,7 @@ class Su {
     });
   }
   switchTheme(e) {
+    console.log(3333, e);
     const n = e === "light" ? this.themeIds.light : this.themeIds.dark;
     yu(n);
   }
@@ -3845,12 +3846,12 @@ function In(t, e) {
   return n || (n = document.createElement("style"), n.id = e, n.dataset.dynamic = "true", document.head.appendChild(n)), n.innerHTML = t, n;
 }
 function yu(t) {
-  document.querySelectorAll("style[data-dynamic]").forEach((e) => {
-    e.disabled = e.id !== t;
+  console.log(4444, t), document.querySelectorAll("style[data-dynamic]").forEach((e) => {
+    console.log(5555, e), e.disabled = e.id !== t;
   });
 }
 function Eu() {
-  return typeof window > "u" || window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  return console.log(1111), typeof window > "u" ? "light" : (console.log(2222), window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 }
 export {
   Su as MicromarkTool
