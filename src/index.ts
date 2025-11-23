@@ -65,7 +65,8 @@ class MicromarkTool {
     switchTheme(mode: 'light' | 'dark') {
         console.log(3333, mode);
         const id = (mode === 'light' ? this.themeIds.light : this.themeIds.dark) as 'theme-light' | 'theme-dark';
-        switchInlineTheme(id);
+        // switchInlineTheme(id);
+        switchInlineTheme('theme-dark');
     }
 
     private injectThemes() {

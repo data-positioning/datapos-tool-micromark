@@ -3785,9 +3785,7 @@ class Su {
     });
   }
   switchTheme(e) {
-    console.log(3333, e);
-    const n = e === "light" ? this.themeIds.light : this.themeIds.dark;
-    yu(n);
+    console.log(3333, e), e === "light" ? this.themeIds.light : this.themeIds.dark, yu("theme-dark");
   }
   injectThemes() {
     In(this.themeCss.light, this.themeIds.light), In(this.themeCss.dark, this.themeIds.dark);
