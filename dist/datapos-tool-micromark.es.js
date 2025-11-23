@@ -3757,8 +3757,7 @@ async function fu(t, e, n = !0, r = {}) {
 }
 async function bu(t, e = t.className.match(/shj-lang-([\w-]+)/)?.[1], n, r) {
   let l = t.textContent;
-  n ?? (n = `${t.tagName == "CODE" ? "in" : l.split(`
-`).length < 2 ? "one" : "multi"}line`), t.dataset.lang = e, t.className = `${[...t.classList].filter((a) => !a.startsWith("shj-")).join(" ")} shj-lang-${e} shj-${n}`, t.innerHTML = await fu(l, e, n == "multiline", r);
+  t.dataset.lang = e, t.className = `${[...t.classList].filter((a) => !a.startsWith("shj-")).join(" ")} shj-lang-${e} shj-${n}`, t.innerHTML = await fu(l, e, n == "multiline", r);
 }
 const du = "[class*=shj-lang-]{white-space:pre;color:#112;text-shadow:none;box-sizing:border-box;background:#fff;border-radius:10px;max-width:min(100%,100vw);margin:10px 0;padding:30px 20px;font:18px/24px Consolas,Courier New,Monaco,Andale Mono,Ubuntu Mono,monospace;box-shadow:0 0 5px #0001}.shj-inline{border-radius:5px;margin:0;padding:2px 5px;display:inline-block}[class*=shj-lang-]::selection{background:#bdf5}[class*=shj-lang-] ::selection{background:#bdf5}[class*=shj-lang-]>div{display:flex;overflow:auto}[class*=shj-lang-]>div :last-child{outline:none;flex:1}.shj-numbers{counter-reset:line;padding-left:5px}.shj-numbers div{padding-right:5px}.shj-numbers div:before{color:#999;content:counter(line);opacity:.5;text-align:right;counter-increment:line;margin-right:5px;display:block}.shj-syn-cmnt{font-style:italic}.shj-syn-err,.shj-syn-kwd{color:#e16}.shj-syn-num,.shj-syn-class{color:#f60}.shj-syn-insert,.shj-syn-str{color:#7d8}.shj-syn-bool{color:#3bf}.shj-syn-type,.shj-syn-oper{color:#5af}.shj-syn-section,.shj-syn-func{color:#84f}.shj-syn-deleted,.shj-syn-var{color:#f44}.shj-oneline{padding:12px 10px}.shj-lang-http.shj-oneline .shj-syn-kwd{color:#fff;background:#25f;border-radius:5px;padding:5px 7px}[class*=shj-lang-]{color:#24292f;background:#fff}.shj-syn-deleted,.shj-syn-err,.shj-syn-kwd{color:#cf222e}.shj-syn-class{color:#953800}.shj-numbers,.shj-syn-cmnt{color:#6e7781}.shj-syn-type,.shj-syn-oper,.shj-syn-num,.shj-syn-section,.shj-syn-var,.shj-syn-bool{color:#0550ae}.shj-syn-str{color:#0a3069}.shj-syn-func{color:#8250df}", xu = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" };
 class Su {
@@ -3778,7 +3777,7 @@ class Su {
   }
   highlight() {
     document.querySelectorAll('div[class^="shj-lang-"]').forEach((e) => {
-      (/shj-lang-([^\s]+)/.exec(e.className) || [])[1] && bu(e, "js");
+      (/shj-lang-([^\s]+)/.exec(e.className) || [])[1] && bu(e, "js", "multiline", { hideLineNumbers: !0 });
     });
   }
   switchTheme(e) {
