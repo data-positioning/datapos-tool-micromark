@@ -1,6 +1,6 @@
 {
     "name": "@data-positioning/datapos-tool-micromark",
-    "version": "0.1.901",
+    "version": "0.1.902",
     "description": "A TypeScript library containing common declarations and utilities used across other Data Positioning repositories.",
     "license": "MIT",
     "private": false,
@@ -29,6 +29,7 @@
         "registry": "https://registry.npmjs.org/"
     },
     "dependencies": {
+        "@speed-highlight/core": "^1.2.12",
         "micromark": "^4.0.2",
         "micromark-extension-gfm": "^3.0.0",
         "prismjs": "^1.30.0"

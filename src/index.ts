@@ -11,10 +11,12 @@ import type { CompileContext, HtmlExtension, Options, Token } from 'micromark-ut
 import { gfm, gfmHtml } from 'micromark-extension-gfm'; // Adds 21.2KB when gzipped. Base 79.16KB.
 
 // Dependencies - Prism.
-import Prism from 'prismjs';
-
+// import Prism from 'prismjs';
 // Dependencies - Prism languages. Must be after Prism import.
 // import 'prismjs/components/prism-json.js'; // TODO: Example usage if required in the future.
+
+// Dependencies - Speed Highlight JS.
+import { highlightElement, loadLanguage } from '@speed-highlight/core';
 
 // Constants
 const ESCAPE_MAP: Record<string, string> = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
@@ -83,12 +85,15 @@ class MicromarkTool {
                         html = `<div class="${metaAttr}" data-options="${encodeURIComponent(rawContent)}"></div>`;
                     } else if (language === 'json' && metaAttr === 'datapos-highcharts') {
                         html = `<div class="${metaAttr}" data-options="${encodeURIComponent(rawContent)}"></div>`;
-                    } else if (Prism?.languages[language]) {
-                        const highlighted = Prism.highlight(rawContent, Prism.languages[language], language);
-                        html = `<pre class="language-${language}"><code>${highlighted}</code></pre>`;
+                        // } else if (Prism?.languages[language]) {
+                        //     const highlighted = Prism.highlight(rawContent, Prism.languages[language], language);
+                        //     html = `<pre class="language-${language}"><code>${highlighted}</code></pre>`;
+                        // } else {
+                        //     const escaped = rawContent.replace(/[&<>"']/g, (char: string) => ESCAPE_MAP[char]);
+                        //     html = `<pre class="language-text"><code>${escaped}</code></pre>`;
                     } else {
-                        const escaped = rawContent.replace(/[&<>"']/g, (char: string) => ESCAPE_MAP[char]);
-                        html = `<pre class="language-text"><code>${escaped}</code></pre>`;
+                        const safeLang = language.replace(/[^a-z0-9_-]/gi, '');
+                        html = `<div class="shj-lang-${safeLang}">${escapeHtml(rawContent)}</div>`;
                     }
                     this.raw(html);
                     currentBlockData = undefined;
@@ -96,6 +101,10 @@ class MicromarkTool {
             }
         };
     }
+}
+
+function escapeHtml(str: string): string {
+    return str.replace(/[&<>"']/g, (char) => ESCAPE_MAP[char]);
 }
 
 export { MicromarkTool };
