@@ -29,7 +29,9 @@ class MicromarkTool {
         };
         // Inject inline styles
         this.injectThemes();
+        console.log(1111);
         this.injectCodeFont();
+        console.log(2222);
 
         // Apply preferred theme immediately to prevent flicker
         this.switchTheme(getPreferredTheme());
@@ -38,8 +40,8 @@ class MicromarkTool {
     private injectCodeFont() {
         const fontCss = `
             @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');
-            div[class^="shj-lang-"] {
-                font-family: 'Fira Code', 'Fira Mono', monospace;
+            article > div[class^="shj-lang-"] {
+                font-family: 'Fira Code', 'Fira Mono', monospace !important;
             }`;
         injectStyle(fontCss, 'code-font');
     }

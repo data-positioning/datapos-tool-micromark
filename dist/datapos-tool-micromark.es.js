@@ -3769,13 +3769,13 @@ class Su {
       allowDangerousHtml: !1,
       extensions: [Ol()],
       htmlExtensions: [Nl(), this.createPresenterCodeBlockHtmlExtension()]
-    }, this.injectThemes(), this.injectCodeFont(), this.switchTheme(Eu());
+    }, this.injectThemes(), console.log(1111), this.injectCodeFont(), console.log(2222), this.switchTheme(Eu());
   }
   injectCodeFont() {
     Mt(`
             @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');
-            div[class^="shj-lang-"] {
-                font-family: 'Fira Code', 'Fira Mono', monospace;
+            article > div[class^="shj-lang-"] {
+                font-family: 'Fira Code', 'Fira Mono', monospace !important;
             }`, "code-font");
   }
   // Operations - Render.
