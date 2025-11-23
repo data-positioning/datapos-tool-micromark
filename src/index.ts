@@ -8,34 +8,18 @@ import type { CompileContext, HtmlExtension, Options, Token } from 'micromark-ut
 import { gfm, gfmHtml } from 'micromark-extension-gfm'; // Adds 21.2KB when gzipped. Base 79.16KB.
 
 // Dependencies - Speed Highlight.
-// @ts-expect-error
 import darkThemeCss from '@speed-highlight/core/themes/github-dark.css?raw';
 import { highlightElement } from '@speed-highlight/core';
-// @ts-expect-error
 import lightThemeCss from '@speed-highlight/core/themes/github-light.css?raw';
-
-console.log(1111, lightThemeCss);
-console.log(2222, darkThemeCss);
 
 // Constants
 const ESCAPE_MAP: Record<string, string> = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
 
-/** Example code for dynamically loading css file.
- *
- * if (typeof document !== 'undefined' && !document.querySelector('link[data-katex]')) {
- *     const link = document.createElement('link');
- *     link.rel = 'stylesheet';
- *     link.href = 'https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css';
- *     link.dataset.katex = 'true';
- *     document.head.appendChild(link);
- * }
- */
-
 // Classes - Micromark tool.
 class MicromarkTool {
     private readonly options: Options;
-    private themeIds = { light: 'theme-light', dark: 'theme-dark' };
-    private themeCss = { light: lightThemeCss, dark: darkThemeCss };
+    private readonly themeIds = { light: 'theme-light', dark: 'theme-dark' };
+    private readonly themeCss = { light: lightThemeCss, dark: darkThemeCss };
 
     constructor() {
         this.options = {
@@ -57,16 +41,14 @@ class MicromarkTool {
 
     highlight(): void {
         document.querySelectorAll<HTMLDivElement>('div[class^="shj-lang-"]').forEach((elm) => {
-            const lang = elm.className.match(/shj-lang-([^\s]+)/)?.[1];
+            const lang = (/shj-lang-([^\s]+)/.exec(elm.className) || [])[1];
             if (lang) highlightElement(elm, 'js');
         });
     }
 
     switchTheme(mode: 'light' | 'dark') {
-        console.log(3333, mode);
         const id = (mode === 'light' ? this.themeIds.light : this.themeIds.dark) as 'theme-light' | 'theme-dark';
-        // switchInlineTheme(id);
-        switchInlineTheme('theme-dark');
+        switchInlineTheme(id);
     }
 
     private injectThemes() {
@@ -113,12 +95,6 @@ class MicromarkTool {
                         html = `<div class="${metaAttr}" data-options="${encodeURIComponent(rawContent)}"></div>`;
                     } else if (language === 'json' && metaAttr === 'datapos-highcharts') {
                         html = `<div class="${metaAttr}" data-options="${encodeURIComponent(rawContent)}"></div>`;
-                        // } else if (Prism?.languages[language]) {
-                        //     const highlighted = Prism.highlight(rawContent, Prism.languages[language], language);
-                        //     html = `<pre class="language-${language}"><code>${highlighted}</code></pre>`;
-                        // } else {
-                        //     const escaped = rawContent.replace(/[&<>"']/g, (char: string) => ESCAPE_MAP[char]);
-                        //     html = `<pre class="language-text"><code>${escaped}</code></pre>`;
                     } else {
                         const safeLang = language.replaceAll(/[^a-z0-9_-]/gi, '');
                         html = `<div class="shj-lang-${safeLang}">${escapeHtml(rawContent)}</div>`;
@@ -149,18 +125,14 @@ function injectStyle(cssText: string, id: string): HTMLStyleElement | undefined 
 }
 
 function switchInlineTheme(id: 'theme-light' | 'theme-dark') {
-    console.log(4444, id);
     document.querySelectorAll<HTMLStyleElement>('style[data-dynamic]').forEach((style) => {
-        console.log(5555, style);
         style.disabled = style.id !== id;
     });
 }
 
 function getPreferredTheme(): 'light' | 'dark' {
-    console.log(1111);
     if (typeof window === 'undefined') return 'light';
-    console.log(2222);
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    return globalThis.window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 }
 
 export { MicromarkTool };
