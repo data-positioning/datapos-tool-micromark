@@ -3772,11 +3772,7 @@ class Su {
     }, this.injectThemes(), console.log(1111), this.injectCodeFont(), console.log(2222), this.switchTheme(Eu());
   }
   injectCodeFont() {
-    Mt(`
-            @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');
-            article div[class^="shj-lang-"] {
-                font-family: 'Fira Code', 'Fira Mono', monospace !important;
-            }`, "code-font");
+    Mt("@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');", "code-font");
   }
   // Operations - Render.
   render(e) {
@@ -3784,7 +3780,7 @@ class Su {
   }
   highlight() {
     document.querySelectorAll('div[class^="shj-lang-"]').forEach((e) => {
-      (/shj-lang-([^\s]+)/.exec(e.className) || [])[1] && bu(e, "js", "multiline", { hideLineNumbers: !0 });
+      (/shj-lang-([^\s]+)/.exec(e.className) || [])[1] && (e.style.setProperty("font-family", "'Fira Code', 'Fira Mono', monospace", "important"), bu(e, "js", "multiline", { hideLineNumbers: !0 }));
     });
   }
   switchTheme(e) {
