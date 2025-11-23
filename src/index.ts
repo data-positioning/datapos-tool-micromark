@@ -40,7 +40,7 @@ class MicromarkTool {
     private injectCodeFont() {
         const fontCss = `
             @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');
-            article > div[class^="shj-lang-"] {
+            article div[class^="shj-lang-"] {
                 font-family: 'Fira Code', 'Fira Mono', monospace !important;
             }`;
         injectStyle(fontCss, 'code-font');
@@ -56,7 +56,7 @@ class MicromarkTool {
             const lang = (/shj-lang-([^\s]+)/.exec(elm.className) || [])[1];
             if (lang) {
                 highlightElement(elm, 'js', 'multiline', { hideLineNumbers: true });
-                elm.style.setProperty('font-family', "'Fira Code', 'Fira Mono', monospace", 'important');
+                // elm.style.setProperty('font-family', "'Fira Code', 'Fira Mono', monospace", 'important');
             }
         });
     }
