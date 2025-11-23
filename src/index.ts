@@ -8,8 +8,10 @@ import type { CompileContext, HtmlExtension, Options, Token } from 'micromark-ut
 import { gfm, gfmHtml } from 'micromark-extension-gfm'; // Adds 21.2KB when gzipped. Base 79.16KB.
 
 // Dependencies - Speed Highlight.
+// @ts-expect-error
 import darkThemeCss from '@speed-highlight/core/themes/github-dark.css?raw';
 import { highlightElement } from '@speed-highlight/core';
+// @ts-expect-error
 import lightThemeCss from '@speed-highlight/core/themes/github-light.css?raw';
 
 console.log(1111, lightThemeCss);
@@ -61,7 +63,7 @@ class MicromarkTool {
     }
 
     switchTheme(mode: 'light' | 'dark') {
-        const id = mode === 'light' ? this.themeIds.light : this.themeIds.dark;
+        const id = (mode === 'light' ? this.themeIds.light : this.themeIds.dark) as 'theme-light' | 'theme-dark';
         switchInlineTheme(id);
     }
 
@@ -151,7 +153,7 @@ function switchInlineTheme(id: 'theme-light' | 'theme-dark') {
 }
 
 function getPreferredTheme(): 'light' | 'dark' {
-    if (typeof window === 'undefined') return 'light';
+    if (typeof window === 'undefined') return 'dark';
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 }
 

@@ -3850,7 +3850,7 @@ function yu(t) {
   });
 }
 function Eu() {
-  return typeof window > "u" ? "light" : window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  return typeof window > "u" || window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 }
 export {
   Su as MicromarkTool
