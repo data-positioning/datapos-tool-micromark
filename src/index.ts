@@ -9,7 +9,6 @@
 import { micromark } from 'micromark';
 import type { CompileContext, HtmlExtension, Options, Token } from 'micromark-util-types';
 import { gfm, gfmHtml } from 'micromark-extension-gfm'; // Adds 21.2KB when gzipped. Base 79.16KB.
-import { math, mathHtml } from 'micromark-extension-math'; // Adds 148.88KB when gzipped. Base 79.16KB.
 
 // Dependencies - Prism.
 import Prism from 'prismjs';
@@ -36,8 +35,8 @@ class MicromarkTool {
     constructor() {
         this.options = {
             allowDangerousHtml: false,
-            extensions: [gfm(), math()],
-            htmlExtensions: [gfmHtml(), mathHtml(), this.createPresenterCodeBlockHtmlExtension()]
+            extensions: [gfm()],
+            htmlExtensions: [gfmHtml(), this.createPresenterCodeBlockHtmlExtension()]
         };
     }
 
