@@ -131,7 +131,7 @@ function switchInlineTheme(id: 'theme-light' | 'theme-dark') {
 }
 
 function getPreferredTheme(): 'light' | 'dark' {
-    if (typeof globalThis.window === 'undefined') return 'light';
+    if (globalThis.window === undefined) return 'light';
     return globalThis.window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 }
 
