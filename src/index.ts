@@ -9,6 +9,11 @@ import { gfm, gfmHtml } from 'micromark-extension-gfm'; // Adds 21.2KB when gzip
 
 // Dependencies - Speed Highlight.
 import { highlightElement, loadLanguage } from '@speed-highlight/core';
+import lightThemeUrl from '@speed-highlight/core/themes/github-light.css?url';
+import darkThemeUrl from '@speed-highlight/core/themes/github-dark.css?url';
+
+console.log(1111, lightThemeUrl);
+console.log(2222, darkThemeUrl);
 
 // Constants
 const ESCAPE_MAP: Record<string, string> = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
@@ -43,15 +48,8 @@ class MicromarkTool {
 
     highlight(): void {
         document.querySelectorAll<HTMLDivElement>('div[class^="shj-lang-"]').forEach((elm) => {
-            console.log(1111, elm);
             const lang = elm.className.match(/shj-lang-([^\s]+)/)?.[1];
-            console.log(2222, lang);
-            if (lang) {
-                // loadLanguage(lang); // load language definition
-                console.log(3333);
-                highlightElement(elm, 'js'); // highlight using known language
-                console.log(4444);
-            }
+            if (lang) highlightElement(elm, 'js');
         });
     }
 

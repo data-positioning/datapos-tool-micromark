@@ -3759,8 +3759,11 @@ async function pl(t, e = t.className.match(/shj-lang-([\w-]+)/)?.[1], n, r) {
   n ?? (n = `${t.tagName == "CODE" ? "in" : u.split(`
 `).length < 2 ? "one" : "multi"}line`), t.dataset.lang = e, t.className = `${[...t.classList].filter((a) => !a.startsWith("shj-")).join(" ")} shj-lang-${e} shj-${n}`, t.innerHTML = await gl(u, e, n == "multiline", r);
 }
-const fl = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" };
-class xl {
+const fl = "https://engine-eu.datapos.app/tools/github-light.css", bl = "https://engine-eu.datapos.app/tools/github-dark.css";
+console.log(1111, fl);
+console.log(2222, bl);
+const xl = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" };
+class kl {
   options;
   constructor() {
     this.options = {
@@ -3775,9 +3778,7 @@ class xl {
   }
   highlight() {
     document.querySelectorAll('div[class^="shj-lang-"]').forEach((e) => {
-      console.log(1111, e);
-      const n = e.className.match(/shj-lang-([^\s]+)/)?.[1];
-      console.log(2222, n), n && (console.log(3333), pl(e, "js"), console.log(4444));
+      e.className.match(/shj-lang-([^\s]+)/)?.[1] && pl(e, "js");
     });
   }
   // Utilities - Create presenter code block.
@@ -3819,15 +3820,15 @@ class xl {
           const r = n.codeContent.join(`
 `), u = n.lang || "plain", a = n.meta || "";
           let i = "";
-          u === "json" && a === "datapos-visual" ? i = `<div class="${a}" data-options="${encodeURIComponent(r)}"></div>` : u === "json" && a === "datapos-highcharts" ? i = `<div class="${a}" data-options="${encodeURIComponent(r)}"></div>` : i = `<div class="shj-lang-${u.replaceAll(/[^a-z0-9_-]/gi, "")}">${bl(r)}</div>`, this.raw(i), e = void 0;
+          u === "json" && a === "datapos-visual" ? i = `<div class="${a}" data-options="${encodeURIComponent(r)}"></div>` : u === "json" && a === "datapos-highcharts" ? i = `<div class="${a}" data-options="${encodeURIComponent(r)}"></div>` : i = `<div class="shj-lang-${u.replaceAll(/[^a-z0-9_-]/gi, "")}">${dl(r)}</div>`, this.raw(i), e = void 0;
         }
       }
     };
   }
 }
-function bl(t) {
-  return t.replaceAll(/[&<>"']/g, (e) => fl[e]);
+function dl(t) {
+  return t.replaceAll(/[&<>"']/g, (e) => xl[e]);
 }
 export {
-  xl as MicromarkTool
+  kl as MicromarkTool
 };
