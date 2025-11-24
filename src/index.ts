@@ -34,8 +34,8 @@ class MicromarkTool {
     }
 
     // Operations - Highligh previously rendered markdown.
-    async highlight(): Promise<void> {
-        const { highlightElement } = await loadHighlighter();
+    async highlight(colorModeId: string): Promise<void> {
+        const { highlightElement } = await loadHighlighter(colorModeId);
 
         document.querySelectorAll<HTMLDivElement>('div[class^="shj-lang-"]').forEach((element) => {
             const lang = (/shj-lang-([^\s]+)/.exec(element.className) || [])[1];
@@ -65,10 +65,10 @@ class MicromarkTool {
     }
 
     // Operations - Set color mode.
-    setColorMode(colorModeId: 'light' | 'dark'): void {
-        const themeId = colorModeId === 'light' ? 'theme-light' : 'theme-dark';
-        console.log('tool-micromark.setColorMode', colorModeId, themeId);
-        document.querySelectorAll<HTMLStyleElement>('style[data-dynamic]').forEach((style) => (style.disabled = style.id !== themeId));
+    setColorMode(colorModeId: string): void {
+        const styleId = colorModeId === 'dark' ? 'theme-dark' : 'theme-light';
+        console.log('tool-micromark.setColorMode', colorModeId, styleId);
+        document.querySelectorAll<HTMLStyleElement>('style[data-dynamic]').forEach((style) => (style.disabled = style.id !== styleId));
     }
 }
 
@@ -127,18 +127,18 @@ function escapeHTML(str: string): string {
 }
 
 // Helpers - Inject style.
-function injectStyle(cssText: string, id: string): void {
+function injectStyle(cssText: string, styleId: string): void {
     if (typeof document === 'undefined') return;
 
-    let style = document.getElementById(id) as HTMLStyleElement | null;
+    let style = document.getElementById(styleId) as HTMLStyleElement | null;
     if (style == null) {
         style = document.createElement('style');
-        style.id = id;
+        style.id = styleId;
         style.dataset.dynamic = 'true';
         document.head.appendChild(style);
     }
     style.innerHTML = cssText;
-    style.disabled = true;
+    style.disabled = true; // Need to set this after style is injected.
 }
 
 // Helpers - Load GFM (GitHub Flavoured Markdown) table extension.
@@ -150,8 +150,9 @@ async function loadGFMTableExtension(): Promise<GFMTableExtensions> {
     return gfmTableExtensions;
 }
 
-// Helpers - Load Speen Highlighter and associated themes.
-async function loadHighlighter(): Promise<any> {
+// Helpers - Load Speed Highlighter and inject associated themes.
+async function loadHighlighter(colorModeId: string): Promise<typeof SpeedHighlight> {
+    console.log('Need to set color mode to', colorModeId);
     if (speedHighlight) return speedHighlight;
 
     const [module, darkThemeCss, lightThemeCss] = await Promise.all([

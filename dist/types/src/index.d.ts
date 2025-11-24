@@ -7,8 +7,8 @@ type RenderOptions = {
 declare class MicromarkTool {
     private readonly options;
     constructor();
-    highlight(): Promise<void>;
+    highlight(colorModeId: string): Promise<void>;
     render(markdown: string, options?: RenderOptions): Promise<string>;
-    setColorMode(colorModeId: 'light' | 'dark'): void;
+    setColorMode(colorModeId: string): void;
 }
 export { MicromarkTool, type RenderOptions };

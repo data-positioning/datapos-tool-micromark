@@ -1,8 +1,8 @@
-const Nn = document.createElement("i");
+const Dn = document.createElement("i");
 function Gn(n) {
   const r = "&" + n + ";";
-  Nn.innerHTML = r;
-  const t = Nn.textContent;
+  Dn.innerHTML = r;
+  const t = Dn.textContent;
   return (
     // @ts-expect-error: TypeScript is wrong that `textContent` on elements can
     // yield `null`.
@@ -53,14 +53,14 @@ function Ot(n, r) {
     (r[t].add === "after" ? n : e).push(r[t]);
   nn(n, 0, 0, e);
 }
-function Dt(n) {
+function Nt(n) {
   const r = {};
   let t = -1;
   for (; ++t < n.length; )
-    Nt(r, n[t]);
+    Dt(r, n[t]);
   return r;
 }
-function Nt(n, r) {
+function Dt(n, r) {
   let t;
   for (t in r) {
     const u = (wn.call(n, t) ? n[t] : void 0) || (n[t] = {}), i = r[t];
@@ -158,7 +158,7 @@ function Yt(n) {
   let t = !0;
   const e = {}, u = [[]], i = [], l = [], m = (
     /** @type {NormalizedHtmlExtension} */
-    Dt([{
+    Nt([{
       enter: {
         blockQuote: A,
         codeFenced: tn,
@@ -179,8 +179,8 @@ function Yt(n) {
         link: an,
         listItemMarker: y,
         listItemValue: q,
-        listOrdered: D,
-        listUnordered: N,
+        listOrdered: N,
+        listUnordered: D,
         paragraph: R,
         reference: T,
         resource: on,
@@ -265,8 +265,8 @@ function Yt(n) {
     K = Q(K, rn), K = Q(K, k.slice(j)), C = -1;
     const X = K;
     for (m.enter.null && m.enter.null.call(f); ++C < k.length; ) {
-      const Mn = m[X[C][0]], On = X[C][1].type, Dn = Mn[On];
-      qn.call(Mn, On) && Dn && Dn.call({
+      const Mn = m[X[C][0]], On = X[C][1].type, Nn = Mn[On];
+      qn.call(Mn, On) && Nn && Nn.call({
         sliceSerialize: X[C][2].sliceSerialize,
         ...f
       }, X[C][1]);
@@ -329,10 +329,10 @@ function Yt(n) {
   function L() {
     d();
   }
-  function D(k) {
+  function N(k) {
     l.push(!k._loose), F(), I("<ol"), S("expectFirstItem", !0);
   }
-  function N(k) {
+  function D(k) {
     l.push(!k._loose), F(), I("<ul"), S("expectFirstItem", !0);
   }
   function q(k) {
@@ -666,20 +666,20 @@ function Kt(n) {
         )
           return;
       const L = r.events.length;
-      let D = L, N, q;
-      for (; D--; )
-        if (r.events[D][0] === "exit" && r.events[D][1].type === "chunkFlow") {
-          if (N) {
-            q = r.events[D][1].end;
+      let N = L, D, q;
+      for (; N--; )
+        if (r.events[N][0] === "exit" && r.events[N][1].type === "chunkFlow") {
+          if (D) {
+            q = r.events[N][1].end;
             break;
           }
-          N = !0;
+          D = !0;
         }
       for (d(e), x = L; x < r.events.length; )
         r.events[x][1].end = {
           ...q
         }, x++;
-      nn(r.events, D + 1, 0, r.events.slice(L)), r.events.length = x;
+      nn(r.events, N + 1, 0, r.events.slice(L)), r.events.length = x;
     }
   }
   function d(b) {
@@ -975,8 +975,8 @@ function se(n, r, t) {
   function P(x) {
     return n.exit("codeFenced"), r(x);
   }
-  function F(x, L, D) {
-    let N = 0;
+  function F(x, L, N) {
+    let D = 0;
     return q;
     function q(A) {
       return x.enter("lineEnding"), x.consume(A), x.exit("lineEnding"), y;
@@ -985,13 +985,13 @@ function se(n, r, t) {
       return x.enter("codeFencedFence"), _(A) ? B(x, w, "linePrefix", e.parser.constructs.disable.null.includes("codeIndented") ? void 0 : 4)(A) : w(A);
     }
     function w(A) {
-      return A === a ? (x.enter("codeFencedFenceSequence"), M(A)) : D(A);
+      return A === a ? (x.enter("codeFencedFenceSequence"), M(A)) : N(A);
     }
     function M(A) {
-      return A === a ? (N++, x.consume(A), M) : N >= l ? (x.exit("codeFencedFenceSequence"), _(A) ? B(x, O, "whitespace")(A) : O(A)) : D(A);
+      return A === a ? (D++, x.consume(A), M) : D >= l ? (x.exit("codeFencedFenceSequence"), _(A) ? B(x, O, "whitespace")(A) : O(A)) : N(A);
     }
     function O(A) {
-      return A === null || z(A) ? (x.exit("codeFencedFence"), L(A)) : D(A);
+      return A === null || z(A) ? (x.exit("codeFencedFence"), L(A)) : N(A);
     }
   }
 }
@@ -1619,10 +1619,10 @@ const Me = [
   name: "htmlFlow",
   resolveTo: qe,
   tokenize: Re
-}, De = {
+}, Ne = {
   partial: !0,
   tokenize: Ve
-}, Ne = {
+}, De = {
   partial: !0,
   tokenize: He
 };
@@ -1681,15 +1681,15 @@ function Re(n, r, t) {
     return s === 61 ? (n.consume(s), x) : _(s) ? (n.consume(s), F) : b(s);
   }
   function x(s) {
-    return s === null || s === 60 || s === 61 || s === 62 || s === 96 ? t(s) : s === 34 || s === 39 ? (n.consume(s), m = s, L) : _(s) ? (n.consume(s), x) : D(s);
+    return s === null || s === 60 || s === 61 || s === 62 || s === 96 ? t(s) : s === 34 || s === 39 ? (n.consume(s), m = s, L) : _(s) ? (n.consume(s), x) : N(s);
   }
   function L(s) {
-    return s === m ? (n.consume(s), m = null, N) : s === null || z(s) ? t(s) : (n.consume(s), L);
-  }
-  function D(s) {
-    return s === null || s === 34 || s === 39 || s === 47 || s === 60 || s === 61 || s === 62 || s === 96 || $(s) ? F(s) : (n.consume(s), D);
+    return s === m ? (n.consume(s), m = null, D) : s === null || z(s) ? t(s) : (n.consume(s), L);
   }
   function N(s) {
+    return s === null || s === 34 || s === 39 || s === 47 || s === 60 || s === 61 || s === 62 || s === 96 || $(s) ? F(s) : (n.consume(s), N);
+  }
+  function D(s) {
     return s === 47 || s === 62 || _(s) ? b(s) : t(s);
   }
   function q(s) {
@@ -1699,10 +1699,10 @@ function Re(n, r, t) {
     return s === null || z(s) ? w(s) : _(s) ? (n.consume(s), y) : t(s);
   }
   function w(s) {
-    return s === 45 && u === 2 ? (n.consume(s), V) : s === 60 && u === 1 ? (n.consume(s), R) : s === 62 && u === 4 ? (n.consume(s), Z) : s === 63 && u === 3 ? (n.consume(s), o) : s === 93 && u === 5 ? (n.consume(s), tn) : z(s) && (u === 6 || u === 7) ? (n.exit("htmlFlowData"), n.check(De, en, M)(s)) : s === null || z(s) ? (n.exit("htmlFlowData"), M(s)) : (n.consume(s), w);
+    return s === 45 && u === 2 ? (n.consume(s), V) : s === 60 && u === 1 ? (n.consume(s), R) : s === 62 && u === 4 ? (n.consume(s), Z) : s === 63 && u === 3 ? (n.consume(s), o) : s === 93 && u === 5 ? (n.consume(s), tn) : z(s) && (u === 6 || u === 7) ? (n.exit("htmlFlowData"), n.check(Ne, en, M)(s)) : s === null || z(s) ? (n.exit("htmlFlowData"), M(s)) : (n.consume(s), w);
   }
   function M(s) {
-    return n.check(Ne, O, en)(s);
+    return n.check(De, O, en)(s);
   }
   function O(s) {
     return n.enter("lineEnding"), n.consume(s), n.exit("lineEnding"), A;
@@ -1764,7 +1764,7 @@ function Qe(n, r, t) {
     return n.enter("htmlText"), n.enter("htmlTextData"), n.consume(o), m;
   }
   function m(o) {
-    return o === 33 ? (n.consume(o), h) : o === 47 ? (n.consume(o), F) : o === 63 ? (n.consume(o), b) : v(o) ? (n.consume(o), D) : t(o);
+    return o === 33 ? (n.consume(o), h) : o === 47 ? (n.consume(o), F) : o === 63 ? (n.consume(o), b) : v(o) ? (n.consume(o), N) : t(o);
   }
   function h(o) {
     return o === 45 ? (n.consume(o), f) : o === 91 ? (n.consume(o), i = 0, S) : v(o) ? (n.consume(o), I) : t(o);
@@ -1812,17 +1812,17 @@ function Qe(n, r, t) {
   function L(o) {
     return z(o) ? (l = L, R(o)) : _(o) ? (n.consume(o), L) : V(o);
   }
-  function D(o) {
-    return o === 45 || W(o) ? (n.consume(o), D) : o === 47 || o === 62 || $(o) ? N(o) : t(o);
-  }
   function N(o) {
-    return o === 47 ? (n.consume(o), V) : o === 58 || o === 95 || v(o) ? (n.consume(o), q) : z(o) ? (l = N, R(o)) : _(o) ? (n.consume(o), N) : V(o);
+    return o === 45 || W(o) ? (n.consume(o), N) : o === 47 || o === 62 || $(o) ? D(o) : t(o);
+  }
+  function D(o) {
+    return o === 47 ? (n.consume(o), V) : o === 58 || o === 95 || v(o) ? (n.consume(o), q) : z(o) ? (l = D, R(o)) : _(o) ? (n.consume(o), D) : V(o);
   }
   function q(o) {
     return o === 45 || o === 46 || o === 58 || o === 95 || W(o) ? (n.consume(o), q) : y(o);
   }
   function y(o) {
-    return o === 61 ? (n.consume(o), w) : z(o) ? (l = y, R(o)) : _(o) ? (n.consume(o), y) : N(o);
+    return o === 61 ? (n.consume(o), w) : z(o) ? (l = y, R(o)) : _(o) ? (n.consume(o), y) : D(o);
   }
   function w(o) {
     return o === null || o === 60 || o === 61 || o === 62 || o === 96 ? t(o) : o === 34 || o === 39 ? (n.consume(o), u = o, M) : z(o) ? (l = w, R(o)) : _(o) ? (n.consume(o), w) : (n.consume(o), O);
@@ -1831,10 +1831,10 @@ function Qe(n, r, t) {
     return o === u ? (n.consume(o), u = void 0, A) : o === null ? t(o) : z(o) ? (l = M, R(o)) : (n.consume(o), M);
   }
   function O(o) {
-    return o === null || o === 34 || o === 39 || o === 60 || o === 61 || o === 96 ? t(o) : o === 47 || o === 62 || $(o) ? N(o) : (n.consume(o), O);
+    return o === null || o === 34 || o === 39 || o === 60 || o === 61 || o === 96 ? t(o) : o === 47 || o === 62 || $(o) ? D(o) : (n.consume(o), O);
   }
   function A(o) {
-    return o === 47 || o === 62 || $(o) ? N(o) : t(o);
+    return o === 47 || o === 62 || $(o) ? D(o) : t(o);
   }
   function V(o) {
     return o === 62 ? (n.consume(o), n.exit("htmlTextData"), n.exit("htmlText"), r) : t(o);
@@ -2403,7 +2403,7 @@ function _r(n, r, t) {
   let f = r.tokenize.call(h, m);
   return r.resolveAll && i.push(r), h;
   function p(y) {
-    return l = Q(l, y), T(), l[l.length - 1] !== null ? [] : (D(r, 0), h.events = Fn(i, h.events, h), h.events);
+    return l = Q(l, y), T(), l[l.length - 1] !== null ? [] : (N(r, 0), h.events = Fn(i, h.events, h), h.events);
   }
   function g(y, w) {
     return Pr(c(y), w);
@@ -2459,7 +2459,7 @@ function _r(n, r, t) {
     return w.end = S(), h.events.push(["exit", w, h]), w;
   }
   function F(y, w) {
-    D(y, w.from);
+    N(y, w.from);
   }
   function x(y, w) {
     w.restore();
@@ -2496,7 +2496,7 @@ function _r(n, r, t) {
       function s(H) {
         return cn;
         function cn(un) {
-          return o = N(), tn = H, H.partial || (h.currentConstruct = H), H.name && h.parser.constructs.disable.null.includes(H.name) ? an() : H.tokenize.call(
+          return o = D(), tn = H, H.partial || (h.currentConstruct = H), H.name && h.parser.constructs.disable.null.includes(H.name) ? an() : H.tokenize.call(
             // If we do have fields, create an object w/ `context` as its
             // prototype.
             // This allows a “live binding”, which is needed for `interrupt`.
@@ -2515,10 +2515,10 @@ function _r(n, r, t) {
       }
     }
   }
-  function D(y, w) {
+  function N(y, w) {
     y.resolveAll && !i.includes(y) && i.push(y), y.resolve && nn(h.events, w, h.events.length - w, y.resolve(h.events.slice(w), h)), y.resolveTo && (h.events = y.resolveTo(h.events, h));
   }
-  function N() {
+  function D() {
     const y = S(), w = h.previous, M = h.currentConstruct, O = h.events.length, A = Array.from(a);
     return {
       from: O,
@@ -2649,10 +2649,10 @@ function Or() {
     return a && (e && m.push(-5), r && m.push(r), m.push(null)), m;
   }
 }
-function Dr(n, r, t) {
+function Nr(n, r, t) {
   return typeof r != "string" && (t = r, r = void 0), Yt(t)(Mr(Br(t).document().write(Or()(n, r, !0))));
 }
-const Nr = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" };
+const Dr = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" };
 let xn, kn;
 class jr {
   options;
@@ -2665,10 +2665,10 @@ class jr {
     };
   }
   // Operations - Highligh previously rendered markdown.
-  async highlight() {
-    const { highlightElement: r } = await Vr();
-    document.querySelectorAll('div[class^="shj-lang-"]').forEach((t) => {
-      (/shj-lang-([^\s]+)/.exec(t.className) || [])[1] === "javascript" && (r(t, "js", "multiline", { hideLineNumbers: !0 }), Object.assign(t.style, {
+  async highlight(r) {
+    const { highlightElement: t } = await Vr(r);
+    document.querySelectorAll('div[class^="shj-lang-"]').forEach((e) => {
+      (/shj-lang-([^\s]+)/.exec(e.className) || [])[1] === "javascript" && (t(e, "js", "multiline", { hideLineNumbers: !0 }), Object.assign(e.style, {
         fontFamily: "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, Liberation Mono, monospace",
         fontSize: "16px"
       }));
@@ -2681,11 +2681,11 @@ class jr {
       const i = await Hr();
       e.push(i.parseExtension), u.push(i.htmlExtension);
     }
-    return Dr(r, { ...this.options, extensions: e, htmlExtensions: u });
+    return Nr(r, { ...this.options, extensions: e, htmlExtensions: u });
   }
   // Operations - Set color mode.
   setColorMode(r) {
-    const t = r === "light" ? "theme-light" : "theme-dark";
+    const t = r === "dark" ? "theme-dark" : "theme-light";
     console.log("tool-micromark.setColorMode", r, t), document.querySelectorAll("style[data-dynamic]").forEach((e) => e.disabled = e.id !== t);
   }
 }
@@ -2733,7 +2733,7 @@ function qr() {
   };
 }
 function Rr(n) {
-  return n.replaceAll(/[&<>"']/g, (r) => Nr[r]);
+  return n.replaceAll(/[&<>"']/g, (r) => Dr[r]);
 }
 function Zn(n, r) {
   if (typeof document > "u") return;
@@ -2742,17 +2742,17 @@ function Zn(n, r) {
 }
 async function Hr() {
   if (xn !== void 0) return xn;
-  const n = await import("./index-B67GdfO2.js");
+  const n = await import("./index-nJZa7eeX.js");
   return xn = { parseExtension: n.gfmTable(), htmlExtension: n.gfmTableHtml() }, xn;
 }
-async function Vr() {
-  if (kn) return kn;
-  const [n, r, t] = await Promise.all([
+async function Vr(n) {
+  if (console.log("Need to set color mode to", n), kn) return kn;
+  const [r, t, e] = await Promise.all([
     import("./index-BgHmvLYe.js"),
     import("./github-dark-O5tSO1Qn.js"),
     import("./github-light-MQ8W3G6n.js")
   ]);
-  return kn = n, Zn(r.default, "theme-dark"), Zn(t.default, "theme-light"), kn;
+  return kn = r, Zn(t.default, "theme-dark"), Zn(e.default, "theme-light"), kn;
 }
 export {
   jr as M,

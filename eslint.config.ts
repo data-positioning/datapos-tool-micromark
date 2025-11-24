@@ -21,6 +21,7 @@ export default [
             '@typescript-eslint/no-import-type-side-effects': 'warn',
 
             '@typescript-eslint/explicit-function-return-type': 'warn',
+            '@typescript-eslint/no-explicit-any': 'warn',
             '@typescript-eslint/no-unused-vars': 'warn',
             '@typescript-eslint/strict-boolean-expressions': 'warn',
 
