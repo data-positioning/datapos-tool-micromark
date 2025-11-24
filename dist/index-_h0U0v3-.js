@@ -2876,7 +2876,7 @@ class cu {
   }
   highlight() {
     document.querySelectorAll('div[class^="shj-lang-"]').forEach((t) => {
-      (/shj-lang-([^\s]+)/.exec(t.className) || [])[1] && (iu(t, "js", "multiline", { hideLineNumbers: !0 }), t.style.setProperty("font-family", "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, Liberation Mono, monospace"));
+      (/shj-lang-([^\s]+)/.exec(t.className) || [])[1] && (iu(t, "js", "multiline", { hideLineNumbers: !0 }), t.style.setProperty("font-family", "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, Liberation Mono, monospace"), t.style.setProperty("font-size", "16px"));
     });
   }
   setColorMode(t) {
@@ -2941,7 +2941,7 @@ function On(n, t) {
 }
 async function su() {
   if (In) return In;
-  const n = await import("./index-BNyDjHwx.js");
+  const n = await import("./index-Dr-CerIj.js");
   return In = {
     ext: n.gfmTable(),
     html: n.gfmTableHtml()

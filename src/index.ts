@@ -67,6 +67,7 @@ class MicromarkTool {
                 highlightElement(elm, 'js', 'multiline', { hideLineNumbers: true });
                 // elm.style.setProperty('font-family', "'Fira Code', 'Fira Mono', monospace", 'important');
                 elm.style.setProperty('font-family', "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, Liberation Mono, monospace");
+                elm.style.setProperty('font-size', '16px');
             }
         });
     }
