@@ -5,7 +5,7 @@
 // Dependencies - Micromark.
 import { micromark } from 'micromark';
 import type { CompileContext, HtmlExtension, Options, Token } from 'micromark-util-types';
-import { gfm, gfmHtml } from 'micromark-extension-gfm'; // Adds 21.2KB when gzipped. Base 79.16KB.
+import { gfmTable, gfmTableHtml } from 'micromark-extension-gfm-table'; // Adds 21.2KB when gzipped. Base 79.16KB.
 
 // Dependencies - Speed Highlight.
 import darkThemeCss from '@speed-highlight/core/themes/github-dark.css?raw';
@@ -24,8 +24,8 @@ class MicromarkTool {
     constructor() {
         this.options = {
             allowDangerousHtml: false,
-            extensions: [gfm()],
-            htmlExtensions: [gfmHtml(), this.createPresenterCodeBlockHtmlExtension()]
+            extensions: [gfmTable()],
+            htmlExtensions: [gfmTableHtml(), this.createPresenterCodeBlockHtmlExtension()]
         };
         // Inject inline styles
         this.injectThemes();
@@ -55,9 +55,7 @@ class MicromarkTool {
     }
 
     setColorMode(colorModeId: 'light' | 'dark') {
-        console.log(7777, colorModeId);
         const id = (colorModeId === 'light' ? this.themeIds.light : this.themeIds.dark) as 'theme-light' | 'theme-dark';
-        console.log(8888, id);
         switchInlineTheme(id);
     }
 
@@ -140,9 +138,9 @@ function switchInlineTheme(id: 'theme-light' | 'theme-dark') {
     });
 }
 
-function getPreferredTheme(): 'light' | 'dark' {
-    if (globalThis.window === undefined) return 'light';
-    return globalThis.window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-}
+// function getPreferredTheme(): 'light' | 'dark' {
+//     if (globalThis.window === undefined) return 'light';
+//     return globalThis.window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+// }
 
 export { MicromarkTool };
