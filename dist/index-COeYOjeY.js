@@ -2686,7 +2686,7 @@ class jr {
   // Operations - Set color mode.
   setColorMode(r) {
     const t = r === "light" ? "theme-light" : "theme-dark";
-    document.querySelectorAll("style[data-dynamic]").forEach((e) => e.disabled = e.id !== t);
+    console.log(1111, r, t), document.querySelectorAll("style[data-dynamic]").forEach((e) => e.disabled = e.id !== t);
   }
 }
 function qr() {
@@ -2742,7 +2742,7 @@ function Zn(n, r) {
 }
 async function Hr() {
   if (xn !== void 0) return xn;
-  const n = await import("./index-Dp6kibLg.js");
+  const n = await import("./index-BQEMEN0d.js");
   return xn = { parseExtension: n.gfmTable(), htmlExtension: n.gfmTableHtml() }, xn;
 }
 async function Vr() {
