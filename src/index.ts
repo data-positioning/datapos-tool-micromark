@@ -5,7 +5,6 @@
 // Dependencies - Micromark.
 import { micromark } from 'micromark';
 import type { CompileContext, HtmlExtension, Options, Token } from 'micromark-util-types';
-import { gfmTable, gfmTableHtml } from 'micromark-extension-gfm-table';
 
 // Dependencies - Speed Highlight.
 import darkThemeCss from '@speed-highlight/core/themes/github-dark.css?raw';
@@ -14,7 +13,8 @@ import lightThemeCss from '@speed-highlight/core/themes/github-light.css?raw';
 
 // Types/Interfaces
 type RenderOptions = { tables?: boolean };
-let gfmTableCache: { ext: ReturnType<any>; html: ReturnType<any> } | null = null;
+let gfmTableCache: { ext: ReturnType<any>; html: ReturnType<any> } | undefined = null;
+undefined;
 
 async function loadGfmTable() {
     if (gfmTableCache) return gfmTableCache;
@@ -54,12 +54,12 @@ class MicromarkTool {
     }
 
     // Operations - Render.
-    async render(markdown: string, options: RenderOptions): Promise<string> {
+    async render(markdown: string, options?: RenderOptions): Promise<string> {
         const extensions = [];
         const htmlExtensions = [...(this.options.htmlExtensions ?? [])];
 
         // Lazy load tables if requested
-        if (options.tables) {
+        if (options?.tables) {
             const table = await loadGfmTable();
             extensions.push(table.ext);
             htmlExtensions.push(table.html);

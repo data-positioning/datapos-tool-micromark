@@ -10,7 +10,7 @@ declare class MicromarkTool {
     private readonly themeCss;
     constructor();
     private injectCodeFont;
-    render(markdown: string, options: RenderOptions): Promise<string>;
+    render(markdown: string, options?: RenderOptions): Promise<string>;
     highlight(): void;
     setColorMode(colorModeId: 'light' | 'dark'): void;
     private injectThemes;

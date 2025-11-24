@@ -2847,7 +2847,7 @@ const au = "[class*=shj-lang-]{white-space:pre;color:#112;text-shadow:none;box-s
 let In = null;
 async function uu() {
   if (In) return In;
-  const n = await import("./index-B-CTmTH7.js");
+  const n = await import("./index-DQN_s5p-.js");
   return In = {
     ext: n.gfmTable(),
     html: n.gfmTableHtml()
@@ -2872,7 +2872,7 @@ class cu {
   // Operations - Render.
   async render(t, e) {
     const r = [], a = [...this.options.htmlExtensions ?? []];
-    if (e.tables) {
+    if (e?.tables) {
       const i = await uu();
       r.push(i.ext), a.push(i.html);
     }
