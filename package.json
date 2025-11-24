@@ -1,6 +1,6 @@
 {
     "name": "@datapos/datapos-tool-micromark",
-    "version": "0.1.958",
+    "version": "0.1.959",
     "description": "A library that provides a wrapper around the Micromark markdown parser and the Speed Highlight code highlighter.",
     "license": "MIT",
     "private": false,
@@ -31,14 +31,13 @@
     "dependencies": {
         "@speed-highlight/core": "^1.2.12",
         "micromark": "^4.0.2",
-        "micromark-extension-gfm": "^3.0.0",
         "micromark-extension-gfm-table": "^2.1.1"
     },
     "devDependencies": {
         "@datapos/datapos-development": "^0.3.94",
         "@types/node": "^24.10.1",
-        "@typescript-eslint/eslint-plugin": "^8.47.0",
-        "@typescript-eslint/parser": "^8.47.0",
+        "@typescript-eslint/eslint-plugin": "^8.48.0",
+        "@typescript-eslint/parser": "^8.48.0",
         "eslint": "^9.39.1",
         "eslint-plugin-import": "^2.32.0",
         "jiti": "^2.6.1",

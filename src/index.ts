@@ -112,10 +112,14 @@ function createPresenterCodeBlockHtmlExtension(): HtmlExtension {
                 const language = blockData.lang || 'plain';
                 const metaAttr = blockData.meta || '';
                 let html = '';
-                if (language === 'json' && metaAttr === 'datapos-visual') {
-                    html = `<div class="${metaAttr}" data-options="${encodeURIComponent(rawContent)}"></div>`;
-                } else if (language === 'json' && metaAttr === 'datapos-highcharts') {
-                    html = `<div class="${metaAttr}" data-options="${encodeURIComponent(rawContent)}"></div>`;
+                if (language === 'json') {
+                    if (metaAttr === 'datapos-visual') {
+                        html = `<div class="${metaAttr}" data-options="${encodeURIComponent(rawContent)}"></div>`;
+                    } else if (metaAttr === 'datapos-formula') {
+                        html = `<div class="${metaAttr}">${rawContent}</div>`;
+                    } else if (metaAttr === 'datapos-highcharts') {
+                        html = `<div class="${metaAttr}" data-options="${encodeURIComponent(rawContent)}"></div>`;
+                    }
                 } else {
                     const safeLang = language.replaceAll(/[^a-z0-9_-]/gi, '');
                     html = `<div class="shj-lang-${safeLang}">${escapeHTML(rawContent)}</div>`;
