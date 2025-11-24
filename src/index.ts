@@ -66,7 +66,8 @@ class MicromarkTool {
 
     // Operations - Set color mode.
     setColorMode(colorModeId: 'light' | 'dark'): void {
-        switchInlineTheme(colorModeId === 'light' ? 'theme-light' : 'theme-dark');
+        const themeId = colorModeId === 'light' ? 'theme-light' : 'theme-dark';
+        document.querySelectorAll<HTMLStyleElement>('style[data-dynamic]').forEach((style) => (style.disabled = style.id !== themeId));
     }
 }
 
@@ -110,7 +111,7 @@ function createPresenterCodeBlockHtmlExtension(): HtmlExtension {
                     html = `<div class="${metaAttr}" data-options="${encodeURIComponent(rawContent)}"></div>`;
                 } else {
                     const safeLang = language.replaceAll(/[^a-z0-9_-]/gi, '');
-                    html = `<div class="shj-lang-${safeLang}">${escapeHtml(rawContent)}</div>`;
+                    html = `<div class="shj-lang-${safeLang}">${escapeHTML(rawContent)}</div>`;
                 }
                 this.raw(html);
                 currentBlockData = undefined;
@@ -120,7 +121,7 @@ function createPresenterCodeBlockHtmlExtension(): HtmlExtension {
 }
 
 // Helpers - Escape HTML.
-function escapeHtml(str: string): string {
+function escapeHTML(str: string): string {
     return str.replaceAll(/[&<>"']/g, (char) => ESCAPE_MAP[char as '&' | '<' | '>' | '"' | "'"]);
 }
 
@@ -128,11 +129,12 @@ function escapeHtml(str: string): string {
 function injectStyle(cssText: string, id: string): void {
     if (typeof document === 'undefined') return;
 
-    let style = document.getElementById(id);
+    let style = document.getElementById(id) as HTMLStyleElement | null;
     if (style == null) {
         style = document.createElement('style');
         style.id = id;
         style.dataset.dynamic = 'true';
+        style.disabled = true;
         document.head.appendChild(style);
     }
     style.innerHTML = cssText;
@@ -160,11 +162,6 @@ async function loadHighlighter(): Promise<any> {
     injectStyle(darkThemeCss.default, 'theme-dark');
     injectStyle(lightThemeCss.default, 'theme-light');
     return speedHighlight;
-}
-
-// Helpers - Switch inline theme.
-function switchInlineTheme(themeId: 'theme-light' | 'theme-dark'): void {
-    document.querySelectorAll<HTMLStyleElement>('style[data-dynamic]').forEach((style) => (style.disabled = style.id !== themeId));
 }
 
 export { MicromarkTool, type RenderOptions };

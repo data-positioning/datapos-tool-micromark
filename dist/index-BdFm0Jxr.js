@@ -2654,7 +2654,7 @@ function Dr(n, r, t) {
 }
 const Nr = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" };
 let xn, kn;
-class Qr {
+class jr {
   options;
   constructor() {
     this.options = {
@@ -2685,7 +2685,8 @@ class Qr {
   }
   // Operations - Set color mode.
   setColorMode(r) {
-    jr(r === "light" ? "theme-light" : "theme-dark");
+    const t = r === "light" ? "theme-light" : "theme-dark";
+    document.querySelectorAll("style[data-dynamic]").forEach((e) => e.disabled = e.id !== t);
   }
 }
 function qr() {
@@ -2737,11 +2738,11 @@ function Rr(n) {
 function Zn(n, r) {
   if (typeof document > "u") return;
   let t = document.getElementById(r);
-  t == null && (t = document.createElement("style"), t.id = r, t.dataset.dynamic = "true", document.head.appendChild(t)), t.innerHTML = n;
+  t == null && (t = document.createElement("style"), t.id = r, t.dataset.dynamic = "true", t.disabled = !0, document.head.appendChild(t)), t.innerHTML = n;
 }
 async function Hr() {
   if (xn !== void 0) return xn;
-  const n = await import("./index-Bng2JaS3.js");
+  const n = await import("./index-Dp6kibLg.js");
   return xn = { parseExtension: n.gfmTable(), htmlExtension: n.gfmTableHtml() }, xn;
 }
 async function Vr() {
@@ -2753,11 +2754,8 @@ async function Vr() {
   ]);
   return kn = n, Zn(r.default, "theme-dark"), Zn(t.default, "theme-light"), kn;
 }
-function jr(n) {
-  document.querySelectorAll("style[data-dynamic]").forEach((r) => r.disabled = r.id !== n);
-}
 export {
-  Qr as M,
+  jr as M,
   _ as a,
   $ as b,
   B as f,
