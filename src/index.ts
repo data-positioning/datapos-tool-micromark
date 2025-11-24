@@ -7,9 +7,9 @@ import { micromark } from 'micromark';
 import type { CompileContext, Extension, HtmlExtension, Options, Token } from 'micromark-util-types';
 
 // Dependencies - Speed Highlight.
-import darkThemeCss from '@speed-highlight/core/themes/github-dark.css?raw';
-import { highlightElement } from '@speed-highlight/core';
-import lightThemeCss from '@speed-highlight/core/themes/github-light.css?raw';
+// import darkThemeCss from '@speed-highlight/core/themes/github-dark.css?raw';
+// import { highlightElement } from '@speed-highlight/core';
+// import lightThemeCss from '@speed-highlight/core/themes/github-light.css?raw';
 
 // Types/Interfaces
 type GFMTableExtensions = { parseExtension: Extension; htmlExtension: HtmlExtension };
@@ -20,8 +20,11 @@ const ESCAPE_MAP: Record<'&' | '<' | '>' | '"' | "'", string> = { '&': '&amp;', 
 
 // Module Variables
 let gfmTableExtensions: GFMTableExtensions | undefined = undefined;
-const themeIds = { light: 'theme-light', dark: 'theme-dark' };
 let themesAreInjected = false;
+
+let highlightModule: typeof import('@speed-highlight/core') | undefined = undefined;
+let darkThemeCss: string | undefined = undefined;
+let lightThemeCss: string | undefined = undefined;
 
 // Classes - Micromark tool.
 class MicromarkTool {
@@ -34,13 +37,20 @@ class MicromarkTool {
             extensions: [],
             htmlExtensions: [createPresenterCodeBlockHtmlExtension()]
         };
-
-        // Inject inline styles
-        ensureThemesAreInjected();
+        // ensureThemesAreInjected();
     }
 
     // Operations - Highligh previously rendered markdown.
-    highlight(): void {
+    async highlight(): Promise<void> {
+        const { highlightElement } = await loadHighlighter();
+
+        // Inject themes only once
+        if (!themesAreInjected) {
+            injectStyle(lightThemeCss, 'theme-light');
+            injectStyle(darkThemeCss, 'theme-dark');
+            themesAreInjected = true;
+        }
+
         document.querySelectorAll<HTMLDivElement>('div[class^="shj-lang-"]').forEach((element) => {
             const lang = (/shj-lang-([^\s]+)/.exec(element.className) || [])[1];
             if (lang === 'javascript') {
@@ -70,8 +80,7 @@ class MicromarkTool {
 
     // Operations - Set color mode.
     setColorMode(colorModeId: 'light' | 'dark'): void {
-        const id = (colorModeId === 'light' ? themeIds.light : themeIds.dark) as 'theme-light' | 'theme-dark';
-        switchInlineTheme(id);
+        switchInlineTheme(colorModeId === 'light' ? 'theme-light' : 'theme-dark');
     }
 }
 
@@ -127,6 +136,7 @@ function createPresenterCodeBlockHtmlExtension(): HtmlExtension {
 // Helpers - Ensure themes are injected.
 function ensureThemesAreInjected(): void {
     if (themesAreInjected) return;
+
     injectStyle(lightThemeCss, 'theme-light');
     injectStyle(darkThemeCss, 'theme-dark');
     themesAreInjected = true;
@@ -138,9 +148,10 @@ function escapeHtml(str: string): string {
 }
 
 // Helpers - Inject style.
-function injectStyle(cssText: string, id: string): HTMLStyleElement | undefined {
+function injectStyle(cssText: string, id: string): void {
     if (typeof document === 'undefined') return;
-    let style = document.getElementById(id) as HTMLStyleElement | null;
+
+    let style = document.getElementById(id);
     if (style == null) {
         style = document.createElement('style');
         style.id = id;
@@ -148,7 +159,6 @@ function injectStyle(cssText: string, id: string): HTMLStyleElement | undefined 
         document.head.appendChild(style);
     }
     style.innerHTML = cssText;
-    return style;
 }
 
 // Helpers - Load GFM (GitHub Flavoured Markdown) table extension.
@@ -160,9 +170,26 @@ async function loadGFMTableExtension(): Promise<GFMTableExtensions> {
     return gfmTableExtensions;
 }
 
+// Helpers - Load Speen Highlighter and associated themes.
+async function loadHighlighter(): Promise<any> {
+    if (highlightModule) return highlightModule;
+
+    const [mod, darkCss, lightCss] = await Promise.all([
+        import('@speed-highlight/core'),
+        import('@speed-highlight/core/themes/github-dark.css?raw'),
+        import('@speed-highlight/core/themes/github-light.css?raw')
+    ]);
+
+    highlightModule = mod;
+    darkThemeCss = darkCss.default;
+    lightThemeCss = lightCss.default;
+
+    return highlightModule;
+}
+
 // Helpers - Switch inline theme.
-function switchInlineTheme(id: 'theme-light' | 'theme-dark'): void {
-    document.querySelectorAll<HTMLStyleElement>('style[data-dynamic]').forEach((style) => (style.disabled = style.id !== id));
+function switchInlineTheme(themeId: 'theme-light' | 'theme-dark'): void {
+    document.querySelectorAll<HTMLStyleElement>('style[data-dynamic]').forEach((style) => (style.disabled = style.id !== themeId));
 }
 
 export { MicromarkTool, type RenderOptions };
