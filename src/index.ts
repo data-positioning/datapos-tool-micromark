@@ -13,19 +13,7 @@ import lightThemeCss from '@speed-highlight/core/themes/github-light.css?raw';
 
 // Types/Interfaces
 type RenderOptions = { tables?: boolean };
-let gfmTableCache: { ext: ReturnType<any>; html: ReturnType<any> } | undefined = null;
-undefined;
-
-async function loadGfmTable() {
-    if (gfmTableCache) return gfmTableCache;
-
-    const mod = await import('micromark-extension-gfm-table');
-    gfmTableCache = {
-        ext: mod.gfmTable(),
-        html: mod.gfmTableHtml()
-    };
-    return gfmTableCache;
-}
+let gfmTableCache: { ext: ReturnType<any>; html: ReturnType<any> } | undefined = undefined;
 
 // Constants
 const ESCAPE_MAP: Record<string, string> = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
@@ -46,7 +34,7 @@ class MicromarkTool {
 
         // Inject inline styles
         this.injectThemes();
-        this.injectCodeFont();
+        // this.injectCodeFont();
     }
 
     private injectCodeFont() {
@@ -77,7 +65,8 @@ class MicromarkTool {
             const lang = (/shj-lang-([^\s]+)/.exec(elm.className) || [])[1];
             if (lang) {
                 highlightElement(elm, 'js', 'multiline', { hideLineNumbers: true });
-                elm.style.setProperty('font-family', "'Fira Code', 'Fira Mono', monospace", 'important');
+                // elm.style.setProperty('font-family', "'Fira Code', 'Fira Mono', monospace", 'important');
+                elm.style.setProperty('font-family', "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, Liberation Mono, monospace");
             }
         });
     }
@@ -160,10 +149,21 @@ function injectStyle(cssText: string, id: string): HTMLStyleElement | undefined 
     return style;
 }
 
+async function loadGfmTable() {
+    if (gfmTableCache) return gfmTableCache;
+
+    const mod = await import('micromark-extension-gfm-table');
+    gfmTableCache = {
+        ext: mod.gfmTable(),
+        html: mod.gfmTableHtml()
+    };
+    return gfmTableCache;
+}
+
 function switchInlineTheme(id: 'theme-light' | 'theme-dark') {
     document.querySelectorAll<HTMLStyleElement>('style[data-dynamic]').forEach((style) => {
         style.disabled = style.id !== id;
     });
 }
 
-export { MicromarkTool };
+export { MicromarkTool, type RenderOptions };

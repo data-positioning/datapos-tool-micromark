@@ -16,4 +16,4 @@ declare class MicromarkTool {
     private injectThemes;
     private createPresenterCodeBlockHtmlExtension;
 }
-export { MicromarkTool };
+export { MicromarkTool, type RenderOptions };

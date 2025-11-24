@@ -2844,16 +2844,8 @@ async function iu(n, t = n.className.match(/shj-lang-([\w-]+)/)?.[1], e, r) {
   n.dataset.lang = t, n.className = `${[...n.classList].filter((i) => !i.startsWith("shj-")).join(" ")} shj-lang-${t} shj-${e}`, n.innerHTML = await ru(a, t, e == "multiline", r);
 }
 const au = "[class*=shj-lang-]{white-space:pre;color:#112;text-shadow:none;box-sizing:border-box;background:#fff;border-radius:10px;max-width:min(100%,100vw);margin:10px 0;padding:30px 20px;font:18px/24px Consolas,Courier New,Monaco,Andale Mono,Ubuntu Mono,monospace;box-shadow:0 0 5px #0001}.shj-inline{border-radius:5px;margin:0;padding:2px 5px;display:inline-block}[class*=shj-lang-]::selection{background:#bdf5}[class*=shj-lang-] ::selection{background:#bdf5}[class*=shj-lang-]>div{display:flex;overflow:auto}[class*=shj-lang-]>div :last-child{outline:none;flex:1}.shj-numbers{counter-reset:line;padding-left:5px}.shj-numbers div{padding-right:5px}.shj-numbers div:before{color:#999;content:counter(line);opacity:.5;text-align:right;counter-increment:line;margin-right:5px;display:block}.shj-syn-cmnt{font-style:italic}.shj-syn-err,.shj-syn-kwd{color:#e16}.shj-syn-num,.shj-syn-class{color:#f60}.shj-syn-insert,.shj-syn-str{color:#7d8}.shj-syn-bool{color:#3bf}.shj-syn-type,.shj-syn-oper{color:#5af}.shj-syn-section,.shj-syn-func{color:#84f}.shj-syn-deleted,.shj-syn-var{color:#f44}.shj-oneline{padding:12px 10px}.shj-lang-http.shj-oneline .shj-syn-kwd{color:#fff;background:#25f;border-radius:5px;padding:5px 7px}[class*=shj-lang-]{color:#24292f;background:#fff}.shj-syn-deleted,.shj-syn-err,.shj-syn-kwd{color:#cf222e}.shj-syn-class{color:#953800}.shj-numbers,.shj-syn-cmnt{color:#6e7781}.shj-syn-type,.shj-syn-oper,.shj-syn-num,.shj-syn-section,.shj-syn-var,.shj-syn-bool{color:#0550ae}.shj-syn-str{color:#0a3069}.shj-syn-func{color:#8250df}";
-let In = null;
-async function uu() {
-  if (In) return In;
-  const n = await import("./index-DQN_s5p-.js");
-  return In = {
-    ext: n.gfmTable(),
-    html: n.gfmTableHtml()
-  }, In;
-}
-const lu = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" };
+let In;
+const uu = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" };
 class cu {
   options;
   themeIds = { light: "theme-light", dark: "theme-dark" };
@@ -2864,7 +2856,7 @@ class cu {
       allowDangerousProtocol: !1,
       extensions: [],
       htmlExtensions: [this.createPresenterCodeBlockHtmlExtension()]
-    }, this.injectThemes(), this.injectCodeFont();
+    }, this.injectThemes();
   }
   injectCodeFont() {
     On("@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');", "code-font");
@@ -2873,7 +2865,7 @@ class cu {
   async render(t, e) {
     const r = [], a = [...this.options.htmlExtensions ?? []];
     if (e?.tables) {
-      const i = await uu();
+      const i = await su();
       r.push(i.ext), a.push(i.html);
     }
     return ya(t, {
@@ -2884,7 +2876,7 @@ class cu {
   }
   highlight() {
     document.querySelectorAll('div[class^="shj-lang-"]').forEach((t) => {
-      (/shj-lang-([^\s]+)/.exec(t.className) || [])[1] && (iu(t, "js", "multiline", { hideLineNumbers: !0 }), t.style.setProperty("font-family", "'Fira Code', 'Fira Mono', monospace", "important"));
+      (/shj-lang-([^\s]+)/.exec(t.className) || [])[1] && (iu(t, "js", "multiline", { hideLineNumbers: !0 }), t.style.setProperty("font-family", "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, Liberation Mono, monospace"));
     });
   }
   setColorMode(t) {
@@ -2933,19 +2925,27 @@ class cu {
           const r = e.codeContent.join(`
 `), a = e.lang || "plain", i = e.meta || "";
           let u = "";
-          a === "json" && i === "datapos-visual" ? u = `<div class="${i}" data-options="${encodeURIComponent(r)}"></div>` : a === "json" && i === "datapos-highcharts" ? u = `<div class="${i}" data-options="${encodeURIComponent(r)}"></div>` : u = `<div class="shj-lang-${a.replaceAll(/[^a-z0-9_-]/gi, "")}">${su(r)}</div>`, this.raw(u), t = void 0;
+          a === "json" && i === "datapos-visual" ? u = `<div class="${i}" data-options="${encodeURIComponent(r)}"></div>` : a === "json" && i === "datapos-highcharts" ? u = `<div class="${i}" data-options="${encodeURIComponent(r)}"></div>` : u = `<div class="shj-lang-${a.replaceAll(/[^a-z0-9_-]/gi, "")}">${lu(r)}</div>`, this.raw(u), t = void 0;
         }
       }
     };
   }
 }
-function su(n) {
-  return n.replaceAll(/[&<>"']/g, (t) => lu[t]);
+function lu(n) {
+  return n.replaceAll(/[&<>"']/g, (t) => uu[t]);
 }
 function On(n, t) {
   if (typeof document > "u") return;
   let e = document.getElementById(t);
   return e || (e = document.createElement("style"), e.id = t, e.dataset.dynamic = "true", document.head.appendChild(e)), e.innerHTML = n, e;
+}
+async function su() {
+  if (In) return In;
+  const n = await import("./index-BNyDjHwx.js");
+  return In = {
+    ext: n.gfmTable(),
+    html: n.gfmTableHtml()
+  }, In;
 }
 function ou(n) {
   document.querySelectorAll("style[data-dynamic]").forEach((t) => {
