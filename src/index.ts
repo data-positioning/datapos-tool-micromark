@@ -136,9 +136,9 @@ function injectStyle(cssText: string, id: string): void {
         style.id = id;
         style.dataset.dynamic = 'true';
         document.head.appendChild(style);
-        style.disabled = true;
     }
     style.innerHTML = cssText;
+    style.disabled = true;
 }
 
 // Helpers - Load GFM (GitHub Flavoured Markdown) table extension.
