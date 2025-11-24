@@ -149,23 +149,30 @@ function injectStyle(cssText: string, styleId: string): void {
         document.head.appendChild(style);
     }
     style.innerHTML = cssText;
-    style.disabled = true; // Need to set this after style is injected.
+    style.disabled = true; // This must be set after style is injected.
 }
 
 // Helpers - Load Speed Highlight and inject associated themes.
 async function loadSpeedHighlight(colorModeId: string): Promise<typeof SpeedHighlight> {
     if (speedHighlight) return speedHighlight;
 
-    const [module, darkThemeCss, lightThemeCss] = await Promise.all([
-        import('@speed-highlight/core'),
-        import('@speed-highlight/core/themes/github-dark.css?raw'),
-        import('@speed-highlight/core/themes/github-light.css?raw')
-    ]);
-    speedHighlight = module;
-    injectStyle(darkThemeCss.default, 'theme-dark');
-    injectStyle(lightThemeCss.default, 'theme-light');
-    applyColorMode(colorModeId);
-    return speedHighlight;
+    if (!speedHighlightPromise) {
+        speedHighlightPromise = (async (): Promise<typeof SpeedHighlight> => {
+            const [module, darkThemeCss, lightThemeCss] = await Promise.all([
+                import('@speed-highlight/core'),
+                import('@speed-highlight/core/themes/github-dark.css?raw'),
+                import('@speed-highlight/core/themes/github-light.css?raw')
+            ]);
+            speedHighlight = module;
+            injectStyle(darkThemeCss.default, 'theme-dark');
+            injectStyle(lightThemeCss.default, 'theme-light');
+            applyColorMode(colorModeId);
+            speedHighlightPromise = undefined;
+            return speedHighlight!;
+        })();
+    }
+
+    return speedHighlightPromise;
 }
 
 export { MicromarkTool, type RenderOptions };
