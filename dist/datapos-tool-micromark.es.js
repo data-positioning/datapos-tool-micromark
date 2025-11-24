@@ -3784,8 +3784,9 @@ class Su {
     });
   }
   setColorMode(e) {
+    console.log(7777, e);
     const n = e === "light" ? this.themeIds.light : this.themeIds.dark;
-    yu(n);
+    console.log(8888, n), yu(n);
   }
   injectThemes() {
     Mt(this.themeCss.light, this.themeIds.light), Mt(this.themeCss.dark, this.themeIds.dark);

@@ -1,4 +1,4 @@
-# Common git ignore configuration for published repositories.
+# Common git ignore configuration for published Data Positioning repositories.
 dist-scripts
 node_modules
 .env

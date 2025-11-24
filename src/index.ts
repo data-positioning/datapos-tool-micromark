@@ -54,8 +54,10 @@ class MicromarkTool {
         });
     }
 
-    setColorMode(mode: 'light' | 'dark') {
-        const id = (mode === 'light' ? this.themeIds.light : this.themeIds.dark) as 'theme-light' | 'theme-dark';
+    setColorMode(colorModeId: 'light' | 'dark') {
+        console.log(7777, colorModeId);
+        const id = (colorModeId === 'light' ? this.themeIds.light : this.themeIds.dark) as 'theme-light' | 'theme-dark';
+        console.log(8888, id);
         switchInlineTheme(id);
     }
 
