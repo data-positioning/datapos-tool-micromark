@@ -19,6 +19,7 @@ const ESCAPE_MAP: Record<'&' | '<' | '>' | '"' | "'", string> = { '&': '&amp;', 
 let tableExtensionIsLoaded: boolean = false;
 let tableExtensionPromise: Promise<void> | undefined = undefined;
 let speedHighlight: typeof SpeedHighlight | undefined = undefined;
+let speedHighlightPromise: Promise<typeof SpeedHighlight> | undefined = undefined;
 
 // Classes - Micromark tool.
 class MicromarkTool {

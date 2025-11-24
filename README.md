@@ -4,7 +4,7 @@
 [![npm version](https://img.shields.io/npm/v/@datapos/datapos-tool-micromark)](https://www.npmjs.com/package/@datapos/datapos-tool-micromark)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 
-A TypeScript wrapper for Micromark and Prism that implements the Data Positioning document-rendering interface. It improves browser memory efficiency by sharing a single Micromark/Prism instance across all informers and presenters and loading optional modules on demand.
+A library that provides a wrapper around the Micromark markdown parser and the Speed Highlight code highlighter. It improves browser memory efficiency by sharing single instances of these tools across all presenters and loading optional modules on demand.
 
 ## Installation
 

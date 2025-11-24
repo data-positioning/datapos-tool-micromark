@@ -1,7 +1,7 @@
 {
     "name": "@datapos/datapos-tool-micromark",
-    "version": "0.1.955",
-    "description": "A TypeScript library containing common declarations and utilities used across other Data Positioning repositories.",
+    "version": "0.1.956",
+    "description": "A library that provides a wrapper around the Micromark markdown parser and the Speed Highlight code highlighter.",
     "license": "MIT",
     "private": false,
     "type": "module",
