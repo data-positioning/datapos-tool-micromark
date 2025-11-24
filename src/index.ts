@@ -16,6 +16,12 @@ type RenderOptions = { tables?: boolean };
 const ESCAPE_MAP: Record<'&' | '<' | '>' | '"' | "'", string> = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
 
 // Module Variables
+const micromarkOptions: Options = {
+    allowDangerousHtml: false,
+    allowDangerousProtocol: false,
+    extensions: [],
+    htmlExtensions: [createPresenterCodeBlockHtmlExtension()]
+};
 let tableExtensionIsLoaded: boolean = false;
 let tableExtensionPromise: Promise<void> | undefined = undefined;
 let speedHighlight: typeof SpeedHighlight | undefined = undefined;
@@ -23,17 +29,6 @@ let speedHighlightPromise: Promise<typeof SpeedHighlight> | undefined = undefine
 
 // Classes - Micromark tool.
 class MicromarkTool {
-    private readonly options: Options;
-
-    constructor() {
-        this.options = {
-            allowDangerousHtml: false,
-            allowDangerousProtocol: false,
-            extensions: [],
-            htmlExtensions: [createPresenterCodeBlockHtmlExtension()]
-        };
-    }
-
     // Operations - Highligh previously rendered markdown.
     async highlight(renderTo: HTMLElement, colorModeId: string): Promise<void> {
         if (typeof document === 'undefined') return;
@@ -58,15 +53,15 @@ class MicromarkTool {
             if (!tableExtensionIsLoaded && !tableExtensionPromise) {
                 tableExtensionPromise = (async (): Promise<void> => {
                     const module = await import('micromark-extension-gfm-table');
-                    this.options.extensions?.push(module.gfmTable());
-                    this.options.htmlExtensions?.push(module.gfmTableHtml());
+                    micromarkOptions.extensions?.push(module.gfmTable());
+                    micromarkOptions.htmlExtensions?.push(module.gfmTableHtml());
                     tableExtensionIsLoaded = true;
                     tableExtensionPromise = undefined;
                 })();
             }
-            await tableExtensionPromise;
+            if (tableExtensionPromise) await tableExtensionPromise;
         }
-        return micromark(markdown, this.options);
+        return micromark(markdown, micromarkOptions);
     }
 
     // Operations - Set color mode.
