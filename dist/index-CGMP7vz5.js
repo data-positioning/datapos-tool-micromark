@@ -2667,14 +2667,14 @@ class Ur {
     r.querySelectorAll('div[class^="shj-lang-"]').forEach((u) => {
       (/shj-lang-([^\s]+)/.exec(u.className) || [])[1] === "javascript" && (e(u, "js", "multiline", { hideLineNumbers: !0 }), Object.assign(u.style, {
         fontFamily: "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, Liberation Mono, monospace",
-        fontSize: "16px"
+        fontSize: "14px"
       }));
     });
   }
   // Operations - Render markdown.
   async render(r, t) {
     return (t?.tables ?? !1) && (!Gn && !fn && (fn = (async () => {
-      const e = await import("./index-BVwWvf3_.js");
+      const e = await import("./index-C61WkH0w.js");
       yn.extensions?.push(e.gfmTable()), yn.htmlExtensions?.push(e.gfmTableHtml()), Gn = !0, fn = void 0;
     })()), fn && await fn), Hr(r, yn);
   }

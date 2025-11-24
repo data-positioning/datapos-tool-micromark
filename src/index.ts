@@ -41,7 +41,7 @@ class MicromarkTool {
                 highlightElement(element, 'js', 'multiline', { hideLineNumbers: true });
                 Object.assign(element.style, {
                     fontFamily: "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, Liberation Mono, monospace",
-                    fontSize: '16px'
+                    fontSize: '14px'
                 });
             }
         });
