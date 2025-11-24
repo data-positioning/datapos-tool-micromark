@@ -4,7 +4,7 @@
 
 // Dependencies - Micromark.
 import { micromark } from 'micromark';
-import type { CompileContext, HtmlExtension, Options, Token } from 'micromark-util-types';
+import type { CompileContext, Handle, HtmlExtension, Options, Token } from 'micromark-util-types';
 
 // Dependencies - Speed Highlight.
 import darkThemeCss from '@speed-highlight/core/themes/github-dark.css?raw';
@@ -13,10 +13,11 @@ import lightThemeCss from '@speed-highlight/core/themes/github-light.css?raw';
 
 // Types/Interfaces
 type RenderOptions = { tables?: boolean };
-let gfmTableCache: { ext: ReturnType<any>; html: ReturnType<any> } | undefined = undefined;
+type Xxxx = { ext: ReturnType<any>; html: ReturnType<any> };
+let gfmTableCache: Xxxx | undefined = undefined;
 
 // Constants
-const ESCAPE_MAP: Record<string, string> = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
+const ESCAPE_MAP: Record<'&' | '<' | '>' | '"' | "'", string> = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
 
 // Classes - Micromark tool.
 class MicromarkTool {
@@ -34,11 +35,6 @@ class MicromarkTool {
 
         // Inject inline styles
         this.injectThemes();
-        this.injectCodeFont();
-    }
-
-    private injectCodeFont() {
-        injectStyle("@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');", 'code-font');
     }
 
     // Operations - Render.
@@ -53,11 +49,7 @@ class MicromarkTool {
             htmlExtensions.push(table.html);
         }
 
-        return micromark(markdown, {
-            ...this.options,
-            extensions,
-            htmlExtensions
-        });
+        return micromark(markdown, { ...this.options, extensions, htmlExtensions });
     }
 
     highlight(): void {
@@ -65,11 +57,8 @@ class MicromarkTool {
             const lang = (/shj-lang-([^\s]+)/.exec(element.className) || [])[1];
             if (lang) {
                 highlightElement(element, 'js', 'multiline', { hideLineNumbers: true });
-                // elm.style.setProperty('font-family', "'Fira Code', 'Fira Mono', monospace", 'important');
-                // elm.style.setProperty('font-family', "'Fira Code', 'Fira Mono', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, Liberation Mono, monospace");
-                // elm.style.setProperty('font-size', '16px');
                 Object.assign(element.style, {
-                    fontFamily: "'Fira Code', 'Fira Mono', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, Liberation Mono, monospace",
+                    fontFamily: "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, Liberation Mono, monospace",
                     fontSize: '16px'
                 });
             }
@@ -81,7 +70,7 @@ class MicromarkTool {
         switchInlineTheme(id);
     }
 
-    private injectThemes() {
+    private injectThemes(): void {
         // Inject both themes as <style>, but one disabled
         injectStyle(this.themeCss.light, this.themeIds.light);
         injectStyle(this.themeCss.dark, this.themeIds.dark);
@@ -92,30 +81,30 @@ class MicromarkTool {
         let currentBlockData: { codeContent: string[]; lang: string; meta: string } | undefined = undefined;
         return {
             enter: {
-                codeFenced(this: CompileContext) /* The entire fenced code block starts. */ {
+                codeFenced(this: CompileContext): undefined /* The entire fenced code block starts. */ {
                     this.buffer();
                     currentBlockData = { codeContent: [], lang: '', meta: '' };
                 },
-                codeFencedFence() /* The opening fence line. */ {},
-                codeFencedFenceSequence() /* The opening fence characters (```). */ {},
-                codeFencedFenceInfo(this: CompileContext, token: Token) /* The language identifier (json, javascript...). */ {
-                    if (currentBlockData) currentBlockData.lang = this.sliceSerialize(token);
+                codeFencedFence(): undefined /* The opening fence line. */ {},
+                codeFencedFenceSequence(): undefined /* The opening fence characters (```). */ {},
+                codeFencedFenceInfo(this: CompileContext, token: Token): undefined /* The language identifier (json, javascript...). */ {
+                    if (currentBlockData !== undefined) currentBlockData.lang = this.sliceSerialize(token);
                 },
-                codeFencedFenceMeta(this: CompileContext, token: Token) /* The metadata after the language identifier (datapos-visual). */ {
-                    if (currentBlockData) currentBlockData.meta = this.sliceSerialize(token);
+                codeFencedFenceMeta(this: CompileContext, token: Token): undefined /* The metadata after the language identifier (datapos-visual). */ {
+                    if (currentBlockData !== undefined) currentBlockData.meta = this.sliceSerialize(token);
                 },
-                codeFlowValue(this: CompileContext, token: Token) /* Each line/chunk of actual code content. */ {
-                    if (currentBlockData) currentBlockData.codeContent.push(this.sliceSerialize(token));
+                codeFlowValue(this: CompileContext, token: Token): undefined /* Each line/chunk of actual code content. */ {
+                    if (currentBlockData !== undefined) currentBlockData.codeContent.push(this.sliceSerialize(token));
                 }
             },
             exit: {
-                codeFlowValue() /*  Done capturing the code. */ {},
-                codeFencedFenceMeta() /* Done processing the metadata. */ {},
-                codeFencedFenceInfo() /* Done processing the language identifier. */ {},
-                codeFencedFenceSequence() /* The closing fence characters (```). */ {},
-                codeFencedFence() /* The closing fence line. */ {},
-                codeFenced(this: CompileContext) /* The entire code block is complete, replacement can happen now. */ {
-                    const blockData = currentBlockData || { codeContent: [], lang: '', meta: '' };
+                codeFlowValue(): undefined /*  Done capturing the code. */ {},
+                codeFencedFenceMeta(): undefined /* Done processing the metadata. */ {},
+                codeFencedFenceInfo(): undefined /* Done processing the language identifier. */ {},
+                codeFencedFenceSequence(): undefined /* The closing fence characters (```). */ {},
+                codeFencedFence(): undefined /* The closing fence line. */ {},
+                codeFenced(this: CompileContext): undefined /* The entire code block is complete, replacement can happen now. */ {
+                    const blockData = currentBlockData == undefined ? { codeContent: [], lang: '', meta: '' } : currentBlockData;
                     this.resume(); // Discard the captured code text.
                     const rawContent = blockData.codeContent.join('\n');
                     const language = blockData.lang || 'plain';
@@ -138,13 +127,13 @@ class MicromarkTool {
 }
 
 function escapeHtml(str: string): string {
-    return str.replaceAll(/[&<>"']/g, (char) => ESCAPE_MAP[char]);
+    return str.replaceAll(/[&<>"']/g, (char) => ESCAPE_MAP[char as '&' | '<' | '>' | '"' | "'"]);
 }
 
 function injectStyle(cssText: string, id: string): HTMLStyleElement | undefined {
     if (typeof document === 'undefined') return;
     let style = document.getElementById(id) as HTMLStyleElement | null;
-    if (!style) {
+    if (style == null) {
         style = document.createElement('style');
         style.id = id;
         style.dataset.dynamic = 'true';
@@ -154,8 +143,8 @@ function injectStyle(cssText: string, id: string): HTMLStyleElement | undefined 
     return style;
 }
 
-async function loadGfmTable() {
-    if (gfmTableCache) return gfmTableCache;
+async function loadGfmTable(): Promise<Xxxx> {
+    if (gfmTableCache !== undefined) return gfmTableCache;
 
     const mod = await import('micromark-extension-gfm-table');
     gfmTableCache = {
@@ -165,7 +154,7 @@ async function loadGfmTable() {
     return gfmTableCache;
 }
 
-function switchInlineTheme(id: 'theme-light' | 'theme-dark') {
+function switchInlineTheme(id: 'theme-light' | 'theme-dark'): void {
     document.querySelectorAll<HTMLStyleElement>('style[data-dynamic]').forEach((style) => {
         style.disabled = style.id !== id;
     });

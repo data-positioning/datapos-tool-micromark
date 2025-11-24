@@ -5,6 +5,7 @@
         "declaration": true,
         "module": "ESNext",
         "moduleResolution": "Node",
+        "noUncheckedIndexedAccess": true,
         "noImplicitAny": true,
         "outDir": "./dist",
         "paths": {
@@ -12,7 +13,8 @@
             "@/*": ["src/*"]
         },
         "resolveJsonModule": true,
-        "target": "ESNext"
+        "target": "ESNext",
+        "strict": true
     },
     "include": ["vite.config.ts", "src/**/*.ts"]
 }
