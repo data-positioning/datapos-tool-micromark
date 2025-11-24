@@ -35,7 +35,7 @@ class MicromarkTool {
 
     // Operations - Highligh previously rendered markdown.
     async highlight(colorModeId: string): Promise<void> {
-        const { highlightElement } = await loadHighlighter(colorModeId);
+        const { highlightElement } = await ensureHighlighterReady(colorModeId);
 
         document.querySelectorAll<HTMLDivElement>('div[class^="shj-lang-"]').forEach((element) => {
             const lang = (/shj-lang-([^\s]+)/.exec(element.className) || [])[1];
@@ -68,7 +68,8 @@ class MicromarkTool {
     setColorMode(colorModeId: string): void {
         const styleId = colorModeId === 'dark' ? 'theme-dark' : 'theme-light';
         console.log('tool-micromark.setColorMode', colorModeId, styleId);
-        document.querySelectorAll<HTMLStyleElement>('style[data-dynamic]').forEach((style) => (style.disabled = style.id !== styleId));
+        // document.querySelectorAll<HTMLStyleElement>('style[data-dynamic]').forEach((style) => (style.disabled = style.id !== styleId));
+        applyColorMode(colorModeId);
     }
 }
 
@@ -121,6 +122,12 @@ function createPresenterCodeBlockHtmlExtension(): HtmlExtension {
     };
 }
 
+// Helper - Apply color mode.
+function applyColorMode(colorModeId: string): void {
+    const styleId = colorModeId === 'dark' ? 'theme-dark' : 'theme-light';
+    document.querySelectorAll<HTMLStyleElement>('style[data-dynamic]').forEach((style) => (style.disabled = style.id !== styleId));
+}
+
 // Helpers - Escape HTML.
 function escapeHTML(str: string): string {
     return str.replaceAll(/[&<>"']/g, (char) => ESCAPE_MAP[char as '&' | '<' | '>' | '"' | "'"]);
@@ -149,10 +156,14 @@ async function loadGFMTableExtension(): Promise<GFMTableExtensions> {
     gfmTableExtensions = { parseExtension: module.gfmTable(), htmlExtension: module.gfmTableHtml() };
     return gfmTableExtensions;
 }
+async function ensureHighlighterReady(colorModeId: string): Promise<typeof SpeedHighlight> {
+    const module = await loadHighlighterCore();
+    applyColorMode(colorModeId);
+    return module;
+}
 
-// Helpers - Load Speed Highlighter and inject associated themes.
-async function loadHighlighter(colorModeId: string): Promise<typeof SpeedHighlight> {
-    console.log('Need to set color mode to', colorModeId);
+// Helpers - Load Speed Highlighter core and inject associated themes.
+async function loadHighlighterCore(): Promise<typeof SpeedHighlight> {
     if (speedHighlight) return speedHighlight;
 
     const [module, darkThemeCss, lightThemeCss] = await Promise.all([
