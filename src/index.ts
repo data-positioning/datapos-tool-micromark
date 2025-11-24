@@ -5,12 +5,27 @@
 // Dependencies - Micromark.
 import { micromark } from 'micromark';
 import type { CompileContext, HtmlExtension, Options, Token } from 'micromark-util-types';
-import { gfmTable, gfmTableHtml } from 'micromark-extension-gfm-table'; // Adds 21.2KB when gzipped. Base 79.16KB.
+import { gfmTable, gfmTableHtml } from 'micromark-extension-gfm-table';
 
 // Dependencies - Speed Highlight.
 import darkThemeCss from '@speed-highlight/core/themes/github-dark.css?raw';
 import { highlightElement } from '@speed-highlight/core';
 import lightThemeCss from '@speed-highlight/core/themes/github-light.css?raw';
+
+// Types/Interfaces
+type RenderOptions = { tables?: boolean };
+let gfmTableCache: { ext: ReturnType<any>; html: ReturnType<any> } | null = null;
+
+async function loadGfmTable() {
+    if (gfmTableCache) return gfmTableCache;
+
+    const mod = await import('micromark-extension-gfm-table');
+    gfmTableCache = {
+        ext: mod.gfmTable(),
+        html: mod.gfmTableHtml()
+    };
+    return gfmTableCache;
+}
 
 // Constants
 const ESCAPE_MAP: Record<string, string> = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
@@ -24,15 +39,14 @@ class MicromarkTool {
     constructor() {
         this.options = {
             allowDangerousHtml: false,
-            extensions: [gfmTable()],
-            htmlExtensions: [gfmTableHtml(), this.createPresenterCodeBlockHtmlExtension()]
+            allowDangerousProtocol: false,
+            extensions: [],
+            htmlExtensions: [this.createPresenterCodeBlockHtmlExtension()]
         };
+
         // Inject inline styles
         this.injectThemes();
         this.injectCodeFont();
-
-        // Apply preferred theme immediately to prevent flicker
-        // this.setColorMode(getPreferredTheme());
     }
 
     private injectCodeFont() {
@@ -40,8 +54,22 @@ class MicromarkTool {
     }
 
     // Operations - Render.
-    render(markdown: string): string {
-        return micromark(markdown, this.options);
+    async render(markdown: string, options: RenderOptions): Promise<string> {
+        const extensions = [];
+        const htmlExtensions = [...(this.options.htmlExtensions ?? [])];
+
+        // Lazy load tables if requested
+        if (options.tables) {
+            const table = await loadGfmTable();
+            extensions.push(table.ext);
+            htmlExtensions.push(table.html);
+        }
+
+        return micromark(markdown, {
+            ...this.options,
+            extensions,
+            htmlExtensions
+        });
     }
 
     highlight(): void {
@@ -137,10 +165,5 @@ function switchInlineTheme(id: 'theme-light' | 'theme-dark') {
         style.disabled = style.id !== id;
     });
 }
-
-// function getPreferredTheme(): 'light' | 'dark' {
-//     if (globalThis.window === undefined) return 'light';
-//     return globalThis.window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-// }
 
 export { MicromarkTool };
