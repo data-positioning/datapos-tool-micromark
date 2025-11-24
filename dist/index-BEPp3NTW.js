@@ -1,4 +1,4 @@
-import { m as E, a as y, f as R, b as M } from "./index-kUrZNZOp.js";
+import { m as E, a as y, f as R, b as M } from "./index-C7tYjWYp.js";
 const I = {
   none: "",
   left: ' align="left"',

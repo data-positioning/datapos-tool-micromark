@@ -159,21 +159,19 @@ function injectStyle(cssText: string, styleId: string): void {
 async function loadSpeedHighlight(colorModeId: string): Promise<typeof SpeedHighlight> {
     if (speedHighlight) return speedHighlight;
 
-    if (!speedHighlightPromise) {
-        speedHighlightPromise = (async (): Promise<typeof SpeedHighlight> => {
-            const [module, darkThemeCss, lightThemeCss] = await Promise.all([
-                import('@speed-highlight/core'),
-                import('@speed-highlight/core/themes/github-dark.css?raw'),
-                import('@speed-highlight/core/themes/github-light.css?raw')
-            ]);
-            speedHighlight = module;
-            injectStyle(darkThemeCss.default, 'theme-dark');
-            injectStyle(lightThemeCss.default, 'theme-light');
-            applyColorMode(colorModeId);
-            speedHighlightPromise = undefined;
-            return speedHighlight!;
-        })();
-    }
+    speedHighlightPromise ??= (async (): Promise<typeof SpeedHighlight> => {
+        const [module, darkThemeCss, lightThemeCss] = await Promise.all([
+            import('@speed-highlight/core'),
+            import('@speed-highlight/core/themes/github-dark.css?raw'),
+            import('@speed-highlight/core/themes/github-light.css?raw')
+        ]);
+        speedHighlight = module;
+        injectStyle(darkThemeCss.default, 'theme-dark');
+        injectStyle(lightThemeCss.default, 'theme-light');
+        applyColorMode(colorModeId);
+        speedHighlightPromise = undefined;
+        return speedHighlight!;
+    })();
 
     return speedHighlightPromise;
 }

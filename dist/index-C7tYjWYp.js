@@ -230,7 +230,7 @@ function Kt(n) {
         reference: L,
         referenceString: un,
         resource: L,
-        resourceDestinationString: wn,
+        resourceDestinationString: yn,
         resourceTitleString: ht,
         setextHeading: Ct,
         setextHeadingLineSequence: It,
@@ -406,7 +406,7 @@ function Kt(n) {
   function cn() {
     T(), b("ignoreEncode", !0);
   }
-  function wn() {
+  function yn() {
     i[i.length - 1].destination = d(), b("ignoreEncode");
   }
   function ht() {
@@ -828,7 +828,7 @@ function ae(n, e, t) {
     return t(c);
   }
 }
-const yn = {
+const Sn = {
   partial: !0,
   tokenize: oe
 };
@@ -1005,7 +1005,7 @@ function ge(n, e, t) {
     return r.parser.lazy[r.now().line] ? t(u) : e(u);
   }
 }
-const In = {
+const wn = {
   name: "codeIndented",
   tokenize: ke
 }, xe = {
@@ -1749,7 +1749,7 @@ function Ue(n, e, t) {
 function We(n, e, t) {
   return r;
   function r(l) {
-    return n.enter("lineEnding"), n.consume(l), n.exit("lineEnding"), n.attempt(yn, e, t);
+    return n.enter("lineEnding"), n.consume(l), n.exit("lineEnding"), n.attempt(Sn, e, t);
   }
 }
 const Ye = {
@@ -2023,7 +2023,7 @@ function ar(n, e, t) {
     return u === 94 && "_hiddenFootnoteSupport" in r.parser.constructs ? t(u) : e(u);
   }
 }
-const Cn = {
+const In = {
   name: "lineEnding",
   tokenize: or
 };
@@ -2033,7 +2033,7 @@ function or(n, e) {
     return n.enter("lineEnding"), n.consume(r), n.exit("lineEnding"), B(n, e, "linePrefix");
   }
 }
-const Sn = {
+const bn = {
   name: "thematicBreak",
   tokenize: sr
 };
@@ -2077,7 +2077,7 @@ function fr(n, e, t) {
       if (r.containerState.type || (r.containerState.type = b, n.enter(b, {
         _container: !0
       })), b === "listUnordered")
-        return n.enter("listItemPrefix"), c === 42 || c === 45 ? n.check(Sn, t, h)(c) : h(c);
+        return n.enter("listItemPrefix"), c === 42 || c === 45 ? n.check(bn, t, h)(c) : h(c);
       if (!r.interrupt || c === 49)
         return n.enter("listItemPrefix"), n.enter("listItemValue"), m(c);
     }
@@ -2088,7 +2088,7 @@ function fr(n, e, t) {
   }
   function h(c) {
     return n.enter("listItemMarker"), n.consume(c), n.exit("listItemMarker"), r.containerState.marker = r.containerState.marker || c, n.check(
-      yn,
+      Sn,
       // Can’t be empty when interrupting.
       r.interrupt ? t : p,
       n.attempt(cr, g, f)
@@ -2106,7 +2106,7 @@ function fr(n, e, t) {
 }
 function pr(n, e, t) {
   const r = this;
-  return r.containerState._closeFlow = void 0, n.check(yn, l, i);
+  return r.containerState._closeFlow = void 0, n.check(Sn, l, i);
   function l(a) {
     return r.containerState.furtherBlankLines = r.containerState.furtherBlankLines || r.containerState.initialBlankLine, B(n, e, "listItemIndent", r.containerState.size + 1)(a);
   }
@@ -2194,7 +2194,7 @@ const br = {
 function Sr(n) {
   const e = this, t = n.attempt(
     // Try to parse a blank line.
-    yn,
+    Sn,
     r,
     // Try to parse initial flow (essentially, only code).
     n.attempt(this.parser.constructs.flowInitial, l, B(n, n.attempt(this.parser.constructs.flow, l, n.attempt(ze, l)), "linePrefix"))
@@ -2323,25 +2323,25 @@ const zr = {
 }, Er = {
   91: _e
 }, Fr = {
-  [-2]: In,
-  [-1]: In,
-  32: In
+  [-2]: wn,
+  [-1]: wn,
+  32: wn
 }, Tr = {
   35: De,
-  42: Sn,
-  45: [Zn, Sn],
+  42: bn,
+  45: [Zn, bn],
   60: He,
   61: Zn,
-  95: Sn,
+  95: bn,
   96: Yn,
   126: Yn
 }, Ar = {
   38: rt,
   92: et
 }, _r = {
-  [-5]: Cn,
-  [-4]: Cn,
-  [-3]: Cn,
+  [-5]: In,
+  [-4]: In,
+  [-3]: In,
   33: ir,
   38: rt,
   42: An,
@@ -2481,13 +2481,13 @@ function Or(n, e, t) {
       function v(H) {
         return hn;
         function hn(un) {
-          const sn = un !== null && H[un], cn = un !== null && H.null, wn = [
+          const sn = un !== null && H[un], cn = un !== null && H.null, yn = [
             // To do: add more extension tests.
             /* c8 ignore next 2 */
             ...Array.isArray(sn) ? sn : sn ? [sn] : [],
             ...Array.isArray(cn) ? cn : cn ? [cn] : []
           ];
-          return en(wn)(un);
+          return en(yn)(un);
         }
       }
       function en(H) {
@@ -2721,13 +2721,13 @@ function ln(n) {
       }
   }
 }
-const Ur = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" }, zn = {
+const Ur = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" }, Cn = {
   allowDangerousHtml: !1,
   allowDangerousProtocol: !1,
   extensions: [],
   htmlExtensions: [Wr()]
 };
-let Gn = !1, mn, dn, bn;
+let Gn = !1, mn, dn, zn;
 class Zr {
   // Operations - Highligh previously rendered markdown.
   async highlight(e, t) {
@@ -2743,9 +2743,9 @@ class Zr {
   // Operations - Render markdown.
   async render(e, t) {
     return (t?.tables ?? !1) && (!Gn && !mn && (mn = (async () => {
-      const r = await import("./index-BWwnyobY.js");
-      zn.extensions?.push(r.gfmTable()), zn.htmlExtensions?.push(r.gfmTableHtml()), Gn = !0, mn = void 0;
-    })()), mn && await mn), Vr(e, zn);
+      const r = await import("./index-BEPp3NTW.js");
+      Cn.extensions?.push(r.gfmTable()), Cn.htmlExtensions?.push(r.gfmTableHtml()), Gn = !0, mn = void 0;
+    })()), mn && await mn), Vr(e, Cn);
   }
   // Operations - Set color mode.
   setColorMode(e) {
@@ -2818,14 +2818,14 @@ function Kn(n, e) {
   t == null && (t = document.createElement("style"), t.id = e, t.dataset.dynamic = "true", document.head.appendChild(t)), t.innerHTML = n, t.disabled = !0;
 }
 async function vr(n) {
-  return dn || (bn || (bn = (async () => {
+  return dn || (zn ??= (async () => {
     const [e, t, r] = await Promise.all([
       import("./index-BgHmvLYe.js"),
       import("./github-dark-O5tSO1Qn.js"),
       import("./github-light-MQ8W3G6n.js")
     ]);
-    return dn = e, Kn(t.default, "theme-dark"), Kn(r.default, "theme-light"), ct(n), bn = void 0, dn;
-  })()), bn);
+    return dn = e, Kn(t.default, "theme-dark"), Kn(r.default, "theme-light"), ct(n), zn = void 0, dn;
+  })(), zn);
 }
 export {
   Zr as M,
