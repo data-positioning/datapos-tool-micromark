@@ -14,7 +14,8 @@
         },
         "resolveJsonModule": true,
         "target": "ESNext",
-        "strict": true
+        "strict": true,
+        "strictNullChecks": true
     },
     "include": ["vite.config.ts", "src/**/*.ts"]
 }
