@@ -17,6 +17,7 @@ const ESCAPE_MAP: Record<'&' | '<' | '>' | '"' | "'", string> = { '&': '&amp;', 
 
 // Module Variables
 let tableExtensionIsLoaded: boolean = false;
+let tableExtensionPromise: Promise<void> | undefined = undefined;
 let speedHighlight: typeof SpeedHighlight | undefined = undefined;
 
 // Classes - Micromark tool.
@@ -52,14 +53,33 @@ class MicromarkTool {
 
     // Operations - Render markdown.
     async render(markdown: string, options?: RenderOptions): Promise<string> {
-        if (options?.tables ?? false) await loadGFMTableExtension(this.options);
+        if (options?.tables ?? false) {
+            if (!tableExtensionIsLoaded && !tableExtensionPromise) {
+                tableExtensionPromise = (async (): Promise<void> => {
+                    const module = await import('micromark-extension-gfm-table');
+                    this.options.extensions?.push(module.gfmTable());
+                    this.options.htmlExtensions?.push(module.gfmTableHtml());
+                    tableExtensionIsLoaded = true;
+                    tableExtensionPromise = undefined;
+                })();
+            }
+            await tableExtensionPromise;
+        }
         return micromark(markdown, this.options);
     }
 
     // Operations - Set color mode.
     setColorMode(colorModeId: string): void {
-        setColorMode(colorModeId);
+        applyColorMode(colorModeId);
     }
+}
+
+// Helper - Apply color mode.
+function applyColorMode(colorModeId: string): void {
+    if (typeof document === 'undefined') return;
+
+    const styleId = colorModeId === 'dark' ? 'theme-dark' : 'theme-light';
+    document.querySelectorAll<HTMLStyleElement>('style[data-dynamic]').forEach((style) => (style.disabled = style.id !== styleId));
 }
 
 // Helpers - Create presenter code block.
@@ -131,16 +151,6 @@ function injectStyle(cssText: string, styleId: string): void {
     style.disabled = true; // Need to set this after style is injected.
 }
 
-// Helpers - Load GFM (GitHub Flavoured Markdown) table extension.
-async function loadGFMTableExtension(options: Options): Promise<void> {
-    if (tableExtensionIsLoaded) return;
-
-    const module = await import('micromark-extension-gfm-table');
-    options.extensions?.push(module.gfmTable());
-    options.htmlExtensions?.push(module.gfmTableHtml());
-    tableExtensionIsLoaded = true;
-}
-
 // Helpers - Load Speed Highlight and inject associated themes.
 async function loadSpeedHighlight(colorModeId: string): Promise<typeof SpeedHighlight> {
     if (speedHighlight) return speedHighlight;
@@ -153,16 +163,8 @@ async function loadSpeedHighlight(colorModeId: string): Promise<typeof SpeedHigh
     speedHighlight = module;
     injectStyle(darkThemeCss.default, 'theme-dark');
     injectStyle(lightThemeCss.default, 'theme-light');
-    setColorMode(colorModeId);
+    applyColorMode(colorModeId);
     return speedHighlight;
-}
-
-// Helper - Set color mode.
-function setColorMode(colorModeId: string): void {
-    if (typeof document === 'undefined') return;
-
-    const styleId = colorModeId === 'dark' ? 'theme-dark' : 'theme-light';
-    document.querySelectorAll<HTMLStyleElement>('style[data-dynamic]').forEach((style) => (style.disabled = style.id !== styleId));
 }
 
 export { MicromarkTool, type RenderOptions };
