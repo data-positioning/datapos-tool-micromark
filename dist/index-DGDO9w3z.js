@@ -2856,7 +2856,7 @@ class cu {
       allowDangerousProtocol: !1,
       extensions: [],
       htmlExtensions: [this.createPresenterCodeBlockHtmlExtension()]
-    }, this.injectThemes();
+    }, this.injectThemes(), this.injectCodeFont();
   }
   injectCodeFont() {
     On("@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');", "code-font");
@@ -2876,7 +2876,10 @@ class cu {
   }
   highlight() {
     document.querySelectorAll('div[class^="shj-lang-"]').forEach((t) => {
-      (/shj-lang-([^\s]+)/.exec(t.className) || [])[1] && (iu(t, "js", "multiline", { hideLineNumbers: !0 }), t.style.setProperty("font-family", "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, Liberation Mono, monospace"), t.style.setProperty("font-size", "16px"));
+      (/shj-lang-([^\s]+)/.exec(t.className) || [])[1] && (iu(t, "js", "multiline", { hideLineNumbers: !0 }), Object.assign(t.style, {
+        fontFamily: "'Fira Code', 'Fira Mono', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, Liberation Mono, monospace",
+        fontSize: "16px"
+      }));
     });
   }
   setColorMode(t) {
@@ -2941,7 +2944,7 @@ function On(n, t) {
 }
 async function su() {
   if (In) return In;
-  const n = await import("./index-Dr-CerIj.js");
+  const n = await import("./index-DVxB1dXl.js");
   return In = {
     ext: n.gfmTable(),
     html: n.gfmTableHtml()

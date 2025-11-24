@@ -34,7 +34,7 @@ class MicromarkTool {
 
         // Inject inline styles
         this.injectThemes();
-        // this.injectCodeFont();
+        this.injectCodeFont();
     }
 
     private injectCodeFont() {
@@ -61,13 +61,17 @@ class MicromarkTool {
     }
 
     highlight(): void {
-        document.querySelectorAll<HTMLDivElement>('div[class^="shj-lang-"]').forEach((elm) => {
-            const lang = (/shj-lang-([^\s]+)/.exec(elm.className) || [])[1];
+        document.querySelectorAll<HTMLDivElement>('div[class^="shj-lang-"]').forEach((element) => {
+            const lang = (/shj-lang-([^\s]+)/.exec(element.className) || [])[1];
             if (lang) {
-                highlightElement(elm, 'js', 'multiline', { hideLineNumbers: true });
+                highlightElement(element, 'js', 'multiline', { hideLineNumbers: true });
                 // elm.style.setProperty('font-family', "'Fira Code', 'Fira Mono', monospace", 'important');
-                elm.style.setProperty('font-family', "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, Liberation Mono, monospace");
-                elm.style.setProperty('font-size', '16px');
+                // elm.style.setProperty('font-family', "'Fira Code', 'Fira Mono', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, Liberation Mono, monospace");
+                // elm.style.setProperty('font-size', '16px');
+                Object.assign(element.style, {
+                    fontFamily: "'Fira Code', 'Fira Mono', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, Liberation Mono, monospace",
+                    fontSize: '16px'
+                });
             }
         });
     }
