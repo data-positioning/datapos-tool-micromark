@@ -2652,108 +2652,18 @@ function Hr() {
 function Vr(n, e, t) {
   return typeof e != "string" && (t = e, e = void 0), Kt(t)(Rr(qr(t).document().write(Hr()(n, e, !0))));
 }
-const $r = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" }, zn = {
-  allowDangerousHtml: !1,
-  allowDangerousProtocol: !1,
-  extensions: [],
-  htmlExtensions: [jr()]
-};
-let Gn = !1, mn, dn, bn;
-class Zr {
-  // Operations - Highligh previously rendered markdown.
-  async highlight(e, t) {
-    if (typeof document > "u") return;
-    const { highlightElement: r } = await vr(t);
-    e.querySelectorAll('div[class^="shj-lang-"]').forEach((l) => {
-      (/shj-lang-([^\s]+)/.exec(l.className) || [])[1] === "javascript" && (r(l, "js", "multiline", { hideLineNumbers: !0 }), Object.assign(l.style, {
-        fontFamily: "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, Liberation Mono, monospace",
-        fontSize: "14px"
-      }));
-    });
-  }
-  // Operations - Render markdown.
-  async render(e, t) {
-    return (t?.tables ?? !1) && (!Gn && !mn && (mn = (async () => {
-      const r = await import("./index-DBIN-NzK.js");
-      zn.extensions?.push(r.gfmTable()), zn.htmlExtensions?.push(r.gfmTableHtml()), Gn = !0, mn = void 0;
-    })()), mn && await mn), Vr(e, zn);
-  }
-  // Operations - Set color mode.
-  setColorMode(e) {
-    ct(e);
-  }
-}
-function ct(n) {
-  if (typeof document > "u") return;
-  const e = n === "dark" ? "theme-dark" : "theme-light";
-  document.querySelectorAll("style[data-dynamic]").forEach((t) => t.disabled = t.id !== e);
-}
-function jr() {
-  let n;
-  return {
-    enter: {
-      codeFenced() {
-        this.buffer(), n = { codeContent: [], lang: "", meta: "" };
-      },
-      codeFencedFence() {
-      },
-      codeFencedFenceSequence() {
-      },
-      codeFencedFenceInfo(e) {
-        n !== void 0 && (n.lang = this.sliceSerialize(e));
-      },
-      codeFencedFenceMeta(e) {
-        n !== void 0 && (n.meta = this.sliceSerialize(e));
-      },
-      codeFlowValue(e) {
-        n !== void 0 && n.codeContent.push(this.sliceSerialize(e));
-      }
-    },
-    exit: {
-      codeFlowValue() {
-      },
-      codeFencedFenceMeta() {
-      },
-      codeFencedFenceInfo() {
-      },
-      codeFencedFenceSequence() {
-      },
-      codeFencedFence() {
-      },
-      codeFenced() {
-        const e = n ?? { codeContent: [], lang: "", meta: "" };
-        this.resume();
-        const t = e.codeContent.join(`
-`), r = e.lang || "plain", l = e.meta || "";
-        let i = "";
-        if (r === "json")
-          if (l === "datapos-visual")
-            i = `<div class="${l}" data-options="${encodeURIComponent(t)}"></div>`;
-          else if (l === "datapos-formula") {
-            const u = JSON.parse(t);
-            i = Qr(u.expression);
-          } else l === "datapos-highcharts" && (i = `<div class="${l}" data-options="${encodeURIComponent(t)}"></div>`);
-        else
-          i = `<div class="shj-lang-${r.replaceAll(/[^a-z0-9_-]/gi, "")}">${Yr(t)}</div>`;
-        this.raw(i), n = void 0;
-      }
-    }
-  };
-}
-function Qr(n) {
-  const e = Ur(n);
-  if (!e) return "";
-  const t = Wr(e);
+function $r(n) {
+  const e = jr(n), t = Qr(e);
   return `<math display="block">${ln(t)}</math>`;
 }
-function Ur(n) {
-  return n.match(/[A-Za-z][A-Za-z ]*|\d+(?:\.\d+)?|[=()+\-*/]/g)?.map((e) => e.trim());
+function jr(n) {
+  return n.match(/[A-Za-z][A-Za-z ]*|\d+(?:\.\d+)?|[=()+\-*/]/g)?.map((e) => e.trim()) ?? [];
 }
-function Wr(n) {
+function Qr(n) {
   let e = 0;
   function t() {
     const u = n[e++];
-    if (!u) return null;
+    if (u === void 0) return null;
     if (/^\d/.test(u)) return { type: "number", value: u };
     if (/^[A-Za-z]/.test(u)) return { type: "identifier", value: u };
     if (u === "(") {
@@ -2811,8 +2721,96 @@ function ln(n) {
       }
   }
 }
+const Ur = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" }, zn = {
+  allowDangerousHtml: !1,
+  allowDangerousProtocol: !1,
+  extensions: [],
+  htmlExtensions: [Wr()]
+};
+let Gn = !1, mn, dn, bn;
+class Zr {
+  // Operations - Highligh previously rendered markdown.
+  async highlight(e, t) {
+    if (typeof document > "u") return;
+    const { highlightElement: r } = await vr(t);
+    e.querySelectorAll('div[class^="shj-lang-"]').forEach((l) => {
+      (/shj-lang-([^\s]+)/.exec(l.className) || [])[1] === "javascript" && (r(l, "js", "multiline", { hideLineNumbers: !0 }), Object.assign(l.style, {
+        fontFamily: "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, Liberation Mono, monospace",
+        fontSize: "14px"
+      }));
+    });
+  }
+  // Operations - Render markdown.
+  async render(e, t) {
+    return (t?.tables ?? !1) && (!Gn && !mn && (mn = (async () => {
+      const r = await import("./index-BWwnyobY.js");
+      zn.extensions?.push(r.gfmTable()), zn.htmlExtensions?.push(r.gfmTableHtml()), Gn = !0, mn = void 0;
+    })()), mn && await mn), Vr(e, zn);
+  }
+  // Operations - Set color mode.
+  setColorMode(e) {
+    ct(e);
+  }
+}
+function ct(n) {
+  if (typeof document > "u") return;
+  const e = n === "dark" ? "theme-dark" : "theme-light";
+  document.querySelectorAll("style[data-dynamic]").forEach((t) => t.disabled = t.id !== e);
+}
+function Wr() {
+  let n;
+  return {
+    enter: {
+      codeFenced() {
+        this.buffer(), n = { codeContent: [], lang: "", meta: "" };
+      },
+      codeFencedFence() {
+      },
+      codeFencedFenceSequence() {
+      },
+      codeFencedFenceInfo(e) {
+        n !== void 0 && (n.lang = this.sliceSerialize(e));
+      },
+      codeFencedFenceMeta(e) {
+        n !== void 0 && (n.meta = this.sliceSerialize(e));
+      },
+      codeFlowValue(e) {
+        n !== void 0 && n.codeContent.push(this.sliceSerialize(e));
+      }
+    },
+    exit: {
+      codeFlowValue() {
+      },
+      codeFencedFenceMeta() {
+      },
+      codeFencedFenceInfo() {
+      },
+      codeFencedFenceSequence() {
+      },
+      codeFencedFence() {
+      },
+      codeFenced() {
+        const e = n ?? { codeContent: [], lang: "", meta: "" };
+        this.resume();
+        const t = e.codeContent.join(`
+`), r = e.lang || "plain", l = e.meta || "";
+        let i = "";
+        if (r === "json")
+          if (l === "datapos-visual")
+            i = `<div class="${l}" data-options="${encodeURIComponent(t)}"></div>`;
+          else if (l === "datapos-formula") {
+            const u = JSON.parse(t);
+            i = $r(u.expression);
+          } else l === "datapos-highcharts" && (i = `<div class="${l}" data-options="${encodeURIComponent(t)}"></div>`);
+        else
+          i = `<div class="shj-lang-${r.replaceAll(/[^a-z0-9_-]/gi, "")}">${Yr(t)}</div>`;
+        this.raw(i), n = void 0;
+      }
+    }
+  };
+}
 function Yr(n) {
-  return n.replaceAll(/[&<>"']/g, (e) => $r[e]);
+  return n.replaceAll(/[&<>"']/g, (e) => Ur[e]);
 }
 function Kn(n, e) {
   if (typeof document > "u") return;
