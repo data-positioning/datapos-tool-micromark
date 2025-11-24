@@ -116,7 +116,7 @@ function createPresenterCodeBlockHtmlExtension(): HtmlExtension {
                     if (metaAttr === 'datapos-visual') {
                         html = `<div class="${metaAttr}" data-options="${encodeURIComponent(rawContent)}"></div>`;
                     } else if (metaAttr === 'datapos-formula') {
-                        html = `<div class="${metaAttr}">${rawContent}</div>`;
+                        html = `<div class="${metaAttr}"><math display="block"><mrow><mi>Termination Rate</mi><mo>=</mo><mrow><mfrac><mi>Average Headcount</mi><mi>Terminations</mi></mfrac><mo>×</mo><mn>100</mn></mrow></mrow></math></div>`;
                     } else if (metaAttr === 'datapos-highcharts') {
                         html = `<div class="${metaAttr}" data-options="${encodeURIComponent(rawContent)}"></div>`;
                     }
