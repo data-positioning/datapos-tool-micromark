@@ -29,12 +29,10 @@ class MicromarkTool {
         };
         // Inject inline styles
         this.injectThemes();
-        console.log(1111);
         this.injectCodeFont();
-        console.log(2222);
 
         // Apply preferred theme immediately to prevent flicker
-        this.switchTheme(getPreferredTheme());
+        this.setColorMode(getPreferredTheme());
     }
 
     private injectCodeFont() {
@@ -56,7 +54,7 @@ class MicromarkTool {
         });
     }
 
-    switchTheme(mode: 'light' | 'dark') {
+    setColorMode(mode: 'light' | 'dark') {
         const id = (mode === 'light' ? this.themeIds.light : this.themeIds.dark) as 'theme-light' | 'theme-dark';
         switchInlineTheme(id);
     }

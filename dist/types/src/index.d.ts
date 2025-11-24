@@ -9,7 +9,7 @@ declare class MicromarkTool {
     private injectCodeFont;
     render(markdown: string): string;
     highlight(): void;
-    switchTheme(mode: 'light' | 'dark'): void;
+    setColorMode(mode: 'light' | 'dark'): void;
     private injectThemes;
     private createPresenterCodeBlockHtmlExtension;
 }
