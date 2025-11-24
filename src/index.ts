@@ -32,7 +32,7 @@ class MicromarkTool {
         this.injectCodeFont();
 
         // Apply preferred theme immediately to prevent flicker
-        this.setColorMode(getPreferredTheme());
+        // this.setColorMode(getPreferredTheme());
     }
 
     private injectCodeFont() {
