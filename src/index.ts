@@ -18,7 +18,7 @@ const ESCAPE_MAP: Record<'&' | '<' | '>' | '"' | "'", string> = { '&': '&amp;', 
 
 // Module Variables
 let gfmTableExtensions: GFMTableExtensions | undefined = undefined;
-let highlightModule: typeof SpeedHighlight | undefined = undefined;
+let speedHighlight: typeof SpeedHighlight | undefined = undefined;
 
 // Classes - Micromark tool.
 class MicromarkTool {
@@ -31,7 +31,6 @@ class MicromarkTool {
             extensions: [],
             htmlExtensions: [createPresenterCodeBlockHtmlExtension()]
         };
-        // ensureThemesAreInjected();
     }
 
     // Operations - Highligh previously rendered markdown.
@@ -150,17 +149,17 @@ async function loadGFMTableExtension(): Promise<GFMTableExtensions> {
 
 // Helpers - Load Speen Highlighter and associated themes.
 async function loadHighlighter(): Promise<any> {
-    if (highlightModule) return highlightModule;
+    if (speedHighlight) return speedHighlight;
 
     const [module, darkThemeCss, lightThemeCss] = await Promise.all([
         import('@speed-highlight/core'),
         import('@speed-highlight/core/themes/github-dark.css?raw'),
         import('@speed-highlight/core/themes/github-light.css?raw')
     ]);
-    highlightModule = module;
-    injectStyle(lightThemeCss.default, 'theme-light');
+    speedHighlight = module;
     injectStyle(darkThemeCss.default, 'theme-dark');
-    return highlightModule;
+    injectStyle(lightThemeCss.default, 'theme-light');
+    return speedHighlight;
 }
 
 // Helpers - Switch inline theme.
