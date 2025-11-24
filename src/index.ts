@@ -12,8 +12,8 @@ import { highlightElement } from '@speed-highlight/core';
 import lightThemeCss from '@speed-highlight/core/themes/github-light.css?raw';
 
 // Types/Interfaces
-type RenderOptions = { tables?: boolean };
 type GFMTableExtensions = { parseExtension: Extension; htmlExtension: HtmlExtension };
+type RenderOptions = { tables?: boolean };
 
 // Constants
 const ESCAPE_MAP: Record<'&' | '<' | '>' | '"' | "'", string> = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
@@ -21,8 +21,7 @@ const ESCAPE_MAP: Record<'&' | '<' | '>' | '"' | "'", string> = { '&': '&amp;', 
 // Module Variables
 let gfmTableExtensions: GFMTableExtensions | undefined = undefined;
 const themeIds = { light: 'theme-light', dark: 'theme-dark' };
-// const themeCss = { light: lightThemeCss, dark: darkThemeCss };
-let themesInjected = false;
+let themesAreInjected = false;
 
 // Classes - Micromark tool.
 class MicromarkTool {
@@ -37,12 +36,26 @@ class MicromarkTool {
         };
 
         // Inject inline styles
-        ensureThemesInjected();
+        ensureThemesAreInjected();
     }
 
-    // Operations - Render.
+    // Operations - Highligh previously rendered markdown.
+    highlight(): void {
+        document.querySelectorAll<HTMLDivElement>('div[class^="shj-lang-"]').forEach((element) => {
+            const lang = (/shj-lang-([^\s]+)/.exec(element.className) || [])[1];
+            if (lang === 'javascript') {
+                highlightElement(element, 'js', 'multiline', { hideLineNumbers: true });
+                Object.assign(element.style, {
+                    fontFamily: "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, Liberation Mono, monospace",
+                    fontSize: '16px'
+                });
+            }
+        });
+    }
+
+    // Operations - Render markdown.
     async render(markdown: string, options?: RenderOptions): Promise<string> {
-        const extensions = [];
+        const extensions = [...(this.options.extensions ?? [])];
         const htmlExtensions = [...(this.options.htmlExtensions ?? [])];
 
         // Lazy load tables if requested
@@ -55,68 +68,14 @@ class MicromarkTool {
         return micromark(markdown, { ...this.options, extensions, htmlExtensions });
     }
 
-    highlight(): void {
-        document.querySelectorAll<HTMLDivElement>('div[class^="shj-lang-"]').forEach((element) => {
-            const lang = (/shj-lang-([^\s]+)/.exec(element.className) || [])[1];
-            if (lang != null) {
-                highlightElement(element, 'js', 'multiline', { hideLineNumbers: true });
-                Object.assign(element.style, {
-                    fontFamily: "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, Liberation Mono, monospace",
-                    fontSize: '16px'
-                });
-            }
-        });
-    }
-
+    // Operations - Set color mode.
     setColorMode(colorModeId: 'light' | 'dark'): void {
         const id = (colorModeId === 'light' ? themeIds.light : themeIds.dark) as 'theme-light' | 'theme-dark';
         switchInlineTheme(id);
     }
 }
 
-function escapeHtml(str: string): string {
-    return str.replaceAll(/[&<>"']/g, (char) => ESCAPE_MAP[char as '&' | '<' | '>' | '"' | "'"]);
-}
-
-// function injectThemes(): void {
-//     // Inject both themes as <style>, but one disabled
-//     injectStyle(themeCss.light, themeIds.light);
-//     injectStyle(themeCss.dark, themeIds.dark);
-// }
-
-function ensureThemesInjected(): void {
-    if (themesInjected) return;
-    injectStyle(lightThemeCss, 'theme-light');
-    injectStyle(darkThemeCss, 'theme-dark');
-    themesInjected = true;
-}
-
-function injectStyle(cssText: string, id: string): HTMLStyleElement | undefined {
-    if (typeof document === 'undefined') return;
-    let style = document.getElementById(id) as HTMLStyleElement | null;
-    if (style == null) {
-        style = document.createElement('style');
-        style.id = id;
-        style.dataset.dynamic = 'true';
-        document.head.appendChild(style);
-    }
-    style.innerHTML = cssText;
-    return style;
-}
-
-async function loadGFMTableExtension(): Promise<GFMTableExtensions> {
-    if (gfmTableExtensions !== undefined) return gfmTableExtensions;
-
-    const module = await import('micromark-extension-gfm-table');
-    gfmTableExtensions = { parseExtension: module.gfmTable(), htmlExtension: module.gfmTableHtml() };
-    return gfmTableExtensions;
-}
-
-function switchInlineTheme(id: 'theme-light' | 'theme-dark'): void {
-    document.querySelectorAll<HTMLStyleElement>('style[data-dynamic]').forEach((style) => (style.disabled = style.id !== id));
-}
-
-// Utilities - Create presenter code block.
+// Helpers - Create presenter code block.
 function createPresenterCodeBlockHtmlExtension(): HtmlExtension {
     let currentBlockData: { codeContent: string[]; lang: string; meta: string } | undefined = undefined;
     return {
@@ -144,7 +103,7 @@ function createPresenterCodeBlockHtmlExtension(): HtmlExtension {
             codeFencedFenceSequence(): undefined /* The closing fence characters (```). */ {},
             codeFencedFence(): undefined /* The closing fence line. */ {},
             codeFenced(this: CompileContext): undefined /* The entire code block is complete, replacement can happen now. */ {
-                const blockData = currentBlockData == undefined ? { codeContent: [], lang: '', meta: '' } : currentBlockData;
+                const blockData = currentBlockData ?? { codeContent: [], lang: '', meta: '' };
                 this.resume(); // Discard the captured code text.
                 const rawContent = blockData.codeContent.join('\n');
                 const language = blockData.lang || 'plain';
@@ -163,6 +122,47 @@ function createPresenterCodeBlockHtmlExtension(): HtmlExtension {
             }
         }
     };
+}
+
+// Helpers - Ensure themes are injected.
+function ensureThemesAreInjected(): void {
+    if (themesAreInjected) return;
+    injectStyle(lightThemeCss, 'theme-light');
+    injectStyle(darkThemeCss, 'theme-dark');
+    themesAreInjected = true;
+}
+
+// Helpers - Escape HTML.
+function escapeHtml(str: string): string {
+    return str.replaceAll(/[&<>"']/g, (char) => ESCAPE_MAP[char as '&' | '<' | '>' | '"' | "'"]);
+}
+
+// Helpers - Inject style.
+function injectStyle(cssText: string, id: string): HTMLStyleElement | undefined {
+    if (typeof document === 'undefined') return;
+    let style = document.getElementById(id) as HTMLStyleElement | null;
+    if (style == null) {
+        style = document.createElement('style');
+        style.id = id;
+        style.dataset.dynamic = 'true';
+        document.head.appendChild(style);
+    }
+    style.innerHTML = cssText;
+    return style;
+}
+
+// Helpers - Load GFM (GitHub Flavoured Markdown) table extension.
+async function loadGFMTableExtension(): Promise<GFMTableExtensions> {
+    if (gfmTableExtensions !== undefined) return gfmTableExtensions;
+
+    const module = await import('micromark-extension-gfm-table');
+    gfmTableExtensions = { parseExtension: module.gfmTable(), htmlExtension: module.gfmTableHtml() };
+    return gfmTableExtensions;
+}
+
+// Helpers - Switch inline theme.
+function switchInlineTheme(id: 'theme-light' | 'theme-dark'): void {
+    document.querySelectorAll<HTMLStyleElement>('style[data-dynamic]').forEach((style) => (style.disabled = style.id !== id));
 }
 
 export { MicromarkTool, type RenderOptions };

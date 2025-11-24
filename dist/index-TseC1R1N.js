@@ -2854,51 +2854,34 @@ class gu {
       allowDangerousHtml: !1,
       allowDangerousProtocol: !1,
       extensions: [],
-      htmlExtensions: [pu()]
+      htmlExtensions: [ou()]
     }, cu();
   }
-  // Operations - Render.
-  async render(t, e) {
-    const r = [], a = [...this.options.htmlExtensions ?? []];
-    if (e?.tables ?? !1) {
-      const i = await hu();
-      r.push(i.parseExtension), a.push(i.htmlExtension);
-    }
-    return Ia(t, { ...this.options, extensions: r, htmlExtensions: a });
-  }
+  // Operations - Highligh previously rendered markdown.
   highlight() {
     document.querySelectorAll('div[class^="shj-lang-"]').forEach((t) => {
-      (/shj-lang-([^\s]+)/.exec(t.className) || [])[1] != null && (uu(t, "js", "multiline", { hideLineNumbers: !0 }), Object.assign(t.style, {
+      (/shj-lang-([^\s]+)/.exec(t.className) || [])[1] === "javascript" && (uu(t, "js", "multiline", { hideLineNumbers: !0 }), Object.assign(t.style, {
         fontFamily: "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, Liberation Mono, monospace",
         fontSize: "16px"
       }));
     });
   }
+  // Operations - Render markdown.
+  async render(t, e) {
+    const r = [...this.options.extensions ?? []], a = [...this.options.htmlExtensions ?? []];
+    if (e?.tables ?? !1) {
+      const i = await mu();
+      r.push(i.parseExtension), a.push(i.htmlExtension);
+    }
+    return Ia(t, { ...this.options, extensions: r, htmlExtensions: a });
+  }
+  // Operations - Set color mode.
   setColorMode(t) {
     const e = t === "light" ? he.light : he.dark;
-    mu(e);
+    pu(e);
   }
 }
-function ou(n) {
-  return n.replaceAll(/[&<>"']/g, (t) => su[t]);
-}
-function cu() {
-  me || (pe(lu, "theme-light"), pe(Sa, "theme-dark"), me = !0);
-}
-function pe(n, t) {
-  if (typeof document > "u") return;
-  let e = document.getElementById(t);
-  return e == null && (e = document.createElement("style"), e.id = t, e.dataset.dynamic = "true", document.head.appendChild(e)), e.innerHTML = n, e;
-}
-async function hu() {
-  if (In !== void 0) return In;
-  const n = await import("./index-CTlUbWEy.js");
-  return In = { parseExtension: n.gfmTable(), htmlExtension: n.gfmTableHtml() }, In;
-}
-function mu(n) {
-  document.querySelectorAll("style[data-dynamic]").forEach((t) => t.disabled = t.id !== n);
-}
-function pu() {
+function ou() {
   let n;
   return {
     enter: {
@@ -2936,10 +2919,29 @@ function pu() {
         const e = t.codeContent.join(`
 `), r = t.lang || "plain", a = t.meta || "";
         let i = "";
-        r === "json" && a === "datapos-visual" ? i = `<div class="${a}" data-options="${encodeURIComponent(e)}"></div>` : r === "json" && a === "datapos-highcharts" ? i = `<div class="${a}" data-options="${encodeURIComponent(e)}"></div>` : i = `<div class="shj-lang-${r.replaceAll(/[^a-z0-9_-]/gi, "")}">${ou(e)}</div>`, this.raw(i), n = void 0;
+        r === "json" && a === "datapos-visual" ? i = `<div class="${a}" data-options="${encodeURIComponent(e)}"></div>` : r === "json" && a === "datapos-highcharts" ? i = `<div class="${a}" data-options="${encodeURIComponent(e)}"></div>` : i = `<div class="shj-lang-${r.replaceAll(/[^a-z0-9_-]/gi, "")}">${hu(e)}</div>`, this.raw(i), n = void 0;
       }
     }
   };
+}
+function cu() {
+  me || (pe(lu, "theme-light"), pe(Sa, "theme-dark"), me = !0);
+}
+function hu(n) {
+  return n.replaceAll(/[&<>"']/g, (t) => su[t]);
+}
+function pe(n, t) {
+  if (typeof document > "u") return;
+  let e = document.getElementById(t);
+  return e == null && (e = document.createElement("style"), e.id = t, e.dataset.dynamic = "true", document.head.appendChild(e)), e.innerHTML = n, e;
+}
+async function mu() {
+  if (In !== void 0) return In;
+  const n = await import("./index-DfnFEuhM.js");
+  return In = { parseExtension: n.gfmTable(), htmlExtension: n.gfmTableHtml() }, In;
+}
+function pu(n) {
+  document.querySelectorAll("style[data-dynamic]").forEach((t) => t.disabled = t.id !== n);
 }
 export {
   gu as M,
