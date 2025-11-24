@@ -149,17 +149,17 @@ function exprToMathML(expr: string): string {
     return `<math display="block">${toMathML(abstractSyntaxTree)}</math>`;
 }
 
-function tokenize(expr: string) {
+function tokenize(expr: string): string[] | undefined {
     // Capture identifiers with spaces, numbers, operators, and parentheses
     return expr.match(/[A-Za-z][A-Za-z ]*|\d+(?:\.\d+)?|[=()+\-*/]/g)?.map((t) => t.trim());
 }
 
-function parseExpression(tokens: string[]) {
+function parseExpression(tokens: string[]): Node | null {
     let pos = 0;
 
     function primary(): Node | null {
         const t = tokens[pos++];
-        if (!t) return null;
+        if (t === undefined) return null;
 
         if (/^\d/.test(t)) return { type: 'number', value: t };
         if (/^[A-Za-z]/.test(t)) return { type: 'identifier', value: t };
