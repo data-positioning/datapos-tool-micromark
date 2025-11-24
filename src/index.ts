@@ -4,20 +4,19 @@
 
 // Dependencies - Micromark.
 import { micromark } from 'micromark';
-import type { CompileContext, Extension, HtmlExtension, Options, Token } from 'micromark-util-types';
+import type { CompileContext, HtmlExtension, Options, Token } from 'micromark-util-types';
 
 // Dependencies - Speed Highlight.
 import type * as SpeedHighlight from '@speed-highlight/core';
 
 // Types/Interfaces
-type GFMTableExtensions = { parseExtension: Extension; htmlExtension: HtmlExtension };
 type RenderOptions = { tables?: boolean };
 
 // Constants
 const ESCAPE_MAP: Record<'&' | '<' | '>' | '"' | "'", string> = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
 
 // Module Variables
-let gfmTableExtensions: GFMTableExtensions | undefined = undefined;
+let tableExtensionIsLoaded: boolean = false;
 let speedHighlight: typeof SpeedHighlight | undefined = undefined;
 
 // Classes - Micromark tool.
@@ -53,17 +52,8 @@ class MicromarkTool {
 
     // Operations - Render markdown.
     async render(markdown: string, options?: RenderOptions): Promise<string> {
-        const extensions = [...(this.options.extensions ?? [])];
-        const htmlExtensions = [...(this.options.htmlExtensions ?? [])];
-
-        // Lazy load tables if requested
-        if (options?.tables ?? false) {
-            const tableExtensions = await loadGFMTableExtension();
-            extensions.push(tableExtensions.parseExtension);
-            htmlExtensions.push(tableExtensions.htmlExtension);
-        }
-
-        return micromark(markdown, { ...this.options, extensions, htmlExtensions });
+        if (options?.tables ?? false) await loadGFMTableExtension(this.options);
+        return micromark(markdown, this.options);
     }
 
     // Operations - Set color mode.
@@ -142,12 +132,13 @@ function injectStyle(cssText: string, styleId: string): void {
 }
 
 // Helpers - Load GFM (GitHub Flavoured Markdown) table extension.
-async function loadGFMTableExtension(): Promise<GFMTableExtensions> {
-    if (gfmTableExtensions !== undefined) return gfmTableExtensions;
+async function loadGFMTableExtension(options: Options): Promise<void> {
+    if (tableExtensionIsLoaded) return;
 
     const module = await import('micromark-extension-gfm-table');
-    gfmTableExtensions = { parseExtension: module.gfmTable(), htmlExtension: module.gfmTableHtml() };
-    return gfmTableExtensions;
+    options.extensions?.push(module.gfmTable());
+    options.htmlExtensions?.push(module.gfmTableHtml());
+    tableExtensionIsLoaded = true;
 }
 
 // Helpers - Load Speed Highlight and inject associated themes.
