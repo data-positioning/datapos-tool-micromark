@@ -2738,11 +2738,11 @@ function Rr(n) {
 function Zn(n, r) {
   if (typeof document > "u") return;
   let t = document.getElementById(r);
-  t == null && (t = document.createElement("style"), t.id = r, t.dataset.dynamic = "true", t.disabled = !0, document.head.appendChild(t)), t.innerHTML = n;
+  t == null && (t = document.createElement("style"), t.id = r, t.dataset.dynamic = "true", document.head.appendChild(t), t.disabled = !0), t.innerHTML = n;
 }
 async function Hr() {
   if (xn !== void 0) return xn;
-  const n = await import("./index-Drg9i7CI.js");
+  const n = await import("./index-9k7I_1qE.js");
   return xn = { parseExtension: n.gfmTable(), htmlExtension: n.gfmTableHtml() }, xn;
 }
 async function Vr() {

@@ -135,8 +135,8 @@ function injectStyle(cssText: string, id: string): void {
         style = document.createElement('style');
         style.id = id;
         style.dataset.dynamic = 'true';
-        style.disabled = true;
         document.head.appendChild(style);
+        style.disabled = true;
     }
     style.innerHTML = cssText;
 }
