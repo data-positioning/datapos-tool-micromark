@@ -2856,7 +2856,7 @@ class cu {
       allowDangerousProtocol: !1,
       extensions: [],
       htmlExtensions: [this.createPresenterCodeBlockHtmlExtension()]
-    }, this.injectThemes();
+    }, this.injectThemes(), this.injectCodeFont();
   }
   injectCodeFont() {
     On("@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');", "code-font");
@@ -2944,7 +2944,7 @@ function On(n, t) {
 }
 async function su() {
   if (In) return In;
-  const n = await import("./index-D-Jdk9Jy.js");
+  const n = await import("./index-DVxB1dXl.js");
   return In = {
     ext: n.gfmTable(),
     html: n.gfmTableHtml()

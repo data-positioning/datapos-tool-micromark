@@ -34,7 +34,7 @@ class MicromarkTool {
 
         // Inject inline styles
         this.injectThemes();
-        // this.injectCodeFont();
+        this.injectCodeFont();
     }
 
     private injectCodeFont() {
