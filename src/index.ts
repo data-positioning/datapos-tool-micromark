@@ -7,9 +7,7 @@ import { micromark } from 'micromark';
 import type { CompileContext, Extension, HtmlExtension, Options, Token } from 'micromark-util-types';
 
 // Dependencies - Speed Highlight.
-// import darkThemeCss from '@speed-highlight/core/themes/github-dark.css?raw';
-// import { highlightElement } from '@speed-highlight/core';
-// import lightThemeCss from '@speed-highlight/core/themes/github-light.css?raw';
+import type * as SpeedHighlight from '@speed-highlight/core';
 
 // Types/Interfaces
 type GFMTableExtensions = { parseExtension: Extension; htmlExtension: HtmlExtension };
@@ -20,11 +18,7 @@ const ESCAPE_MAP: Record<'&' | '<' | '>' | '"' | "'", string> = { '&': '&amp;', 
 
 // Module Variables
 let gfmTableExtensions: GFMTableExtensions | undefined = undefined;
-let themesAreInjected = false;
-
-let highlightModule: typeof import('@speed-highlight/core') | undefined = undefined;
-let darkThemeCss: string | undefined = undefined;
-let lightThemeCss: string | undefined = undefined;
+let highlightModule: typeof SpeedHighlight | undefined = undefined;
 
 // Classes - Micromark tool.
 class MicromarkTool {
@@ -43,13 +37,6 @@ class MicromarkTool {
     // Operations - Highligh previously rendered markdown.
     async highlight(): Promise<void> {
         const { highlightElement } = await loadHighlighter();
-
-        // Inject themes only once
-        if (!themesAreInjected) {
-            injectStyle(lightThemeCss, 'theme-light');
-            injectStyle(darkThemeCss, 'theme-dark');
-            themesAreInjected = true;
-        }
 
         document.querySelectorAll<HTMLDivElement>('div[class^="shj-lang-"]').forEach((element) => {
             const lang = (/shj-lang-([^\s]+)/.exec(element.className) || [])[1];
@@ -133,15 +120,6 @@ function createPresenterCodeBlockHtmlExtension(): HtmlExtension {
     };
 }
 
-// Helpers - Ensure themes are injected.
-function ensureThemesAreInjected(): void {
-    if (themesAreInjected) return;
-
-    injectStyle(lightThemeCss, 'theme-light');
-    injectStyle(darkThemeCss, 'theme-dark');
-    themesAreInjected = true;
-}
-
 // Helpers - Escape HTML.
 function escapeHtml(str: string): string {
     return str.replaceAll(/[&<>"']/g, (char) => ESCAPE_MAP[char as '&' | '<' | '>' | '"' | "'"]);
@@ -174,16 +152,14 @@ async function loadGFMTableExtension(): Promise<GFMTableExtensions> {
 async function loadHighlighter(): Promise<any> {
     if (highlightModule) return highlightModule;
 
-    const [mod, darkCss, lightCss] = await Promise.all([
+    const [module, darkThemeCss, lightThemeCss] = await Promise.all([
         import('@speed-highlight/core'),
         import('@speed-highlight/core/themes/github-dark.css?raw'),
         import('@speed-highlight/core/themes/github-light.css?raw')
     ]);
-
-    highlightModule = mod;
-    darkThemeCss = darkCss.default;
-    lightThemeCss = lightCss.default;
-
+    highlightModule = module;
+    injectStyle(lightThemeCss.default, 'theme-light');
+    injectStyle(darkThemeCss.default, 'theme-dark');
     return highlightModule;
 }
 
