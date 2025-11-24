@@ -67,7 +67,7 @@ class MicromarkTool {
     // Operations - Set color mode.
     setColorMode(colorModeId: 'light' | 'dark'): void {
         const themeId = colorModeId === 'light' ? 'theme-light' : 'theme-dark';
-        console.log(1111, colorModeId, themeId);
+        console.log('tool-micromark.setColorMode', colorModeId, themeId);
         document.querySelectorAll<HTMLStyleElement>('style[data-dynamic]').forEach((style) => (style.disabled = style.id !== themeId));
     }
 }
