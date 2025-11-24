@@ -34,10 +34,12 @@ class MicromarkTool {
     }
 
     // Operations - Highligh previously rendered markdown.
-    async highlight(colorModeId: string): Promise<void> {
-        const { highlightElement } = await ensureHighlighterReady(colorModeId);
+    async highlight(renderTo: HTMLElement, colorModeId: string): Promise<void> {
+        if (typeof document === 'undefined') return;
 
-        document.querySelectorAll<HTMLDivElement>('div[class^="shj-lang-"]').forEach((element) => {
+        const { highlightElement } = await loadSpeedHighlight(colorModeId);
+
+        renderTo.querySelectorAll<HTMLDivElement>('div[class^="shj-lang-"]').forEach((element) => {
             const lang = (/shj-lang-([^\s]+)/.exec(element.className) || [])[1];
             if (lang === 'javascript') {
                 highlightElement(element, 'js', 'multiline', { hideLineNumbers: true });
@@ -66,10 +68,7 @@ class MicromarkTool {
 
     // Operations - Set color mode.
     setColorMode(colorModeId: string): void {
-        const styleId = colorModeId === 'dark' ? 'theme-dark' : 'theme-light';
-        console.log('tool-micromark.setColorMode', colorModeId, styleId);
-        // document.querySelectorAll<HTMLStyleElement>('style[data-dynamic]').forEach((style) => (style.disabled = style.id !== styleId));
-        applyColorMode(colorModeId);
+        setColorMode(colorModeId);
     }
 }
 
@@ -122,12 +121,6 @@ function createPresenterCodeBlockHtmlExtension(): HtmlExtension {
     };
 }
 
-// Helper - Apply color mode.
-function applyColorMode(colorModeId: string): void {
-    const styleId = colorModeId === 'dark' ? 'theme-dark' : 'theme-light';
-    document.querySelectorAll<HTMLStyleElement>('style[data-dynamic]').forEach((style) => (style.disabled = style.id !== styleId));
-}
-
 // Helpers - Escape HTML.
 function escapeHTML(str: string): string {
     return str.replaceAll(/[&<>"']/g, (char) => ESCAPE_MAP[char as '&' | '<' | '>' | '"' | "'"]);
@@ -156,14 +149,9 @@ async function loadGFMTableExtension(): Promise<GFMTableExtensions> {
     gfmTableExtensions = { parseExtension: module.gfmTable(), htmlExtension: module.gfmTableHtml() };
     return gfmTableExtensions;
 }
-async function ensureHighlighterReady(colorModeId: string): Promise<typeof SpeedHighlight> {
-    const module = await loadHighlighterCore();
-    applyColorMode(colorModeId);
-    return module;
-}
 
-// Helpers - Load Speed Highlighter core and inject associated themes.
-async function loadHighlighterCore(): Promise<typeof SpeedHighlight> {
+// Helpers - Load Speed Highlight and inject associated themes.
+async function loadSpeedHighlight(colorModeId: string): Promise<typeof SpeedHighlight> {
     if (speedHighlight) return speedHighlight;
 
     const [module, darkThemeCss, lightThemeCss] = await Promise.all([
@@ -174,7 +162,16 @@ async function loadHighlighterCore(): Promise<typeof SpeedHighlight> {
     speedHighlight = module;
     injectStyle(darkThemeCss.default, 'theme-dark');
     injectStyle(lightThemeCss.default, 'theme-light');
+    setColorMode(colorModeId);
     return speedHighlight;
+}
+
+// Helper - Set color mode.
+function setColorMode(colorModeId: string): void {
+    if (typeof document === 'undefined') return;
+
+    const styleId = colorModeId === 'dark' ? 'theme-dark' : 'theme-light';
+    document.querySelectorAll<HTMLStyleElement>('style[data-dynamic]').forEach((style) => (style.disabled = style.id !== styleId));
 }
 
 export { MicromarkTool, type RenderOptions };
