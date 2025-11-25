@@ -34,7 +34,7 @@ The following list details the repository management commands implementation by 
 
 The OWASP Dependency Check Report identifies known vulnerabilities in project dependencies. It is generated automatically on each release using the npm package `owasp-dependency-check`.
 
-[View the OWASP Dependency Check Report](https://data-positioning.github.io/datapos-tool-micromark/dependency-check-report.html)
+[View the OWASP Dependency Check Report](https://data-positioning.github.io/datapos-tool-micromark/dependency-check-reports/dependency-check-report.html)
 
 ## Bundle Analysis Report
 
