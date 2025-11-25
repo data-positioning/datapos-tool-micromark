@@ -1,6 +1,6 @@
 {
     "name": "@datapos/datapos-tool-micromark",
-    "version": "0.1.968",
+    "version": "0.1.969",
     "description": "A library that provides a wrapper around the Micromark markdown parser and the Speed Highlight code highlighter.",
     "license": "MIT",
     "private": false,

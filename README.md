@@ -1,6 +1,8 @@
 # Data Positioning Micromark Tool
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=data-positioning_datapos-tool-micromark&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=data-positioning_datapos-tool-micromark)
+[![Dependency Check](https://img.shields.io/badge/OWASP-Check-green)](https://data-positioning.github.io/datapos-tool-micromark/dependency-check-report.html)
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/11502/badge)](https://www.bestpractices.dev/projects/11502)  
 [![npm version](https://img.shields.io/npm/v/@datapos/datapos-tool-micromark)](https://www.npmjs.com/package/@datapos/datapos-tool-micromark)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 
@@ -8,7 +10,7 @@ A library that provides a wrapper around the Micromark markdown parser and the S
 
 ## Installation
 
-There’s no need to install this tool manually. Once released, it’s uploaded to the Data Positioning Engine cloud and becomes instantly available to all new instances of the browser app. A notification about the new version is also sent to all existing browser apps.
+There's no need to install this tool manually; once released, it is uploaded to the Data Positioning Cloud and becomes instantly available to all new instances of the browser app. A notification about the new version is also sent to all existing browser apps.
 
 ## Repository Management Commands
 
@@ -20,19 +22,27 @@ The following list details the repository management commands implementation by 
 | build              | alt+ctrl+shift+b  | Build the package using Vite. Output to '/dist' directory.                                                                                      |
 | check              | alt+ctrl+shift+c  | Identify outdated dependencies using npm `outdated` and `npm-check-updates` with option to install latest versions. Also runs `retire` scanner. |
 | document           | alt+ctrl+shift+d  | Identify licenses of the project's production and peer dependencies. See [LICENSES.json](./LICENSES.json).                                      |
-| format             | alt+ctrl+shift+f  | Use `prettier`to enforce formatting style rules.                                                                                                |
-| lint               | alt+ctrl+shift+l  | Use `eslint`to check the code for potential errors and enforces coding style rules.                                                             |
+| format             | alt+ctrl+shift+f  | Use `prettier` to enforce formatting style rules.                                                                                               |
+| lint               | alt+ctrl+shift+l  | Use `eslint` to check the code for potential errors and enforces coding style rules.                                                            |
 | publish            | alt+ctrl+shift+p  | Publish the package to `npm`.                                                                                                                   |
 | release            | alt+ctrl+shift+r  | Bump version, build configuration, build tool, synchronise with `GitHub`, upload tool to Data Positioning platform and publish to `npm`.        |
 | sync:withGitHub    | alt+ctrl+shift+s  | Synchronise local repository with the main GitHub repository.                                                                                   |
 | test               | alt+ctrl+shift+t  | ❌ Not implemented.                                                                                                                             |
 | update:dataPosDeps | alt+ctrl+shift+u  | Install the latest version of all Data Positioning dependencies.                                                                                |
 
-## Bundle Analysis
+## Dependency Check Report
 
-View the [bundle report](https://data-positioning.github.io/datapos-tool-micromark/stats/index.html) to analyze the bundle composition and module sizes (generated with rollup-plugin-visualizer).
+The OWASP Dependency Check Report identifies known vulnerabilities in project dependencies. It is generated automatically on each release using the npm package `owasp-dependency-check`.
 
-## Compliance
+[View the OWASP Dependency Check Report](https://data-positioning.github.io/datapos-tool-micromark/dependency-check-report.html)
+
+## Bundle Analysis Report
+
+The Bundle Analysis Report provides a detailed view of the bundle's composition and module sizes, helping to identify which modules contribute most to the final build. It is generated automatically on each release using the npm package `rollup-plugin-visualizer`.
+
+[View the Bundle Analysis Report](https://data-positioning.github.io/datapos-tool-micromark/stats/index.html)
+
+## Compliance Report
 
 The following badge reflects FOSSA's assessment of this repository's open-source license compliance.
 
