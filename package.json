@@ -1,6 +1,6 @@
 {
     "name": "@datapos/datapos-tool-micromark",
-    "version": "0.1.966",
+    "version": "0.1.967",
     "description": "A library that provides a wrapper around the Micromark markdown parser and the Speed Highlight code highlighter.",
     "license": "MIT",
     "private": false,
@@ -24,10 +24,6 @@
     "files": [
         "dist"
     ],
-    "publishConfig": {
-        "access": "public",
-        "registry": "https://registry.npmjs.org/"
-    },
     "dependencies": {
         "@speed-highlight/core": "^1.2.12",
         "micromark": "^4.0.2",
@@ -45,6 +41,7 @@
         "license-report-check": "^0.1.2",
         "nanoid": "^5.1.6",
         "npm-check-updates": "^19.1.2",
+        "owasp-dependency-check": "^1.0.0",
         "prettier": "^3.6.2",
         "retire": "^5.3.0",
         "rollup-plugin-visualizer": "^6.0.5",
@@ -65,6 +62,7 @@
         "test": "node -e \"import('@datapos/datapos-development').then(m => m.echoScriptNotImplemented('Test'))\"",
         "update:dataPosDeps": "npm run _update:developDep",
         "_bump:version": "node -e \"import('@datapos/datapos-development').then(m => m.bumpVersion())\"",
+        "_check:owasp": "set -a && source .env && set +a && owasp-dependency-check --project \"@datapos/datapos-tool-micromark\" --nvdApiKey \"$NVD_API_KEY\"",
         "_build:config": "node -e \"import('@datapos/datapos-development').then(m => m.buildConfig())\"",
         "_document:licenceReport": "license-report --only=prod,peer > LICENSES.json",
         "_document:licenceCheck": "license-report-check --source ./LICENSES.json --allowed 'MIT' --allowed 'n/a' --allowed 'Apache-2.0' --output=table",
