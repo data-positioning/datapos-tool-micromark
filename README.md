@@ -15,10 +15,11 @@ A library that provides a wrapper around the Micromark markdown parser and the S
 - 🧠 **Memory-Optimised**: single shared instances across presenters
 - 📦 **Modular Loading**: optional modules loaded only when required
 - ☁️ **Cloud-Delivered**: automatically updated in all Data Positioning browser instances
+- 📘 **Implemented in TypeScript**: the library’s source code is written entirely in TypeScript.
 
 ## Installation
 
-There's no need to install this plugin manually. Once released, it is uploaded to the Data Positioning Cloud and instantly available in all newly launched browser app instances. Running instances are notified of the update.
+There's no need to install this library manually. Once released, it is uploaded to the Data Positioning Cloud and instantly available in all newly launched browser app instances. Running instances are notified of the update.
 
 ## Reports & Compliance
 
@@ -30,7 +31,7 @@ The OWASP Dependency Check Report identifies known vulnerabilities in project de
 
 ### Dependency Licenses
 
-The following table lists top-level production and peer dependencies only. All dependency licenses (including transitive) have been recursively verified to conform to Apache-2.0, CC0-1.0, MIT, or n/a. Developers cloning this repository should verify dev/optional dependencies independently; uploaded plugin users are covered by these checks.
+The following table lists top-level production and peer dependencies only. All dependency licenses (including transitive dependencies) have been recursively verified to conform to Apache-2.0, CC0-1.0, MIT, or n/a. Developers cloning this repository should independently verify dev and optional dependencies; users of the uploaded library are covered by these checks.
 
 | Name                          |  Type   | Installed | Latest | Latest Modified          | Author                                                    |
 | :---------------------------- | :-----: | :-------: | :----: | :----------------------- | :-------------------------------------------------------- |
@@ -40,7 +41,7 @@ The following table lists top-level production and peer dependencies only. All d
 
 ### Bundle Analysis Report
 
-The Bundle Analysis Report provides a detailed view of the bundle's composition and module sizes, helping to identify which modules contribute most to the final build. It is generated automatically on each release using the npm package `rollup-plugin-visualizer`.
+The Bundle Analysis Report provides a detailed breakdown of the bundle's composition and module sizes, helping to identify which modules contribute most to the final build. It is generated automatically on each release using the npm package `rollup-plugin-visualizer`.
 
 [View the Bundle Analysis Report](https://data-positioning.github.io/datapos-tool-micromark/stats/index.html)
 
