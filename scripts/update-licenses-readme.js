@@ -6,7 +6,7 @@ const END_MARKER = '<!-- DEPENDENCY_LICENSES_END -->';
 
 try {
     // Read the generated licenses
-    const licensesContent = await fs.readFile('./licenses.md', 'utf8');
+    const licensesContent = (await fs.readFile('./licenses.md', 'utf8')).trim();
 
     // Read the README
     let readmeContent = await fs.readFile('./README.md', 'utf8');
