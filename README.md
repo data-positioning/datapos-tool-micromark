@@ -10,12 +10,12 @@ A library that provides a wrapper around the Micromark markdown parser and the S
 
 ## Features
 
-- 🚀 **Fast Markdown Parsing** using Micromark
+- 🚀 **Fast Markdown Parsing** with Micromark
 - 💡 **Efficient Syntax Highlighting** via Speed Highlight
-- 🧠 **Memory-Optimised**: single shared instances across presenters
-- 📦 **Modular Loading**: optional modules loaded only when required
-- ☁️ **Cloud-Delivered**: automatically updated in all Data Positioning browser instances
-- 📘 **Implemented in TypeScript**: the library’s source code is written entirely in TypeScript.
+- 🧠 **Memory-Optimised**: shared instance across all presenters
+- 📦 **Modular Loading**: optional modules loaded on demand
+- ☁️ **Cloud-Delivered**: updates new instances automatically; notifies existing ones
+- 🧑‍💻 **Implemented in TypeScript**: fully coded in TypeScript
 
 ## Installation
 
