@@ -24,7 +24,7 @@ try {
     const newContent = readmeContent.substring(0, startIdx + START_MARKER.length) + '\n' + licensesContent + '\n' + readmeContent.substring(endIdx);
 
     // Write updated README
-    await fs.writeFile('README_NEW.md', newContent);
+    await fs.writeFile('README.md', newContent);
 
     console.log('✓ README.md updated with license information');
 } catch (error) {
