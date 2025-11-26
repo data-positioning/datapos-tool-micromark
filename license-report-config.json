@@ -3,12 +3,12 @@
     "fields": ["name", "licenseType", "installedVersion", "latestRemoteVersion", "latestRemoteModified", "author"],
     "tablemarkOptions": {
         "columns": [
-            { "name": "name", "align": "center" },
-            { "name": "licenseType", "align": "center" },
-            { "name": "installedVersion", "align": "center" },
-            { "name": "latestRemoteVersion", "align": "center" },
-            { "name": "latestRemoteModified", "align": "center" },
-            { "name": "author", "align": "left" }
+            { "name": "Name", "align": "left" },
+            { "name": "Type", "align": "center" },
+            { "name": "Installed", "align": "center" },
+            { "name": "Latest", "align": "center" },
+            { "name": "Latest Modified", "align": "left" },
+            { "name": "Author", "align": "left" }
         ]
     }
 }

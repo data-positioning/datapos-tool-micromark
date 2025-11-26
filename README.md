@@ -8,9 +8,39 @@
 
 A library that provides a wrapper around the Micromark markdown parser and the Speed Highlight code highlighter. It improves browser memory efficiency by sharing single instances of these tools across all presenters and loading optional modules on demand.
 
+## Features
+
+- 🚀 **Fast Markdown Parsing** using Micromark
+- 💡 **Efficient Syntax Highlighting** via Speed Highlight
+- 🧠 **Memory-Optimised**: single shared instances across presenters
+- 📦 **Modular Loading**: optional modules loaded only when required
+- ☁️ **Cloud-Delivered**: automatically updated in all Data Positioning browser instances
+
 ## Installation
 
 There's no need to install this tool manually. Once released, it is uploaded to the Data Positioning Cloud and instantly available in all newly launched browser app instances. Running instances are notified of the update.
+
+## Reports & Compliance
+
+### Dependency Check Report
+
+The OWASP Dependency Check Report identifies known vulnerabilities in project dependencies. It is generated automatically on each release using the npm package `owasp-dependency-check`.
+
+[View the OWASP Dependency Check Report](https://data-positioning.github.io/datapos-tool-micromark/dependency-check-reports/dependency-check-report.html)
+
+### Dependency Licenses
+
+| Name                          |  Type   | Installed | Latest | Latest Modified          | Author                                                    |
+| :---------------------------- | :-----: | :-------: | :----: | :----------------------- | :-------------------------------------------------------- |
+| @speed-highlight/core         | CC0-1.0 |  1.2.12   | 1.2.12 | 2025-11-03T17:41:39.642Z | matubu hi@mathias.ninja https://mathias.ninja             |
+| micromark                     |   MIT   |   4.0.2   | 4.0.2  | 2025-02-27T14:04:03.783Z | Titus Wormer <tituswormer@gmail.com> (https://wooorm.com) |
+| micromark-extension-gfm-table |   MIT   |   2.1.1   | 2.1.1  | 2025-01-20T12:24:29.697Z | Titus Wormer <tituswormer@gmail.com> (https://wooorm.com) |
+
+### Bundle Analysis Report
+
+The Bundle Analysis Report provides a detailed view of the bundle's composition and module sizes, helping to identify which modules contribute most to the final build. It is generated automatically on each release using the npm package `rollup-plugin-visualizer`.
+
+[View the Bundle Analysis Report](https://data-positioning.github.io/datapos-tool-micromark/stats/index.html)
 
 ## Repository Management Commands
 
@@ -30,30 +60,8 @@ The following list details the repository management commands implementation by 
 | test               | alt+ctrl+shift+t  | ❌ Not implemented.                                                                                                                             |
 | update:dataPosDeps | alt+ctrl+shift+u  | Install the latest version of all Data Positioning dependencies.                                                                                |
 
-## Dependency Check Report
-
-The OWASP Dependency Check Report identifies known vulnerabilities in project dependencies. It is generated automatically on each release using the npm package `owasp-dependency-check`.
-
-[View the OWASP Dependency Check Report](https://data-positioning.github.io/datapos-tool-micromark/dependency-check-reports/dependency-check-report.html)
-
-## Bundle Analysis Report
-
-The Bundle Analysis Report provides a detailed view of the bundle's composition and module sizes, helping to identify which modules contribute most to the final build. It is generated automatically on each release using the npm package `rollup-plugin-visualizer`.
-
-[View the Bundle Analysis Report](https://data-positioning.github.io/datapos-tool-micromark/stats/index.html)
-
-## Compliance Report
-
-The following badge reflects FOSSA's assessment of this repository's open-source license compliance.
-
 ## License
 
 This project is licensed under the MIT License, allowing free use, modification, and distribution.
 
 [MIT](./LICENSE) © 2026 Data Positioning Pty Ltd.
-
-| Name                          | License type | Installed version | Latest remote version | Latest remote modified   | Author                                                    | Link                                                               | Installed from                                                                                     |
-| :---------------------------- | :----------- | :---------------- | :-------------------- | :----------------------- | :-------------------------------------------------------- | :----------------------------------------------------------------- | :------------------------------------------------------------------------------------------------- |
-| @speed-highlight/core         | CC0-1.0      | 1.2.12            | 1.2.12                | 2025-11-03T17:41:39.642Z | matubu hi@mathias.ninja https://mathias.ninja             | git://github.com/speed-highlight/core.git                          | https://registry.npmjs.org/@speed-highlight/core/-/core-1.2.12.tgz                                 |
-| micromark                     | MIT          | 4.0.2             | 4.0.2                 | 2025-02-27T14:04:03.783Z | Titus Wormer <tituswormer@gmail.com> (https://wooorm.com) | git+https://github.com/micromark/micromark.git#main                | https://registry.npmjs.org/micromark/-/micromark-4.0.2.tgz                                         |
-| micromark-extension-gfm-table | MIT          | 2.1.1             | 2.1.1                 | 2025-01-20T12:24:29.697Z | Titus Wormer <tituswormer@gmail.com> (https://wooorm.com) | git+https://github.com/micromark/micromark-extension-gfm-table.git | https://registry.npmjs.org/micromark-extension-gfm-table/-/micromark-extension-gfm-table-2.1.1.tgz |
