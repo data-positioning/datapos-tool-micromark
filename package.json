@@ -1,6 +1,6 @@
 {
     "name": "@datapos/datapos-tool-micromark",
-    "version": "0.1.975",
+    "version": "0.1.976",
     "description": "A library that provides a wrapper around the Micromark markdown parser and the Speed Highlight code highlighter.",
     "license": "MIT",
     "private": false,
@@ -70,6 +70,7 @@
         "_document:licenceReportCheck": "license-report-check --source ./licenses.json --allowed 'MIT' --allowed 'n/a' --allowed 'Apache-2.0' --allowed 'CC0-1.0' --output=table",
         "_document:licenceTree": "license-report-recursive --only=prod,peer --recurse --output=tree > licensesTree.json",
         "_document:licenceTreeCheck": "license-report-check --source ./licensesTree.json --allowed 'MIT' --allowed 'n/a' --allowed 'Apache-2.0' --allowed 'CC0-1.0' --output=table",
+        "_document:update-readme": "node scripts/update-licenses-readme.js",
         "_sync:withGitHub": "node -e \"import('@datapos/datapos-development').then(m => m.syncWithGitHub())\"",
         "_update:developDep": "npm install --save-dev @datapos/datapos-development@latest",
         "_upload": "npm run _upload:moduleToR2 && npm run _upload:moduleConfigToDO",

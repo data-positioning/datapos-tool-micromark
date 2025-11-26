@@ -21,6 +21,16 @@ A library that provides a wrapper around the Micromark markdown parser and the S
 
 There's no need to install this library manually. Once released, it is uploaded to the Data Positioning Cloud and instantly available in all newly launched browser app instances. Running instances are notified of the update.
 
+### For Developers
+
+If you wish to copy or create your own version of the library:
+
+```bash
+git clone https://github.com/data-positioning/datapos-tool-micromark.git
+cd datapos-tool-micromark
+npm install
+```
+
 ## Reports & Compliance
 
 ### Dependency Check Report
@@ -33,11 +43,7 @@ The OWASP Dependency Check Report identifies known vulnerabilities in project de
 
 The following table lists top-level production and peer dependencies only. All dependency licenses (including transitive dependencies) have been recursively verified to conform to Apache-2.0, CC0-1.0, MIT, or n/a. Developers cloning this repository should independently verify dev and optional dependencies; users of the uploaded library are covered by these checks.
 
-| Name                          |  Type   | Installed | Latest | Latest Modified          | Author                                                    |
-| :---------------------------- | :-----: | :-------: | :----: | :----------------------- | :-------------------------------------------------------- |
-| @speed-highlight/core         | CC0-1.0 |  1.2.12   | 1.2.12 | 2025-11-03T17:41:39.642Z | matubu hi@mathias.ninja https://mathias.ninja             |
-| micromark                     |   MIT   |   4.0.2   | 4.0.2  | 2025-02-27T14:04:03.783Z | Titus Wormer <tituswormer@gmail.com> (https://wooorm.com) |
-| micromark-extension-gfm-table |   MIT   |   2.1.1   | 2.1.1  | 2025-01-20T12:24:29.697Z | Titus Wormer <tituswormer@gmail.com> (https://wooorm.com) |
+<!-- DEPENDENCY_LICENSES -->
 
 ### Bundle Analysis Report
 
@@ -68,3 +74,7 @@ The following list details the repository management commands implementation by 
 This project is licensed under the MIT License, allowing free use, modification, and distribution.
 
 [MIT](./LICENSE) © 2026 Data Positioning Pty Ltd.
+
+```
+
+```
