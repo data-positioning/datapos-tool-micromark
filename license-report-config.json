@@ -1,0 +1,14 @@
+{
+    "output": "markdown",
+    "fields": ["name", "licenseType", "installedVersion", "latestRemoteVersion", "latestRemoteModified", "author"],
+    "tablemarkOptions": {
+        "columns": [
+            { "name": "name", "align": "center" },
+            { "name": "licenseType", "align": "center" },
+            { "name": "installedVersion", "align": "center" },
+            { "name": "latestRemoteVersion", "align": "center" },
+            { "name": "latestRemoteModified", "align": "center" },
+            { "name": "author", "align": "left" }
+        ]
+    }
+}

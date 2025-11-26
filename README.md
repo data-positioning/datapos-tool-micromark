@@ -2,7 +2,7 @@
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=data-positioning_datapos-tool-micromark&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=data-positioning_datapos-tool-micromark)
 [![Dependency Check](https://img.shields.io/badge/OWASP-Check-green)](https://data-positioning.github.io/datapos-tool-micromark/dependency-check-report.html)
-[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/11502/badge)](https://www.bestpractices.dev/projects/11502)  
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/11502/badge)](https://www.bestpractices.dev/projects/11502)
 [![npm version](https://img.shields.io/npm/v/@datapos/datapos-tool-micromark)](https://www.npmjs.com/package/@datapos/datapos-tool-micromark)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 
@@ -10,7 +10,7 @@ A library that provides a wrapper around the Micromark markdown parser and the S
 
 ## Installation
 
-There's no need to install this tool manually; once released, it is uploaded to the Data Positioning Cloud and becomes instantly available to all new instances of the browser app. A notification about the new version is also sent to all existing browser apps.
+There's no need to install this tool manually. Once released, it is uploaded to the Data Positioning Cloud and instantly available in all newly launched browser app instances. Running instances are notified of the update.
 
 ## Repository Management Commands
 
@@ -48,4 +48,12 @@ The following badge reflects FOSSA's assessment of this repository's open-source
 
 ## License
 
-[MIT](./LICENSE) © 2026 Data Positioning Pty Ltd
+This project is licensed under the MIT License, allowing free use, modification, and distribution.
+
+[MIT](./LICENSE) © 2026 Data Positioning Pty Ltd.
+
+| Name                          | License type | Installed version | Latest remote version | Latest remote modified   | Author                                                    | Link                                                               | Installed from                                                                                     |
+| :---------------------------- | :----------- | :---------------- | :-------------------- | :----------------------- | :-------------------------------------------------------- | :----------------------------------------------------------------- | :------------------------------------------------------------------------------------------------- |
+| @speed-highlight/core         | CC0-1.0      | 1.2.12            | 1.2.12                | 2025-11-03T17:41:39.642Z | matubu hi@mathias.ninja https://mathias.ninja             | git://github.com/speed-highlight/core.git                          | https://registry.npmjs.org/@speed-highlight/core/-/core-1.2.12.tgz                                 |
+| micromark                     | MIT          | 4.0.2             | 4.0.2                 | 2025-02-27T14:04:03.783Z | Titus Wormer <tituswormer@gmail.com> (https://wooorm.com) | git+https://github.com/micromark/micromark.git#main                | https://registry.npmjs.org/micromark/-/micromark-4.0.2.tgz                                         |
+| micromark-extension-gfm-table | MIT          | 2.1.1             | 2.1.1                 | 2025-01-20T12:24:29.697Z | Titus Wormer <tituswormer@gmail.com> (https://wooorm.com) | git+https://github.com/micromark/micromark-extension-gfm-table.git | https://registry.npmjs.org/micromark-extension-gfm-table/-/micromark-extension-gfm-table-2.1.1.tgz |
