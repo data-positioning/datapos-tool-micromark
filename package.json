@@ -1,6 +1,6 @@
 {
     "name": "@datapos/datapos-tool-micromark",
-    "version": "0.1.981",
+    "version": "0.1.982",
     "description": "A library that provides a wrapper around the Micromark markdown parser and the Speed Highlight code highlighter.",
     "license": "MIT",
     "private": false,
@@ -30,7 +30,7 @@
         "micromark-extension-gfm-table": "^2.1.1"
     },
     "devDependencies": {
-        "@datapos/datapos-development": "^0.3.94",
+        "@datapos/datapos-development": "^0.3.102",
         "@types/node": "^24.10.1",
         "@typescript-eslint/eslint-plugin": "^8.48.0",
         "@typescript-eslint/parser": "^8.48.0",
@@ -70,7 +70,7 @@
         "_document:licenceReportCheck": "license-report-check --source ./licenses.json --allowed 'MIT' --allowed 'n/a' --allowed 'Apache-2.0' --allowed 'CC0-1.0' --output=table",
         "_document:licenceTree": "license-report-recursive --only=prod,peer --recurse --output=tree > licensesTree.json",
         "_document:licenceTreeCheck": "license-report-check --source ./licensesTree.json --allowed 'MIT' --allowed 'n/a' --allowed 'Apache-2.0' --allowed 'CC0-1.0' --output=table",
-        "_document:update-readme": "node scripts/update-licenses-readme.js",
+        "_document:insertLicensesIntoReadme": "node -e \"import('@datapos/datapos-development').then(m => m.insertLicensesIntoReadme())\"",
         "_sync:withGitHub": "node -e \"import('@datapos/datapos-development').then(m => m.syncWithGitHub())\"",
         "_update:developDep": "npm install --save-dev @datapos/datapos-development@latest",
         "_upload": "npm run _upload:moduleToR2 && npm run _upload:moduleConfigToDO",
