@@ -80,7 +80,3 @@ The following list details the repository management commands implementation by 
 This project is licensed under the MIT License, allowing free use, modification, and distribution.
 
 [MIT](./LICENSE) © 2026 Data Positioning Pty Ltd.
-
-```
-
-```
