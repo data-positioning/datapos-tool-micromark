@@ -9,6 +9,7 @@ import importPlugin from 'eslint-plugin-import';
 
 // Exposures - Configuration
 export default [
+    { ignores: ['dist/**'] },
     {
         files: ['vite.config.ts', 'src/**/*.ts'],
         languageOptions: { parser: tseslintParser, parserOptions: { project: './tsconfig.json' } },
