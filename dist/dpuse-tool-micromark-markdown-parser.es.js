@@ -256,7 +256,7 @@ function P(t) {
 	}
 	function S() {
 		let e = a[a.length - 1], t = e[e.length - 1], n = t ? t.charCodeAt(t.length - 1) : null;
-		n === 10 || n === 13 || n === null || x();
+		n !== 10 && n !== 13 && n !== null && x();
 	}
 	function w(e) {
 		return h("ignoreEncode") ? e : D(e);
@@ -1081,7 +1081,7 @@ function Ce(e) {
 		if (r[0] === "enter") r[1].contentType && (Object.assign(t, we(u, n)), n = t[n], l = !0);
 		else if (r[1]._container) {
 			for (a = n, i = void 0; a--;) if (o = u.get(a), o[1].type === "lineEnding" || o[1].type === "lineEndingBlank") o[0] === "enter" && (i && (u.get(i)[1].type = "lineEndingBlank"), o[1].type = "lineEnding", i = a);
-			else if (!(o[1].type === "linePrefix" || o[1].type === "listItemIndent")) break;
+			else if (o[1].type !== "linePrefix" && o[1].type !== "listItemIndent") break;
 			i && (r[1].end = { ...u.get(i)[1].start }, s = u.slice(i, n), s.unshift(r), u.splice(i, n - i + 1, s));
 		}
 	}
@@ -1179,7 +1179,9 @@ function je(e, t, n, r, a, o) {
 		return e.enter(r), e.enter(a), e.consume(t), e.exit(a), e.enter(o), f;
 	}
 	function f(i) {
-		return l > 999 || i === null || i === 91 || i === 93 && !u || i === 94 && !l && "_hiddenFootnoteSupport" in c.parser.constructs ? n(i) : i === 93 ? (e.exit(o), e.enter(a), e.consume(i), e.exit(a), e.exit(r), t) : s(i) ? (e.enter("lineEnding"), e.consume(i), e.exit("lineEnding"), f) : (e.enter("chunkString", { contentType: "string" }), p(i));
+		return l > 999 || i === null || i === 91 || i === 93 && !u || 
+		/* c8 ignore next 3 */
+		i === 94 && !l && "_hiddenFootnoteSupport" in c.parser.constructs ? n(i) : i === 93 ? (e.exit(o), e.enter(a), e.consume(i), e.exit(a), e.exit(r), t) : s(i) ? (e.enter("lineEnding"), e.consume(i), e.exit("lineEnding"), f) : (e.enter("chunkString", { contentType: "string" }), p(i));
 	}
 	function p(t) {
 		return t === null || t === 91 || t === 93 || s(t) || l++ > 999 ? (e.exit("chunkString"), f(t)) : (e.consume(t), u ||= !i(t), t === 92 ? m : p);
@@ -1360,7 +1362,7 @@ var He = /* @__PURE__ */ "address.article.aside.base.basefont.blockquote.body.ca
 };
 function qe(e) {
 	let t = e.length;
-	for (; t-- && !(e[t][0] === "enter" && e[t][1].type === "htmlFlow"););
+	for (; t-- && (e[t][0] !== "enter" || e[t][1].type !== "htmlFlow"););
 	return t > 1 && e[t - 2][1].type === "linePrefix" && (e[t][1].start = e[t - 2][1].start, e[t + 1][1].start = e[t - 2][1].start, e.splice(t - 2, 2)), e;
 }
 function Je(e, t, n) {
@@ -2465,7 +2467,7 @@ var tn = {
 		}
 		if (t?.tables ?? !1) {
 			$.tableExtensionPromise ??= (async () => {
-				let e = await import("./micromark-extension-gfm-table-u0XhUoHG.js");
+				let e = await import("./micromark-extension-gfm-table-DTaYeBnk.js");
 				return {
 					extension: e.gfmTable(),
 					htmlExtension: e.gfmTableHtml()
@@ -2559,7 +2561,7 @@ function ln(e) {
 async function un() {
 	return $.speedHighlight ? $.speedHighlight : ($.speedHighlightPromise ??= (async () => {
 		let [e, t, n] = await Promise.all([
-			import("./dist-B-l9gIeO.js"),
+			import("./dist-DgSeMFwB.js"),
 			import("./github-dark-BQgApYrA.js"),
 			import("./github-light-CYQxR7sx.js")
 		]);
@@ -2569,4 +2571,4 @@ async function un() {
 //#endregion
 export { rn as MicromarkTool };
 
-//# sourceMappingURL=dpuse-tool-micromark.es.js.map
+//# sourceMappingURL=dpuse-tool-micromark-markdown-parser.es.js.map

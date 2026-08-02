@@ -1,15 +1,15 @@
 {
-  "version": "0.1.997",
-  "name": "@dpuse/dpuse-tool-micromark",
+  "version": "0.1.1033",
+  "name": "@dpuse/dpuse-tool-micromark-markdown-parser",
   "dependencies": {
     "@speed-highlight/core": {
-      "version": "1.2.17",
-      "resolved": "https://registry.npmjs.org/@speed-highlight/core/-/core-1.2.17.tgz",
+      "version": "1.2.23",
+      "resolved": "https://registry.npmjs.org/@speed-highlight/core/-/core-1.2.23.tgz",
       "overridden": false
     },
-    "micromark-extension-gfm-table": {
-      "version": "2.1.1",
-      "resolved": "https://registry.npmjs.org/micromark-extension-gfm-table/-/micromark-extension-gfm-table-2.1.1.tgz",
+    "micromark-extension-directive": {
+      "version": "4.0.0",
+      "resolved": "https://registry.npmjs.org/micromark-extension-directive/-/micromark-extension-directive-4.0.0.tgz",
       "overridden": false,
       "dependencies": {
         "devlop": {
@@ -31,6 +31,25 @@
           "dependencies": {
             "micromark-util-character": {
               "version": "2.1.1"
+            },
+            "micromark-util-types": {
+              "version": "2.0.2"
+            }
+          }
+        },
+        "micromark-factory-whitespace": {
+          "version": "2.0.1",
+          "resolved": "https://registry.npmjs.org/micromark-factory-whitespace/-/micromark-factory-whitespace-2.0.1.tgz",
+          "overridden": false,
+          "dependencies": {
+            "micromark-factory-space": {
+              "version": "2.0.1"
+            },
+            "micromark-util-character": {
+              "version": "2.1.1"
+            },
+            "micromark-util-symbol": {
+              "version": "2.0.1"
             },
             "micromark-util-types": {
               "version": "2.0.2"
@@ -59,6 +78,78 @@
           "version": "2.0.2",
           "resolved": "https://registry.npmjs.org/micromark-util-types/-/micromark-util-types-2.0.2.tgz",
           "overridden": false
+        },
+        "parse-entities": {
+          "version": "4.0.2",
+          "resolved": "https://registry.npmjs.org/parse-entities/-/parse-entities-4.0.2.tgz",
+          "overridden": false,
+          "dependencies": {
+            "@types/unist": {
+              "version": "2.0.11",
+              "resolved": "https://registry.npmjs.org/@types/unist/-/unist-2.0.11.tgz",
+              "overridden": false
+            },
+            "character-entities-legacy": {
+              "version": "3.0.0",
+              "resolved": "https://registry.npmjs.org/character-entities-legacy/-/character-entities-legacy-3.0.0.tgz",
+              "overridden": false
+            },
+            "character-reference-invalid": {
+              "version": "2.0.1",
+              "resolved": "https://registry.npmjs.org/character-reference-invalid/-/character-reference-invalid-2.0.1.tgz",
+              "overridden": false
+            },
+            "decode-named-character-reference": {
+              "version": "1.2.0"
+            },
+            "is-alphanumerical": {
+              "version": "2.0.1",
+              "resolved": "https://registry.npmjs.org/is-alphanumerical/-/is-alphanumerical-2.0.1.tgz",
+              "overridden": false,
+              "dependencies": {
+                "is-alphabetical": {
+                  "version": "2.0.1",
+                  "resolved": "https://registry.npmjs.org/is-alphabetical/-/is-alphabetical-2.0.1.tgz",
+                  "overridden": false
+                },
+                "is-decimal": {
+                  "version": "2.0.1"
+                }
+              }
+            },
+            "is-decimal": {
+              "version": "2.0.1",
+              "resolved": "https://registry.npmjs.org/is-decimal/-/is-decimal-2.0.1.tgz",
+              "overridden": false
+            },
+            "is-hexadecimal": {
+              "version": "2.0.1",
+              "resolved": "https://registry.npmjs.org/is-hexadecimal/-/is-hexadecimal-2.0.1.tgz",
+              "overridden": false
+            }
+          }
+        }
+      }
+    },
+    "micromark-extension-gfm-table": {
+      "version": "2.1.1",
+      "resolved": "https://registry.npmjs.org/micromark-extension-gfm-table/-/micromark-extension-gfm-table-2.1.1.tgz",
+      "overridden": false,
+      "dependencies": {
+        "devlop": {
+          "version": "1.1.0"
+        },
+        "micromark-factory-space": {
+          "version": "2.0.1"
+        },
+        "micromark-util-character": {
+          "version": "2.1.1"
+        },
+        "micromark-util-symbol": {
+          "version": "2.0.1"
+        },
+        "micromark-util-types": {
+          "version": "2.0.2"
         }
       }
     },
@@ -175,23 +266,7 @@
               }
             },
             "micromark-factory-whitespace": {
-              "version": "2.0.1",
-              "resolved": "https://registry.npmjs.org/micromark-factory-whitespace/-/micromark-factory-whitespace-2.0.1.tgz",
-              "overridden": false,
-              "dependencies": {
-                "micromark-factory-space": {
-                  "version": "2.0.1"
-                },
-                "micromark-util-character": {
-                  "version": "2.1.1"
-                },
-                "micromark-util-symbol": {
-                  "version": "2.0.1"
-                },
-                "micromark-util-types": {
-                  "version": "2.0.2"
-                }
-              }
+              "version": "2.0.1"
             },
             "micromark-util-character": {
               "version": "2.1.1"

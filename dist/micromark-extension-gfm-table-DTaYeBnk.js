@@ -91,7 +91,7 @@ var s = class {
 };
 function c(e, t, n, r) {
 	let i = 0;
-	if (!(n === 0 && r.length === 0)) {
+	if (n !== 0 || r.length !== 0) {
 		for (; i < e.map.length;) {
 			if (e.map[i][0] === t) {
 				e.map[i][1] += n, e.map[i][2].push(...r);
@@ -324,4 +324,4 @@ function h(e, t) {
 //#endregion
 export { u as gfmTable, a as gfmTableHtml };
 
-//# sourceMappingURL=micromark-extension-gfm-table-u0XhUoHG.js.map
+//# sourceMappingURL=micromark-extension-gfm-table-DTaYeBnk.js.map
