@@ -1,5 +1,7 @@
 # Data Positioning Micromark Tool
 
+Consider TanStack Highlight library for replacing @speed-highlight at some future date.
+
 [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/11502/badge)](https://www.bestpractices.dev/projects/11502)
 [![npm version](https://img.shields.io/npm/v/@dpuse/dpuse-tool-micromark)](https://www.npmjs.com/package/@dpuse/dpuse-tool-micromark)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
@@ -72,47 +74,47 @@ _Requires [Node.js](https://nodejs.org/) 23.11 or later, [npm](https://www.npmjs
 
 License data is collected automatically on each release using [license-checker](https://github.com/RSeidelsohn/license-checker-rseidelsohn). The following table lists all production dependencies. These dependencies (including transitive ones) have been checked and confirmed to use CC0-1.0 or MIT — all permissive, commercially-friendly licenses. Users of the uploaded library are covered by these checks; developers cloning this repository should independently verify development dependencies.
 
-|Dependency|Version|License(s)|Document|
-|:-|:-:|:-|:-|
-|[@speed-highlight/core](https://github.com/speed-highlight/core)|1.2.23|CC0-1.0|[LICENSE](licenses/downloads/@speed-highlight/core@1.2.23-LICENSE.txt)|
-|[@types/debug](https://github.com/DefinitelyTyped/DefinitelyTyped)|4.1.12|MIT|[LICENSE](licenses/downloads/@types/debug@4.1.12-LICENSE.txt)|
-|[@types/ms](https://github.com/DefinitelyTyped/DefinitelyTyped)|2.1.0|MIT|[LICENSE](licenses/downloads/@types/ms@2.1.0-LICENSE.txt)|
-|[@types/unist](https://github.com/DefinitelyTyped/DefinitelyTyped)|2.0.11|MIT|[LICENSE](licenses/downloads/@types/unist@2.0.11-LICENSE.txt)|
-|[character-entities-legacy](https://github.com/wooorm/character-entities-legacy)|3.0.0|MIT|[LICENSE](licenses/downloads/character-entities-legacy@3.0.0-LICENSE.txt)|
-|[character-entities](https://github.com/wooorm/character-entities)|2.0.2|MIT|[LICENSE](licenses/downloads/character-entities@2.0.2-LICENSE.txt)|
-|[character-reference-invalid](https://github.com/wooorm/character-reference-invalid)|2.0.1|MIT|[LICENSE](licenses/downloads/character-reference-invalid@2.0.1-LICENSE.txt)|
-|[debug](https://github.com/debug-js/debug)|4.4.3|MIT|[LICENSE](licenses/downloads/debug@4.4.3-LICENSE.txt)|
-|[decode-named-character-reference](https://github.com/wooorm/decode-named-character-reference)|1.2.0|MIT|[LICENSE](licenses/downloads/decode-named-character-reference@1.2.0-LICENSE.txt)|
-|[dequal](https://github.com/lukeed/dequal)|2.0.3|MIT|[LICENSE](licenses/downloads/dequal@2.0.3-LICENSE.txt)|
-|[devlop](https://github.com/wooorm/devlop)|1.1.0|MIT|[LICENSE](licenses/downloads/devlop@1.1.0-LICENSE.txt)|
-|[is-alphabetical](https://github.com/wooorm/is-alphabetical)|2.0.1|MIT|[LICENSE](licenses/downloads/is-alphabetical@2.0.1-LICENSE.txt)|
-|[is-alphanumerical](https://github.com/wooorm/is-alphanumerical)|2.0.1|MIT|[LICENSE](licenses/downloads/is-alphanumerical@2.0.1-LICENSE.txt)|
-|[is-decimal](https://github.com/wooorm/is-decimal)|2.0.1|MIT|[LICENSE](licenses/downloads/is-decimal@2.0.1-LICENSE.txt)|
-|[is-hexadecimal](https://github.com/wooorm/is-hexadecimal)|2.0.1|MIT|[LICENSE](licenses/downloads/is-hexadecimal@2.0.1-LICENSE.txt)|
-|[micromark-core-commonmark](https://github.com/micromark/micromark.git#main)|2.0.3|MIT|[LICENSE](licenses/downloads/micromark-core-commonmark@2.0.3-LICENSE.txt)|
-|[micromark-extension-directive](https://github.com/micromark/micromark-extension-directive)|4.0.0|MIT|[LICENSE](licenses/downloads/micromark-extension-directive@4.0.0-LICENSE.txt)|
-|[micromark-extension-gfm-table](https://github.com/micromark/micromark-extension-gfm-table)|2.1.1|MIT|[LICENSE](licenses/downloads/micromark-extension-gfm-table@2.1.1-LICENSE.txt)|
-|[micromark-factory-destination](https://github.com/micromark/micromark.git#main)|2.0.1|MIT|[LICENSE](licenses/downloads/micromark-factory-destination@2.0.1-LICENSE.txt)|
-|[micromark-factory-label](https://github.com/micromark/micromark.git#main)|2.0.1|MIT|[LICENSE](licenses/downloads/micromark-factory-label@2.0.1-LICENSE.txt)|
-|[micromark-factory-space](https://github.com/micromark/micromark.git#main)|2.0.1|MIT|[LICENSE](licenses/downloads/micromark-factory-space@2.0.1-LICENSE.txt)|
-|[micromark-factory-title](https://github.com/micromark/micromark.git#main)|2.0.1|MIT|[LICENSE](licenses/downloads/micromark-factory-title@2.0.1-LICENSE.txt)|
-|[micromark-factory-whitespace](https://github.com/micromark/micromark.git#main)|2.0.1|MIT|[LICENSE](licenses/downloads/micromark-factory-whitespace@2.0.1-LICENSE.txt)|
-|[micromark-util-character](https://github.com/micromark/micromark.git#main)|2.1.1|MIT|[LICENSE](licenses/downloads/micromark-util-character@2.1.1-LICENSE.txt)|
-|[micromark-util-chunked](https://github.com/micromark/micromark.git#main)|2.0.1|MIT|[LICENSE](licenses/downloads/micromark-util-chunked@2.0.1-LICENSE.txt)|
-|[micromark-util-classify-character](https://github.com/micromark/micromark.git#main)|2.0.1|MIT|[LICENSE](licenses/downloads/micromark-util-classify-character@2.0.1-LICENSE.txt)|
-|[micromark-util-combine-extensions](https://github.com/micromark/micromark.git#main)|2.0.1|MIT|[LICENSE](licenses/downloads/micromark-util-combine-extensions@2.0.1-LICENSE.txt)|
-|[micromark-util-decode-numeric-character-reference](https://github.com/micromark/micromark.git#main)|2.0.2|MIT|[LICENSE](licenses/downloads/micromark-util-decode-numeric-character-reference@2.0.2-LICENSE.txt)|
-|[micromark-util-encode](https://github.com/micromark/micromark.git#main)|2.0.1|MIT|[LICENSE](licenses/downloads/micromark-util-encode@2.0.1-LICENSE.txt)|
-|[micromark-util-html-tag-name](https://github.com/micromark/micromark.git#main)|2.0.1|MIT|[LICENSE](licenses/downloads/micromark-util-html-tag-name@2.0.1-LICENSE.txt)|
-|[micromark-util-normalize-identifier](https://github.com/micromark/micromark.git#main)|2.0.1|MIT|[LICENSE](licenses/downloads/micromark-util-normalize-identifier@2.0.1-LICENSE.txt)|
-|[micromark-util-resolve-all](https://github.com/micromark/micromark.git#main)|2.0.1|MIT|[LICENSE](licenses/downloads/micromark-util-resolve-all@2.0.1-LICENSE.txt)|
-|[micromark-util-sanitize-uri](https://github.com/micromark/micromark.git#main)|2.0.1|MIT|[LICENSE](licenses/downloads/micromark-util-sanitize-uri@2.0.1-LICENSE.txt)|
-|[micromark-util-subtokenize](https://github.com/micromark/micromark.git#main)|2.1.0|MIT|[LICENSE](licenses/downloads/micromark-util-subtokenize@2.1.0-LICENSE.txt)|
-|[micromark-util-symbol](https://github.com/micromark/micromark.git#main)|2.0.1|MIT|[LICENSE](licenses/downloads/micromark-util-symbol@2.0.1-LICENSE.txt)|
-|[micromark-util-types](https://github.com/micromark/micromark.git#main)|2.0.2|MIT|[LICENSE](licenses/downloads/micromark-util-types@2.0.2-LICENSE.txt)|
-|[micromark](https://github.com/micromark/micromark.git#main)|4.0.2|MIT|[LICENSE](licenses/downloads/micromark@4.0.2-LICENSE.txt)|
-|[ms](https://github.com/vercel/ms)|2.1.3|MIT|[LICENSE](licenses/downloads/ms@2.1.3-LICENSE.txt)|
-|[parse-entities](https://github.com/wooorm/parse-entities)|4.0.2|MIT|[LICENSE](licenses/downloads/parse-entities@4.0.2-LICENSE.txt)|
+| Dependency                                                                                           | Version | License(s) | Document                                                                                          |
+| :--------------------------------------------------------------------------------------------------- | :-----: | :--------- | :------------------------------------------------------------------------------------------------ |
+| [@speed-highlight/core](https://github.com/speed-highlight/core)                                     | 1.2.23  | CC0-1.0    | [LICENSE](licenses/downloads/@speed-highlight/core@1.2.23-LICENSE.txt)                            |
+| [@types/debug](https://github.com/DefinitelyTyped/DefinitelyTyped)                                   | 4.1.12  | MIT        | [LICENSE](licenses/downloads/@types/debug@4.1.12-LICENSE.txt)                                     |
+| [@types/ms](https://github.com/DefinitelyTyped/DefinitelyTyped)                                      |  2.1.0  | MIT        | [LICENSE](licenses/downloads/@types/ms@2.1.0-LICENSE.txt)                                         |
+| [@types/unist](https://github.com/DefinitelyTyped/DefinitelyTyped)                                   | 2.0.11  | MIT        | [LICENSE](licenses/downloads/@types/unist@2.0.11-LICENSE.txt)                                     |
+| [character-entities-legacy](https://github.com/wooorm/character-entities-legacy)                     |  3.0.0  | MIT        | [LICENSE](licenses/downloads/character-entities-legacy@3.0.0-LICENSE.txt)                         |
+| [character-entities](https://github.com/wooorm/character-entities)                                   |  2.0.2  | MIT        | [LICENSE](licenses/downloads/character-entities@2.0.2-LICENSE.txt)                                |
+| [character-reference-invalid](https://github.com/wooorm/character-reference-invalid)                 |  2.0.1  | MIT        | [LICENSE](licenses/downloads/character-reference-invalid@2.0.1-LICENSE.txt)                       |
+| [debug](https://github.com/debug-js/debug)                                                           |  4.4.3  | MIT        | [LICENSE](licenses/downloads/debug@4.4.3-LICENSE.txt)                                             |
+| [decode-named-character-reference](https://github.com/wooorm/decode-named-character-reference)       |  1.2.0  | MIT        | [LICENSE](licenses/downloads/decode-named-character-reference@1.2.0-LICENSE.txt)                  |
+| [dequal](https://github.com/lukeed/dequal)                                                           |  2.0.3  | MIT        | [LICENSE](licenses/downloads/dequal@2.0.3-LICENSE.txt)                                            |
+| [devlop](https://github.com/wooorm/devlop)                                                           |  1.1.0  | MIT        | [LICENSE](licenses/downloads/devlop@1.1.0-LICENSE.txt)                                            |
+| [is-alphabetical](https://github.com/wooorm/is-alphabetical)                                         |  2.0.1  | MIT        | [LICENSE](licenses/downloads/is-alphabetical@2.0.1-LICENSE.txt)                                   |
+| [is-alphanumerical](https://github.com/wooorm/is-alphanumerical)                                     |  2.0.1  | MIT        | [LICENSE](licenses/downloads/is-alphanumerical@2.0.1-LICENSE.txt)                                 |
+| [is-decimal](https://github.com/wooorm/is-decimal)                                                   |  2.0.1  | MIT        | [LICENSE](licenses/downloads/is-decimal@2.0.1-LICENSE.txt)                                        |
+| [is-hexadecimal](https://github.com/wooorm/is-hexadecimal)                                           |  2.0.1  | MIT        | [LICENSE](licenses/downloads/is-hexadecimal@2.0.1-LICENSE.txt)                                    |
+| [micromark-core-commonmark](https://github.com/micromark/micromark.git#main)                         |  2.0.3  | MIT        | [LICENSE](licenses/downloads/micromark-core-commonmark@2.0.3-LICENSE.txt)                         |
+| [micromark-extension-directive](https://github.com/micromark/micromark-extension-directive)          |  4.0.0  | MIT        | [LICENSE](licenses/downloads/micromark-extension-directive@4.0.0-LICENSE.txt)                     |
+| [micromark-extension-gfm-table](https://github.com/micromark/micromark-extension-gfm-table)          |  2.1.1  | MIT        | [LICENSE](licenses/downloads/micromark-extension-gfm-table@2.1.1-LICENSE.txt)                     |
+| [micromark-factory-destination](https://github.com/micromark/micromark.git#main)                     |  2.0.1  | MIT        | [LICENSE](licenses/downloads/micromark-factory-destination@2.0.1-LICENSE.txt)                     |
+| [micromark-factory-label](https://github.com/micromark/micromark.git#main)                           |  2.0.1  | MIT        | [LICENSE](licenses/downloads/micromark-factory-label@2.0.1-LICENSE.txt)                           |
+| [micromark-factory-space](https://github.com/micromark/micromark.git#main)                           |  2.0.1  | MIT        | [LICENSE](licenses/downloads/micromark-factory-space@2.0.1-LICENSE.txt)                           |
+| [micromark-factory-title](https://github.com/micromark/micromark.git#main)                           |  2.0.1  | MIT        | [LICENSE](licenses/downloads/micromark-factory-title@2.0.1-LICENSE.txt)                           |
+| [micromark-factory-whitespace](https://github.com/micromark/micromark.git#main)                      |  2.0.1  | MIT        | [LICENSE](licenses/downloads/micromark-factory-whitespace@2.0.1-LICENSE.txt)                      |
+| [micromark-util-character](https://github.com/micromark/micromark.git#main)                          |  2.1.1  | MIT        | [LICENSE](licenses/downloads/micromark-util-character@2.1.1-LICENSE.txt)                          |
+| [micromark-util-chunked](https://github.com/micromark/micromark.git#main)                            |  2.0.1  | MIT        | [LICENSE](licenses/downloads/micromark-util-chunked@2.0.1-LICENSE.txt)                            |
+| [micromark-util-classify-character](https://github.com/micromark/micromark.git#main)                 |  2.0.1  | MIT        | [LICENSE](licenses/downloads/micromark-util-classify-character@2.0.1-LICENSE.txt)                 |
+| [micromark-util-combine-extensions](https://github.com/micromark/micromark.git#main)                 |  2.0.1  | MIT        | [LICENSE](licenses/downloads/micromark-util-combine-extensions@2.0.1-LICENSE.txt)                 |
+| [micromark-util-decode-numeric-character-reference](https://github.com/micromark/micromark.git#main) |  2.0.2  | MIT        | [LICENSE](licenses/downloads/micromark-util-decode-numeric-character-reference@2.0.2-LICENSE.txt) |
+| [micromark-util-encode](https://github.com/micromark/micromark.git#main)                             |  2.0.1  | MIT        | [LICENSE](licenses/downloads/micromark-util-encode@2.0.1-LICENSE.txt)                             |
+| [micromark-util-html-tag-name](https://github.com/micromark/micromark.git#main)                      |  2.0.1  | MIT        | [LICENSE](licenses/downloads/micromark-util-html-tag-name@2.0.1-LICENSE.txt)                      |
+| [micromark-util-normalize-identifier](https://github.com/micromark/micromark.git#main)               |  2.0.1  | MIT        | [LICENSE](licenses/downloads/micromark-util-normalize-identifier@2.0.1-LICENSE.txt)               |
+| [micromark-util-resolve-all](https://github.com/micromark/micromark.git#main)                        |  2.0.1  | MIT        | [LICENSE](licenses/downloads/micromark-util-resolve-all@2.0.1-LICENSE.txt)                        |
+| [micromark-util-sanitize-uri](https://github.com/micromark/micromark.git#main)                       |  2.0.1  | MIT        | [LICENSE](licenses/downloads/micromark-util-sanitize-uri@2.0.1-LICENSE.txt)                       |
+| [micromark-util-subtokenize](https://github.com/micromark/micromark.git#main)                        |  2.1.0  | MIT        | [LICENSE](licenses/downloads/micromark-util-subtokenize@2.1.0-LICENSE.txt)                        |
+| [micromark-util-symbol](https://github.com/micromark/micromark.git#main)                             |  2.0.1  | MIT        | [LICENSE](licenses/downloads/micromark-util-symbol@2.0.1-LICENSE.txt)                             |
+| [micromark-util-types](https://github.com/micromark/micromark.git#main)                              |  2.0.2  | MIT        | [LICENSE](licenses/downloads/micromark-util-types@2.0.2-LICENSE.txt)                              |
+| [micromark](https://github.com/micromark/micromark.git#main)                                         |  4.0.2  | MIT        | [LICENSE](licenses/downloads/micromark@4.0.2-LICENSE.txt)                                         |
+| [ms](https://github.com/vercel/ms)                                                                   |  2.1.3  | MIT        | [LICENSE](licenses/downloads/ms@2.1.3-LICENSE.txt)                                                |
+| [parse-entities](https://github.com/wooorm/parse-entities)                                           |  4.0.2  | MIT        | [LICENSE](licenses/downloads/parse-entities@4.0.2-LICENSE.txt)                                    |
 
 <!-- DEPENDENCY_LICENSES_END -->
 
@@ -122,101 +124,101 @@ The dependency tree below lists every package in this project — direct and tra
 
 - **[@speed-highlight/core](https://github.com/speed-highlight/core)** 1.2.23 — this month: 2026-08-01
 - **[micromark-extension-directive](https://github.com/micromark/micromark-extension-directive)** 4.0.0 — **17 months** ago: 2025-02-27 ⚠️
-  - **[devlop](https://github.com/wooorm/devlop)** 1.1.0 — **37 months** ago: 2023-06-29 ⚠️
-    - **[dequal](https://github.com/lukeed/dequal)** 2.0.3 — **48 months** ago: 2022-07-11 ⚠️
-  - **[micromark-factory-space](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-    - **[micromark-util-character](https://github.com/micromark/micromark.git#main)** 2.1.1 — **20 months** ago: 2024-11-12 ⚠️
-    - **[micromark-util-types](https://github.com/micromark/micromark.git#main)** 2.0.2 — **17 months** ago: 2025-02-27 ⚠️
-  - **[micromark-factory-whitespace](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-    - **[micromark-factory-space](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-    - **[micromark-util-character](https://github.com/micromark/micromark.git#main)** 2.1.1 — **20 months** ago: 2024-11-12 ⚠️
-    - **[micromark-util-symbol](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-    - **[micromark-util-types](https://github.com/micromark/micromark.git#main)** 2.0.2 — **17 months** ago: 2025-02-27 ⚠️
-  - **[micromark-util-character](https://github.com/micromark/micromark.git#main)** 2.1.1 — **20 months** ago: 2024-11-12 ⚠️
-    - **[micromark-util-symbol](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-    - **[micromark-util-types](https://github.com/micromark/micromark.git#main)** 2.0.2 — **17 months** ago: 2025-02-27 ⚠️
-  - **[micromark-util-symbol](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-  - **[micromark-util-types](https://github.com/micromark/micromark.git#main)** 2.0.2 — **17 months** ago: 2025-02-27 ⚠️
-  - **[parse-entities](https://github.com/wooorm/parse-entities)** 4.0.2 — **19 months** ago: 2024-12-13 ⚠️
-    - **[@types/unist](https://github.com/DefinitelyTyped/DefinitelyTyped)** 2.0.11 — **23 months** ago: 2024-08-15 ⚠️ → **latest**: 3.0.3 — **23 months** ago: 2024-08-15 ⚠️ ❗
-    - **[character-entities-legacy](https://github.com/wooorm/character-entities-legacy)** 3.0.0 — **57 months** ago: 2021-10-29 ⚠️
-    - **[character-reference-invalid](https://github.com/wooorm/character-reference-invalid)** 2.0.1 — **57 months** ago: 2021-10-27 ⚠️
-    - **[decode-named-character-reference](https://github.com/wooorm/decode-named-character-reference)** 1.2.0 — **13 months** ago: 2025-06-14 ⚠️ → **latest**: 1.3.0 — **6 months** ago: 2026-01-19 ❗
-    - **[is-alphanumerical](https://github.com/wooorm/is-alphanumerical)** 2.0.1 — **56 months** ago: 2021-11-04 ⚠️
-      - **[is-alphabetical](https://github.com/wooorm/is-alphabetical)** 2.0.1 — **56 months** ago: 2021-11-04 ⚠️
-      - **[is-decimal](https://github.com/wooorm/is-decimal)** 2.0.1 — **56 months** ago: 2021-11-04 ⚠️
-    - **[is-decimal](https://github.com/wooorm/is-decimal)** 2.0.1 — **56 months** ago: 2021-11-04 ⚠️
-    - **[is-hexadecimal](https://github.com/wooorm/is-hexadecimal)** 2.0.1 — **56 months** ago: 2021-11-04 ⚠️
-- **[micromark-extension-gfm-table](https://github.com/micromark/micromark-extension-gfm-table)** 2.1.1 — **18 months** ago: 2025-01-20 ⚠️
-  - **[devlop](https://github.com/wooorm/devlop)** 1.1.0 — **37 months** ago: 2023-06-29 ⚠️
-  - **[micromark-factory-space](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-  - **[micromark-util-character](https://github.com/micromark/micromark.git#main)** 2.1.1 — **20 months** ago: 2024-11-12 ⚠️
-  - **[micromark-util-symbol](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-  - **[micromark-util-types](https://github.com/micromark/micromark.git#main)** 2.0.2 — **17 months** ago: 2025-02-27 ⚠️
-- **[micromark](https://github.com/micromark/micromark.git#main)** 4.0.2 — **17 months** ago: 2025-02-27 ⚠️
-  - **[@types/debug](https://github.com/DefinitelyTyped/DefinitelyTyped)** 4.1.12 — **32 months** ago: 2023-11-09 ⚠️ → **latest**: 4.1.13 — **4 months** ago: 2026-03-19 ❗
-    - **[@types/ms](https://github.com/DefinitelyTyped/DefinitelyTyped)** 2.1.0 — **18 months** ago: 2025-01-16 ⚠️
-  - **[debug](https://github.com/debug-js/debug)** 4.4.3 — **10 months** ago: 2025-09-13 ⚠️
-    - **[ms](https://github.com/vercel/ms)** 2.1.3 — **67 months** ago: 2020-12-08 ⚠️
-  - **[decode-named-character-reference](https://github.com/wooorm/decode-named-character-reference)** 1.2.0 — **13 months** ago: 2025-06-14 ⚠️ → **latest**: 1.3.0 — **6 months** ago: 2026-01-19 ❗
-    - **[character-entities](https://github.com/wooorm/character-entities)** 2.0.2 — **49 months** ago: 2022-06-22 ⚠️
-  - **[devlop](https://github.com/wooorm/devlop)** 1.1.0 — **37 months** ago: 2023-06-29 ⚠️
-  - **[micromark-core-commonmark](https://github.com/micromark/micromark.git#main)** 2.0.3 — **17 months** ago: 2025-02-27 ⚠️
-    - **[decode-named-character-reference](https://github.com/wooorm/decode-named-character-reference)** 1.2.0 — **13 months** ago: 2025-06-14 ⚠️ → **latest**: 1.3.0 — **6 months** ago: 2026-01-19 ❗
     - **[devlop](https://github.com/wooorm/devlop)** 1.1.0 — **37 months** ago: 2023-06-29 ⚠️
-    - **[micromark-factory-destination](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-      - **[micromark-util-character](https://github.com/micromark/micromark.git#main)** 2.1.1 — **20 months** ago: 2024-11-12 ⚠️
-      - **[micromark-util-symbol](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-      - **[micromark-util-types](https://github.com/micromark/micromark.git#main)** 2.0.2 — **17 months** ago: 2025-02-27 ⚠️
-    - **[micromark-factory-label](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-      - **[devlop](https://github.com/wooorm/devlop)** 1.1.0 — **37 months** ago: 2023-06-29 ⚠️
-      - **[micromark-util-character](https://github.com/micromark/micromark.git#main)** 2.1.1 — **20 months** ago: 2024-11-12 ⚠️
-      - **[micromark-util-symbol](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-      - **[micromark-util-types](https://github.com/micromark/micromark.git#main)** 2.0.2 — **17 months** ago: 2025-02-27 ⚠️
+        - **[dequal](https://github.com/lukeed/dequal)** 2.0.3 — **48 months** ago: 2022-07-11 ⚠️
     - **[micromark-factory-space](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-    - **[micromark-factory-title](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-      - **[micromark-factory-space](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-      - **[micromark-util-character](https://github.com/micromark/micromark.git#main)** 2.1.1 — **20 months** ago: 2024-11-12 ⚠️
-      - **[micromark-util-symbol](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-      - **[micromark-util-types](https://github.com/micromark/micromark.git#main)** 2.0.2 — **17 months** ago: 2025-02-27 ⚠️
+        - **[micromark-util-character](https://github.com/micromark/micromark.git#main)** 2.1.1 — **20 months** ago: 2024-11-12 ⚠️
+        - **[micromark-util-types](https://github.com/micromark/micromark.git#main)** 2.0.2 — **17 months** ago: 2025-02-27 ⚠️
     - **[micromark-factory-whitespace](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+        - **[micromark-factory-space](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+        - **[micromark-util-character](https://github.com/micromark/micromark.git#main)** 2.1.1 — **20 months** ago: 2024-11-12 ⚠️
+        - **[micromark-util-symbol](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+        - **[micromark-util-types](https://github.com/micromark/micromark.git#main)** 2.0.2 — **17 months** ago: 2025-02-27 ⚠️
     - **[micromark-util-character](https://github.com/micromark/micromark.git#main)** 2.1.1 — **20 months** ago: 2024-11-12 ⚠️
-    - **[micromark-util-chunked](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-    - **[micromark-util-classify-character](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-      - **[micromark-util-character](https://github.com/micromark/micromark.git#main)** 2.1.1 — **20 months** ago: 2024-11-12 ⚠️
-      - **[micromark-util-symbol](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-      - **[micromark-util-types](https://github.com/micromark/micromark.git#main)** 2.0.2 — **17 months** ago: 2025-02-27 ⚠️
-    - **[micromark-util-html-tag-name](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-    - **[micromark-util-normalize-identifier](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-    - **[micromark-util-resolve-all](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-    - **[micromark-util-subtokenize](https://github.com/micromark/micromark.git#main)** 2.1.0 — **17 months** ago: 2025-02-27 ⚠️
+        - **[micromark-util-symbol](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+        - **[micromark-util-types](https://github.com/micromark/micromark.git#main)** 2.0.2 — **17 months** ago: 2025-02-27 ⚠️
     - **[micromark-util-symbol](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
     - **[micromark-util-types](https://github.com/micromark/micromark.git#main)** 2.0.2 — **17 months** ago: 2025-02-27 ⚠️
-  - **[micromark-factory-space](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-  - **[micromark-util-character](https://github.com/micromark/micromark.git#main)** 2.1.1 — **20 months** ago: 2024-11-12 ⚠️
-  - **[micromark-util-chunked](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-    - **[micromark-util-symbol](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-  - **[micromark-util-combine-extensions](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-    - **[micromark-util-chunked](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-    - **[micromark-util-types](https://github.com/micromark/micromark.git#main)** 2.0.2 — **17 months** ago: 2025-02-27 ⚠️
-  - **[micromark-util-decode-numeric-character-reference](https://github.com/micromark/micromark.git#main)** 2.0.2 — **20 months** ago: 2024-11-12 ⚠️
-    - **[micromark-util-symbol](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-  - **[micromark-util-encode](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-  - **[micromark-util-normalize-identifier](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-    - **[micromark-util-symbol](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-  - **[micromark-util-resolve-all](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-    - **[micromark-util-types](https://github.com/micromark/micromark.git#main)** 2.0.2 — **17 months** ago: 2025-02-27 ⚠️
-  - **[micromark-util-sanitize-uri](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-    - **[micromark-util-character](https://github.com/micromark/micromark.git#main)** 2.1.1 — **20 months** ago: 2024-11-12 ⚠️
-    - **[micromark-util-encode](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-    - **[micromark-util-symbol](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-  - **[micromark-util-subtokenize](https://github.com/micromark/micromark.git#main)** 2.1.0 — **17 months** ago: 2025-02-27 ⚠️
+    - **[parse-entities](https://github.com/wooorm/parse-entities)** 4.0.2 — **19 months** ago: 2024-12-13 ⚠️
+        - **[@types/unist](https://github.com/DefinitelyTyped/DefinitelyTyped)** 2.0.11 — **23 months** ago: 2024-08-15 ⚠️ → **latest**: 3.0.3 — **23 months** ago: 2024-08-15 ⚠️ ❗
+        - **[character-entities-legacy](https://github.com/wooorm/character-entities-legacy)** 3.0.0 — **57 months** ago: 2021-10-29 ⚠️
+        - **[character-reference-invalid](https://github.com/wooorm/character-reference-invalid)** 2.0.1 — **57 months** ago: 2021-10-27 ⚠️
+        - **[decode-named-character-reference](https://github.com/wooorm/decode-named-character-reference)** 1.2.0 — **13 months** ago: 2025-06-14 ⚠️ → **latest**: 1.3.0 — **6 months** ago: 2026-01-19 ❗
+        - **[is-alphanumerical](https://github.com/wooorm/is-alphanumerical)** 2.0.1 — **56 months** ago: 2021-11-04 ⚠️
+            - **[is-alphabetical](https://github.com/wooorm/is-alphabetical)** 2.0.1 — **56 months** ago: 2021-11-04 ⚠️
+            - **[is-decimal](https://github.com/wooorm/is-decimal)** 2.0.1 — **56 months** ago: 2021-11-04 ⚠️
+        - **[is-decimal](https://github.com/wooorm/is-decimal)** 2.0.1 — **56 months** ago: 2021-11-04 ⚠️
+        - **[is-hexadecimal](https://github.com/wooorm/is-hexadecimal)** 2.0.1 — **56 months** ago: 2021-11-04 ⚠️
+- **[micromark-extension-gfm-table](https://github.com/micromark/micromark-extension-gfm-table)** 2.1.1 — **18 months** ago: 2025-01-20 ⚠️
     - **[devlop](https://github.com/wooorm/devlop)** 1.1.0 — **37 months** ago: 2023-06-29 ⚠️
-    - **[micromark-util-chunked](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+    - **[micromark-factory-space](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+    - **[micromark-util-character](https://github.com/micromark/micromark.git#main)** 2.1.1 — **20 months** ago: 2024-11-12 ⚠️
     - **[micromark-util-symbol](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
     - **[micromark-util-types](https://github.com/micromark/micromark.git#main)** 2.0.2 — **17 months** ago: 2025-02-27 ⚠️
-  - **[micromark-util-symbol](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
-  - **[micromark-util-types](https://github.com/micromark/micromark.git#main)** 2.0.2 — **17 months** ago: 2025-02-27 ⚠️
+- **[micromark](https://github.com/micromark/micromark.git#main)** 4.0.2 — **17 months** ago: 2025-02-27 ⚠️
+    - **[@types/debug](https://github.com/DefinitelyTyped/DefinitelyTyped)** 4.1.12 — **32 months** ago: 2023-11-09 ⚠️ → **latest**: 4.1.13 — **4 months** ago: 2026-03-19 ❗
+        - **[@types/ms](https://github.com/DefinitelyTyped/DefinitelyTyped)** 2.1.0 — **18 months** ago: 2025-01-16 ⚠️
+    - **[debug](https://github.com/debug-js/debug)** 4.4.3 — **10 months** ago: 2025-09-13 ⚠️
+        - **[ms](https://github.com/vercel/ms)** 2.1.3 — **67 months** ago: 2020-12-08 ⚠️
+    - **[decode-named-character-reference](https://github.com/wooorm/decode-named-character-reference)** 1.2.0 — **13 months** ago: 2025-06-14 ⚠️ → **latest**: 1.3.0 — **6 months** ago: 2026-01-19 ❗
+        - **[character-entities](https://github.com/wooorm/character-entities)** 2.0.2 — **49 months** ago: 2022-06-22 ⚠️
+    - **[devlop](https://github.com/wooorm/devlop)** 1.1.0 — **37 months** ago: 2023-06-29 ⚠️
+    - **[micromark-core-commonmark](https://github.com/micromark/micromark.git#main)** 2.0.3 — **17 months** ago: 2025-02-27 ⚠️
+        - **[decode-named-character-reference](https://github.com/wooorm/decode-named-character-reference)** 1.2.0 — **13 months** ago: 2025-06-14 ⚠️ → **latest**: 1.3.0 — **6 months** ago: 2026-01-19 ❗
+        - **[devlop](https://github.com/wooorm/devlop)** 1.1.0 — **37 months** ago: 2023-06-29 ⚠️
+        - **[micromark-factory-destination](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+            - **[micromark-util-character](https://github.com/micromark/micromark.git#main)** 2.1.1 — **20 months** ago: 2024-11-12 ⚠️
+            - **[micromark-util-symbol](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+            - **[micromark-util-types](https://github.com/micromark/micromark.git#main)** 2.0.2 — **17 months** ago: 2025-02-27 ⚠️
+        - **[micromark-factory-label](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+            - **[devlop](https://github.com/wooorm/devlop)** 1.1.0 — **37 months** ago: 2023-06-29 ⚠️
+            - **[micromark-util-character](https://github.com/micromark/micromark.git#main)** 2.1.1 — **20 months** ago: 2024-11-12 ⚠️
+            - **[micromark-util-symbol](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+            - **[micromark-util-types](https://github.com/micromark/micromark.git#main)** 2.0.2 — **17 months** ago: 2025-02-27 ⚠️
+        - **[micromark-factory-space](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+        - **[micromark-factory-title](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+            - **[micromark-factory-space](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+            - **[micromark-util-character](https://github.com/micromark/micromark.git#main)** 2.1.1 — **20 months** ago: 2024-11-12 ⚠️
+            - **[micromark-util-symbol](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+            - **[micromark-util-types](https://github.com/micromark/micromark.git#main)** 2.0.2 — **17 months** ago: 2025-02-27 ⚠️
+        - **[micromark-factory-whitespace](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+        - **[micromark-util-character](https://github.com/micromark/micromark.git#main)** 2.1.1 — **20 months** ago: 2024-11-12 ⚠️
+        - **[micromark-util-chunked](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+        - **[micromark-util-classify-character](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+            - **[micromark-util-character](https://github.com/micromark/micromark.git#main)** 2.1.1 — **20 months** ago: 2024-11-12 ⚠️
+            - **[micromark-util-symbol](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+            - **[micromark-util-types](https://github.com/micromark/micromark.git#main)** 2.0.2 — **17 months** ago: 2025-02-27 ⚠️
+        - **[micromark-util-html-tag-name](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+        - **[micromark-util-normalize-identifier](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+        - **[micromark-util-resolve-all](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+        - **[micromark-util-subtokenize](https://github.com/micromark/micromark.git#main)** 2.1.0 — **17 months** ago: 2025-02-27 ⚠️
+        - **[micromark-util-symbol](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+        - **[micromark-util-types](https://github.com/micromark/micromark.git#main)** 2.0.2 — **17 months** ago: 2025-02-27 ⚠️
+    - **[micromark-factory-space](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+    - **[micromark-util-character](https://github.com/micromark/micromark.git#main)** 2.1.1 — **20 months** ago: 2024-11-12 ⚠️
+    - **[micromark-util-chunked](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+        - **[micromark-util-symbol](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+    - **[micromark-util-combine-extensions](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+        - **[micromark-util-chunked](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+        - **[micromark-util-types](https://github.com/micromark/micromark.git#main)** 2.0.2 — **17 months** ago: 2025-02-27 ⚠️
+    - **[micromark-util-decode-numeric-character-reference](https://github.com/micromark/micromark.git#main)** 2.0.2 — **20 months** ago: 2024-11-12 ⚠️
+        - **[micromark-util-symbol](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+    - **[micromark-util-encode](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+    - **[micromark-util-normalize-identifier](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+        - **[micromark-util-symbol](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+    - **[micromark-util-resolve-all](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+        - **[micromark-util-types](https://github.com/micromark/micromark.git#main)** 2.0.2 — **17 months** ago: 2025-02-27 ⚠️
+    - **[micromark-util-sanitize-uri](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+        - **[micromark-util-character](https://github.com/micromark/micromark.git#main)** 2.1.1 — **20 months** ago: 2024-11-12 ⚠️
+        - **[micromark-util-encode](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+        - **[micromark-util-symbol](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+    - **[micromark-util-subtokenize](https://github.com/micromark/micromark.git#main)** 2.1.0 — **17 months** ago: 2025-02-27 ⚠️
+        - **[devlop](https://github.com/wooorm/devlop)** 1.1.0 — **37 months** ago: 2023-06-29 ⚠️
+        - **[micromark-util-chunked](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+        - **[micromark-util-symbol](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+        - **[micromark-util-types](https://github.com/micromark/micromark.git#main)** 2.0.2 — **17 months** ago: 2025-02-27 ⚠️
+    - **[micromark-util-symbol](https://github.com/micromark/micromark.git#main)** 2.0.1 — **20 months** ago: 2024-11-12 ⚠️
+    - **[micromark-util-types](https://github.com/micromark/micromark.git#main)** 2.0.2 — **17 months** ago: 2025-02-27 ⚠️
 
 <!-- DEPENDENCY_TREE_END -->
 
@@ -226,101 +228,101 @@ The Bundle Analysis Report is generated automatically on each release using [Son
 
 _Note: Sonda's Vite reports currently exclude CSS files, since Vite does not generate source maps for CSS._
 
-|Chunk/Module/File|Composition|
-|:------ |:-----------|
-| dist/dpuse-tool-micromark-markdown-parser.es.js | 74.2 kB · brotli 16.2 kB |
-| &nbsp;&nbsp;&nbsp;&nbsp;micromark-core-commonmark | `█████░░░░░░░░░░░░░░░` 23.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/html-flow.js | `█░░░░░░░░░░░░░░░░░░░` 3.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/label-end.js | `█░░░░░░░░░░░░░░░░░░░` 2.7% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/html-text.js | `░░░░░░░░░░░░░░░░░░░░` 2.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/list.js | `░░░░░░░░░░░░░░░░░░░░` 2.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/code-fenced.js | `░░░░░░░░░░░░░░░░░░░░` 1.9% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/attention.js | `░░░░░░░░░░░░░░░░░░░░` 1.8% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/code-text.js | `░░░░░░░░░░░░░░░░░░░░` 1.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/setext-underline.js | `░░░░░░░░░░░░░░░░░░░░` 1.0% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/heading-atx.js | `░░░░░░░░░░░░░░░░░░░░` 1.0% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/definition.js | `░░░░░░░░░░░░░░░░░░░░` 0.9% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/autolink.js | `░░░░░░░░░░░░░░░░░░░░` 0.9% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/content.js | `░░░░░░░░░░░░░░░░░░░░` 0.8% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/character-reference.js | `░░░░░░░░░░░░░░░░░░░░` 0.8% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/code-indented.js | `░░░░░░░░░░░░░░░░░░░░` 0.7% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/block-quote.js | `░░░░░░░░░░░░░░░░░░░░` 0.6% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/label-start-image.js | `░░░░░░░░░░░░░░░░░░░░` 0.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/thematic-break.js | `░░░░░░░░░░░░░░░░░░░░` 0.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/label-start-link.js | `░░░░░░░░░░░░░░░░░░░░` 0.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/character-escape.js | `░░░░░░░░░░░░░░░░░░░░` 0.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/hard-break-escape.js | `░░░░░░░░░░░░░░░░░░░░` 0.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/blank-line.js | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/line-ending.js | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;micromark | `███░░░░░░░░░░░░░░░░░` 13.9% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/compile.js | `█░░░░░░░░░░░░░░░░░░░` 5.9% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/create-tokenizer.js | `█░░░░░░░░░░░░░░░░░░░` 2.7% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/initialize/document.js | `░░░░░░░░░░░░░░░░░░░░` 1.9% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/initialize/text.js | `░░░░░░░░░░░░░░░░░░░░` 1.4% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/preprocess.js | `░░░░░░░░░░░░░░░░░░░░` 0.6% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/initialize/content.js | `░░░░░░░░░░░░░░░░░░░░` 0.4% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/initialize/flow.js | `░░░░░░░░░░░░░░░░░░░░` 0.4% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/constructs.js | `░░░░░░░░░░░░░░░░░░░░` 0.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/parse.js | `░░░░░░░░░░░░░░░░░░░░` 0.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.js | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/postprocess.js | `░░░░░░░░░░░░░░░░░░░░` 0.0% |
-| &nbsp;&nbsp;&nbsp;&nbsp;(unassigned) → [unassigned] | `█░░░░░░░░░░░░░░░░░░░` 6.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;src | `█░░░░░░░░░░░░░░░░░░░` 4.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.ts | `█░░░░░░░░░░░░░░░░░░░` 2.8% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;formula.ts | `░░░░░░░░░░░░░░░░░░░░` 1.4% |
-| &nbsp;&nbsp;&nbsp;&nbsp;micromark-util-subtokenize | `█░░░░░░░░░░░░░░░░░░░` 2.9% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.js | `░░░░░░░░░░░░░░░░░░░░` 1.6% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/splice-buffer.js | `░░░░░░░░░░░░░░░░░░░░` 1.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;micromark-factory-destination → index.js | `░░░░░░░░░░░░░░░░░░░░` 0.8% |
-| &nbsp;&nbsp;&nbsp;&nbsp;micromark-util-sanitize-uri → index.js | `░░░░░░░░░░░░░░░░░░░░` 0.6% |
-| &nbsp;&nbsp;&nbsp;&nbsp;micromark-factory-label → index.js | `░░░░░░░░░░░░░░░░░░░░` 0.6% |
-| &nbsp;&nbsp;&nbsp;&nbsp;micromark-factory-title → index.js | `░░░░░░░░░░░░░░░░░░░░` 0.5% |
-| &nbsp;&nbsp;&nbsp;&nbsp;micromark-util-combine-extensions → index.js | `░░░░░░░░░░░░░░░░░░░░` 0.5% |
-| &nbsp;&nbsp;&nbsp;&nbsp;micromark-util-html-tag-name → index.js | `░░░░░░░░░░░░░░░░░░░░` 0.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;micromark-util-chunked → index.js | `░░░░░░░░░░░░░░░░░░░░` 0.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;micromark-util-decode-numeric-character-reference → index.js | `░░░░░░░░░░░░░░░░░░░░` 0.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;micromark-util-resolve-all → index.js | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;micromark-util-encode → index.js | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;micromark-util-normalize-identifier → index.js | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;micromark-util-classify-character → index.js | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| dist/dist-DgSeMFwB.js | 28.1 kB · brotli 8.0 kB |
-| &nbsp;&nbsp;&nbsp;&nbsp;@speed-highlight/core → dist/index.js | `████░░░░░░░░░░░░░░░░` 18.6% |
-| &nbsp;&nbsp;&nbsp;&nbsp;(unassigned) → [unassigned] | `░░░░░░░░░░░░░░░░░░░░` 2.1% |
-| dist/micromark-extension-directive-DufZgUDE.js | 18.5 kB · brotli 4.4 kB |
-| &nbsp;&nbsp;&nbsp;&nbsp;micromark-extension-directive | `██░░░░░░░░░░░░░░░░░░` 8.8% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/directive-container.js | `░░░░░░░░░░░░░░░░░░░░` 2.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/html.js | `░░░░░░░░░░░░░░░░░░░░` 2.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/factory-attributes.js | `░░░░░░░░░░░░░░░░░░░░` 1.7% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/directive-leaf.js | `░░░░░░░░░░░░░░░░░░░░` 0.8% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/directive-text.js | `░░░░░░░░░░░░░░░░░░░░` 0.8% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/factory-label.js | `░░░░░░░░░░░░░░░░░░░░` 0.6% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/factory-name.js | `░░░░░░░░░░░░░░░░░░░░` 0.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/syntax.js | `░░░░░░░░░░░░░░░░░░░░` 0.0% |
-| &nbsp;&nbsp;&nbsp;&nbsp;parse-entities → lib/index.js | `░░░░░░░░░░░░░░░░░░░░` 2.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;(unassigned) → [unassigned] | `░░░░░░░░░░░░░░░░░░░░` 1.6% |
-| &nbsp;&nbsp;&nbsp;&nbsp;character-entities-legacy → index.js | `░░░░░░░░░░░░░░░░░░░░` 0.5% |
-| &nbsp;&nbsp;&nbsp;&nbsp;character-reference-invalid → index.js | `░░░░░░░░░░░░░░░░░░░░` 0.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;is-hexadecimal → index.js | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;is-alphabetical → index.js | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;is-decimal → index.js | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;is-alphanumerical → index.js | `░░░░░░░░░░░░░░░░░░░░` 0.0% |
-| dist/micromark-extension-gfm-table-DTaYeBnk.js | 9.7 kB · brotli 2.5 kB |
-| &nbsp;&nbsp;&nbsp;&nbsp;micromark-extension-gfm-table | `█░░░░░░░░░░░░░░░░░░░` 6.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/syntax.js | `█░░░░░░░░░░░░░░░░░░░` 4.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/html.js | `░░░░░░░░░░░░░░░░░░░░` 1.3% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/edit-map.js | `░░░░░░░░░░░░░░░░░░░░` 0.5% |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/infer.js | `░░░░░░░░░░░░░░░░░░░░` 0.4% |
-| &nbsp;&nbsp;&nbsp;&nbsp;(unassigned) → [unassigned] | `░░░░░░░░░░░░░░░░░░░░` 0.9% |
-| dist/github-dark-BQgApYrA.js → (unassigned) → [unassigned] | 1.7 kB · brotli 686 B · `░░░░░░░░░░░░░░░░░░░░` 1.3% |
-| dist/github-light-CYQxR7sx.js → (unassigned) → [unassigned] | 1.7 kB · brotli 656 B · `░░░░░░░░░░░░░░░░░░░░` 1.2% |
-| dist/micromark-factory-space-Cq-2i9SZ.js | 1.0 kB · brotli 451 B |
-| &nbsp;&nbsp;&nbsp;&nbsp;micromark-util-character → index.js | `░░░░░░░░░░░░░░░░░░░░` 0.4% |
-| &nbsp;&nbsp;&nbsp;&nbsp;(unassigned) → [unassigned] | `░░░░░░░░░░░░░░░░░░░░` 0.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;micromark-factory-space → index.js | `░░░░░░░░░░░░░░░░░░░░` 0.2% |
-| dist/micromark-factory-whitespace-DvA2Lja_.js | 737 B · brotli 385 B |
-| &nbsp;&nbsp;&nbsp;&nbsp;(unassigned) → [unassigned] | `░░░░░░░░░░░░░░░░░░░░` 0.2% |
-| &nbsp;&nbsp;&nbsp;&nbsp;micromark-factory-whitespace → index.js | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
-| &nbsp;&nbsp;&nbsp;&nbsp;decode-named-character-reference → index.dom.js | `░░░░░░░░░░░░░░░░░░░░` 0.1% |
+| Chunk/Module/File                                                                    | Composition                                         |
+| :----------------------------------------------------------------------------------- | :-------------------------------------------------- |
+| dist/dpuse-tool-micromark-markdown-parser.es.js                                      | 74.2 kB · brotli 16.2 kB                            |
+| &nbsp;&nbsp;&nbsp;&nbsp;micromark-core-commonmark                                    | `█████░░░░░░░░░░░░░░░` 23.3%                        |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/html-flow.js                     | `█░░░░░░░░░░░░░░░░░░░` 3.2%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/label-end.js                     | `█░░░░░░░░░░░░░░░░░░░` 2.7%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/html-text.js                     | `░░░░░░░░░░░░░░░░░░░░` 2.2%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/list.js                          | `░░░░░░░░░░░░░░░░░░░░` 2.1%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/code-fenced.js                   | `░░░░░░░░░░░░░░░░░░░░` 1.9%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/attention.js                     | `░░░░░░░░░░░░░░░░░░░░` 1.8%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/code-text.js                     | `░░░░░░░░░░░░░░░░░░░░` 1.2%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/setext-underline.js              | `░░░░░░░░░░░░░░░░░░░░` 1.0%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/heading-atx.js                   | `░░░░░░░░░░░░░░░░░░░░` 1.0%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/definition.js                    | `░░░░░░░░░░░░░░░░░░░░` 0.9%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/autolink.js                      | `░░░░░░░░░░░░░░░░░░░░` 0.9%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/content.js                       | `░░░░░░░░░░░░░░░░░░░░` 0.8%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/character-reference.js           | `░░░░░░░░░░░░░░░░░░░░` 0.8%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/code-indented.js                 | `░░░░░░░░░░░░░░░░░░░░` 0.7%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/block-quote.js                   | `░░░░░░░░░░░░░░░░░░░░` 0.6%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/label-start-image.js             | `░░░░░░░░░░░░░░░░░░░░` 0.3%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/thematic-break.js                | `░░░░░░░░░░░░░░░░░░░░` 0.3%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/label-start-link.js              | `░░░░░░░░░░░░░░░░░░░░` 0.3%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/character-escape.js              | `░░░░░░░░░░░░░░░░░░░░` 0.3%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/hard-break-escape.js             | `░░░░░░░░░░░░░░░░░░░░` 0.2%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/blank-line.js                    | `░░░░░░░░░░░░░░░░░░░░` 0.1%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/line-ending.js                   | `░░░░░░░░░░░░░░░░░░░░` 0.1%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;micromark                                                    | `███░░░░░░░░░░░░░░░░░` 13.9%                        |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/compile.js                       | `█░░░░░░░░░░░░░░░░░░░` 5.9%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/create-tokenizer.js              | `█░░░░░░░░░░░░░░░░░░░` 2.7%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/initialize/document.js           | `░░░░░░░░░░░░░░░░░░░░` 1.9%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/initialize/text.js               | `░░░░░░░░░░░░░░░░░░░░` 1.4%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/preprocess.js                    | `░░░░░░░░░░░░░░░░░░░░` 0.6%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/initialize/content.js            | `░░░░░░░░░░░░░░░░░░░░` 0.4%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/initialize/flow.js               | `░░░░░░░░░░░░░░░░░░░░` 0.4%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/constructs.js                    | `░░░░░░░░░░░░░░░░░░░░` 0.3%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/parse.js                         | `░░░░░░░░░░░░░░░░░░░░` 0.2%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.js                             | `░░░░░░░░░░░░░░░░░░░░` 0.1%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/postprocess.js                   | `░░░░░░░░░░░░░░░░░░░░` 0.0%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;(unassigned) → [unassigned]                                  | `█░░░░░░░░░░░░░░░░░░░` 6.3%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;src                                                          | `█░░░░░░░░░░░░░░░░░░░` 4.1%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.ts                             | `█░░░░░░░░░░░░░░░░░░░` 2.8%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;formula.ts                           | `░░░░░░░░░░░░░░░░░░░░` 1.4%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;micromark-util-subtokenize                                   | `█░░░░░░░░░░░░░░░░░░░` 2.9%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.js                             | `░░░░░░░░░░░░░░░░░░░░` 1.6%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/splice-buffer.js                 | `░░░░░░░░░░░░░░░░░░░░` 1.3%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;micromark-factory-destination → index.js                     | `░░░░░░░░░░░░░░░░░░░░` 0.8%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;micromark-util-sanitize-uri → index.js                       | `░░░░░░░░░░░░░░░░░░░░` 0.6%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;micromark-factory-label → index.js                           | `░░░░░░░░░░░░░░░░░░░░` 0.6%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;micromark-factory-title → index.js                           | `░░░░░░░░░░░░░░░░░░░░` 0.5%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;micromark-util-combine-extensions → index.js                 | `░░░░░░░░░░░░░░░░░░░░` 0.5%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;micromark-util-html-tag-name → index.js                      | `░░░░░░░░░░░░░░░░░░░░` 0.3%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;micromark-util-chunked → index.js                            | `░░░░░░░░░░░░░░░░░░░░` 0.3%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;micromark-util-decode-numeric-character-reference → index.js | `░░░░░░░░░░░░░░░░░░░░` 0.2%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;micromark-util-resolve-all → index.js                        | `░░░░░░░░░░░░░░░░░░░░` 0.1%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;micromark-util-encode → index.js                             | `░░░░░░░░░░░░░░░░░░░░` 0.1%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;micromark-util-normalize-identifier → index.js               | `░░░░░░░░░░░░░░░░░░░░` 0.1%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;micromark-util-classify-character → index.js                 | `░░░░░░░░░░░░░░░░░░░░` 0.1%                         |
+| dist/dist-DgSeMFwB.js                                                                | 28.1 kB · brotli 8.0 kB                             |
+| &nbsp;&nbsp;&nbsp;&nbsp;@speed-highlight/core → dist/index.js                        | `████░░░░░░░░░░░░░░░░` 18.6%                        |
+| &nbsp;&nbsp;&nbsp;&nbsp;(unassigned) → [unassigned]                                  | `░░░░░░░░░░░░░░░░░░░░` 2.1%                         |
+| dist/micromark-extension-directive-DufZgUDE.js                                       | 18.5 kB · brotli 4.4 kB                             |
+| &nbsp;&nbsp;&nbsp;&nbsp;micromark-extension-directive                                | `██░░░░░░░░░░░░░░░░░░` 8.8%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/directive-container.js           | `░░░░░░░░░░░░░░░░░░░░` 2.3%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/html.js                          | `░░░░░░░░░░░░░░░░░░░░` 2.2%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/factory-attributes.js            | `░░░░░░░░░░░░░░░░░░░░` 1.7%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/directive-leaf.js                | `░░░░░░░░░░░░░░░░░░░░` 0.8%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/directive-text.js                | `░░░░░░░░░░░░░░░░░░░░` 0.8%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/factory-label.js                 | `░░░░░░░░░░░░░░░░░░░░` 0.6%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/factory-name.js                  | `░░░░░░░░░░░░░░░░░░░░` 0.2%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/syntax.js                        | `░░░░░░░░░░░░░░░░░░░░` 0.0%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;parse-entities → lib/index.js                                | `░░░░░░░░░░░░░░░░░░░░` 2.3%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;(unassigned) → [unassigned]                                  | `░░░░░░░░░░░░░░░░░░░░` 1.6%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;character-entities-legacy → index.js                         | `░░░░░░░░░░░░░░░░░░░░` 0.5%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;character-reference-invalid → index.js                       | `░░░░░░░░░░░░░░░░░░░░` 0.2%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;is-hexadecimal → index.js                                    | `░░░░░░░░░░░░░░░░░░░░` 0.1%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;is-alphabetical → index.js                                   | `░░░░░░░░░░░░░░░░░░░░` 0.1%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;is-decimal → index.js                                        | `░░░░░░░░░░░░░░░░░░░░` 0.1%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;is-alphanumerical → index.js                                 | `░░░░░░░░░░░░░░░░░░░░` 0.0%                         |
+| dist/micromark-extension-gfm-table-DTaYeBnk.js                                       | 9.7 kB · brotli 2.5 kB                              |
+| &nbsp;&nbsp;&nbsp;&nbsp;micromark-extension-gfm-table                                | `█░░░░░░░░░░░░░░░░░░░` 6.2%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/syntax.js                        | `█░░░░░░░░░░░░░░░░░░░` 4.1%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/html.js                          | `░░░░░░░░░░░░░░░░░░░░` 1.3%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/edit-map.js                      | `░░░░░░░░░░░░░░░░░░░░` 0.5%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lib/infer.js                         | `░░░░░░░░░░░░░░░░░░░░` 0.4%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;(unassigned) → [unassigned]                                  | `░░░░░░░░░░░░░░░░░░░░` 0.9%                         |
+| dist/github-dark-BQgApYrA.js → (unassigned) → [unassigned]                           | 1.7 kB · brotli 686 B · `░░░░░░░░░░░░░░░░░░░░` 1.3% |
+| dist/github-light-CYQxR7sx.js → (unassigned) → [unassigned]                          | 1.7 kB · brotli 656 B · `░░░░░░░░░░░░░░░░░░░░` 1.2% |
+| dist/micromark-factory-space-Cq-2i9SZ.js                                             | 1.0 kB · brotli 451 B                               |
+| &nbsp;&nbsp;&nbsp;&nbsp;micromark-util-character → index.js                          | `░░░░░░░░░░░░░░░░░░░░` 0.4%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;(unassigned) → [unassigned]                                  | `░░░░░░░░░░░░░░░░░░░░` 0.2%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;micromark-factory-space → index.js                           | `░░░░░░░░░░░░░░░░░░░░` 0.2%                         |
+| dist/micromark-factory-whitespace-DvA2Lja_.js                                        | 737 B · brotli 385 B                                |
+| &nbsp;&nbsp;&nbsp;&nbsp;(unassigned) → [unassigned]                                  | `░░░░░░░░░░░░░░░░░░░░` 0.2%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;micromark-factory-whitespace → index.js                      | `░░░░░░░░░░░░░░░░░░░░` 0.1%                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;decode-named-character-reference → index.dom.js              | `░░░░░░░░░░░░░░░░░░░░` 0.1%                         |
 
 (unassigned) = bytes Sonda can't trace to a specific source line (whitespace, stray keywords, bundler-injected region markers) — not actual missing/unknown code.
 
