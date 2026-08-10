@@ -4,7 +4,7 @@ import type { Directive } from 'micromark-extension-directive';
 import { micromark } from 'micromark';
 import type { CompileContext, Extension, HtmlExtension, Token } from 'micromark-util-types';
 
-// ── API Framework
+// ── Local Framework
 import { generateMathML } from '@/formula';
 
 // ── Types ────────────────────────────────────────────────────────────────────────────────────────────────────────────
