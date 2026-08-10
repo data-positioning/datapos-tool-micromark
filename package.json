@@ -1,6 +1,6 @@
 {
     "name": "@dpuse/dpuse-tool-micromark-markdown-parser",
-    "version": "0.1.1039",
+    "version": "0.1.1040",
     "private": false,
     "description": "A library that wraps the Micromark markdown parser and Speed Highlight code highlighter.",
     "license": "MIT",
