@@ -1,0 +1,1 @@
+{"version":3,"file":"csv-CEW8W5c_.js","names":[],"sources":["../node_modules/@speed-highlight/core/dist/languages/csv.js"],"sourcesContent":["var e=[{expand:\"strDouble\"},{type:\"oper\",match:/,/g}];export{e as default};\n"],"x_google_ignoreList":[0],"mappings":";AAAA,IAAI,IAAE,CAAC,EAAC,QAAO,YAAW,GAAE;CAAC,MAAK;CAAO,OAAM;AAAI,CAAC"}

@@ -385,25 +385,27 @@ function B(t, n) {
 			t && (v = b, y = t);
 		}
 		let C = 1 + u - s, w = "";
-		if (!(!S && r.nonTerminated === !1)) if (!b) d !== "named" && g(4, C);
-		else if (d === "named") {
-			if (S && !y) g(5, 1);
-			else if (v !== b && (u = l + v.length, C = 1 + u - l, S = !1), !S) {
-				let e = v ? 1 : 3;
-				if (r.attribute) {
-					let n = t.charCodeAt(u);
-					n === 61 ? (g(e, C), y = "") : R(n) ? y = "" : g(e, C);
-				} else g(e, C);
-			}
-			w = y;
-		} else {
-			S || g(2, C);
-			let e = Number.parseInt(b, d === "hexadecimal" ? 16 : 10);
-			if (V(e)) g(7, C), w = "�";
-			else if (e in P) g(6, C), w = P[e];
-			else {
-				let t = "";
-				H(e) && g(6, C), e > 65535 && (e -= 65536, t += String.fromCharCode(e >>> 10 | 55296), e = 56320 | e & 1023), w = t + String.fromCharCode(e);
+		if (!(!S && r.nonTerminated === !1)) {
+			if (!b) d !== "named" && g(4, C);
+			else if (d === "named") {
+				if (S && !y) g(5, 1);
+				else if (v !== b && (u = l + v.length, C = 1 + u - l, S = !1), !S) {
+					let e = v ? 1 : 3;
+					if (r.attribute) {
+						let n = t.charCodeAt(u);
+						n === 61 ? (g(e, C), y = "") : R(n) ? y = "" : g(e, C);
+					} else g(e, C);
+				}
+				w = y;
+			} else {
+				S || g(2, C);
+				let e = Number.parseInt(b, d === "hexadecimal" ? 16 : 10);
+				if (V(e)) g(7, C), w = "�";
+				else if (e in P) g(6, C), w = P[e];
+				else {
+					let t = "";
+					H(e) && g(6, C), e > 65535 && (e -= 65536, t += String.fromCharCode(e >>> 10 | 55296), e = 56320 | e & 1023), w = t + String.fromCharCode(e);
+				}
 			}
 		}
 		if (w) {
@@ -552,5 +554,3 @@ function W(e) {
 }
 //#endregion
 export { M as directive, W as directiveHtml };
-
-//# sourceMappingURL=micromark-extension-directive-DufZgUDE.js.map

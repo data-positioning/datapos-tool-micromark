@@ -1,7 +1,7 @@
 {
   "metadata": {
     "version": "0.14.0",
-    "generatedAt": "2026-08-04T15:49:49.930Z",
+    "generatedAt": "2026-08-20T12:12:49.011Z",
     "integration": "vite",
     "sources": false,
     "gzip": false,
@@ -21,9 +21,9 @@
       "name": "[unassigned]",
       "type": "other",
       "format": "other",
-      "uncompressed": 8691,
+      "uncompressed": 8640,
       "gzip": 0,
-      "brotli": 699,
+      "brotli": 665,
       "parent": "dist/dpuse-tool-micromark-markdown-parser.es.js"
     },
     {
@@ -31,49 +31,269 @@
       "name": "[unassigned]",
       "type": "other",
       "format": "other",
-      "uncompressed": 2908,
+      "uncompressed": 147,
       "gzip": 0,
-      "brotli": 159,
-      "parent": "dist/dist-DgSeMFwB.js"
+      "brotli": 81,
+      "parent": "dist/asm-BlBFo9kg.js"
     },
     {
       "kind": "chunk",
       "name": "[unassigned]",
       "type": "other",
       "format": "other",
-      "uncompressed": 1785,
+      "uncompressed": 162,
       "gzip": 0,
-      "brotli": 686,
-      "parent": "dist/github-dark-BQgApYrA.js"
+      "brotli": 80,
+      "parent": "dist/bash-DBdZzU-Z.js"
     },
     {
       "kind": "chunk",
       "name": "[unassigned]",
       "type": "other",
       "format": "other",
-      "uncompressed": 1714,
+      "uncompressed": 130,
       "gzip": 0,
-      "brotli": 656,
-      "parent": "dist/github-light-CYQxR7sx.js"
+      "brotli": 72,
+      "parent": "dist/bf-DyrOHY0l.js"
     },
     {
       "kind": "chunk",
       "name": "[unassigned]",
       "type": "other",
       "format": "other",
-      "uncompressed": 2184,
+      "uncompressed": 175,
       "gzip": 0,
-      "brotli": 263,
-      "parent": "dist/micromark-extension-directive-DufZgUDE.js"
+      "brotli": 77,
+      "parent": "dist/c-Du-5HtYA.js"
     },
     {
       "kind": "chunk",
       "name": "[unassigned]",
       "type": "other",
       "format": "other",
-      "uncompressed": 1274,
+      "uncompressed": 188,
       "gzip": 0,
-      "brotli": 251,
+      "brotli": 87,
+      "parent": "dist/css-BnMjXUr8.js"
+    },
+    {
+      "kind": "chunk",
+      "name": "[unassigned]",
+      "type": "other",
+      "format": "other",
+      "uncompressed": 107,
+      "gzip": 0,
+      "brotli": 66,
+      "parent": "dist/csv-CEW8W5c_.js"
+    },
+    {
+      "kind": "chunk",
+      "name": "[unassigned]",
+      "type": "other",
+      "format": "other",
+      "uncompressed": 130,
+      "gzip": 0,
+      "brotli": 80,
+      "parent": "dist/diff-XVkHtLNu.js"
+    },
+    {
+      "kind": "chunk",
+      "name": "[unassigned]",
+      "type": "other",
+      "format": "other",
+      "uncompressed": 405,
+      "gzip": 0,
+      "brotli": 144,
+      "parent": "dist/dist-DRv2xTzQ.js"
+    },
+    {
+      "kind": "chunk",
+      "name": "[unassigned]",
+      "type": "other",
+      "format": "other",
+      "uncompressed": 170,
+      "gzip": 0,
+      "brotli": 89,
+      "parent": "dist/docker-PIn81DgH.js"
+    },
+    {
+      "kind": "chunk",
+      "name": "[unassigned]",
+      "type": "other",
+      "format": "other",
+      "uncompressed": 150,
+      "gzip": 0,
+      "brotli": 73,
+      "parent": "dist/git-ByN02Eg5.js"
+    },
+    {
+      "kind": "chunk",
+      "name": "[unassigned]",
+      "type": "other",
+      "format": "other",
+      "uncompressed": 1769,
+      "gzip": 0,
+      "brotli": 669,
+      "parent": "dist/github-dark-CTHfNL12.js"
+    },
+    {
+      "kind": "chunk",
+      "name": "[unassigned]",
+      "type": "other",
+      "format": "other",
+      "uncompressed": 1697,
+      "gzip": 0,
+      "brotli": 646,
+      "parent": "dist/github-light-OLdb5Tfn.js"
+    },
+    {
+      "kind": "chunk",
+      "name": "[unassigned]",
+      "type": "other",
+      "format": "other",
+      "uncompressed": 144,
+      "gzip": 0,
+      "brotli": 83,
+      "parent": "dist/go-X8dsnhRi.js"
+    },
+    {
+      "kind": "chunk",
+      "name": "[unassigned]",
+      "type": "other",
+      "format": "other",
+      "uncompressed": 367,
+      "gzip": 0,
+      "brotli": 96,
+      "parent": "dist/html-BfuFQfc8.js"
+    },
+    {
+      "kind": "chunk",
+      "name": "[unassigned]",
+      "type": "other",
+      "format": "other",
+      "uncompressed": 160,
+      "gzip": 0,
+      "brotli": 80,
+      "parent": "dist/http-BAlZb4g1.js"
+    },
+    {
+      "kind": "chunk",
+      "name": "[unassigned]",
+      "type": "other",
+      "format": "other",
+      "uncompressed": 137,
+      "gzip": 0,
+      "brotli": 82,
+      "parent": "dist/ini-BRzSgkFu.js"
+    },
+    {
+      "kind": "chunk",
+      "name": "[unassigned]",
+      "type": "other",
+      "format": "other",
+      "uncompressed": 146,
+      "gzip": 0,
+      "brotli": 81,
+      "parent": "dist/java-iDtrcWRK.js"
+    },
+    {
+      "kind": "chunk",
+      "name": "[unassigned]",
+      "type": "other",
+      "format": "other",
+      "uncompressed": 270,
+      "gzip": 0,
+      "brotli": 88,
+      "parent": "dist/js-BYQ9mm_M.js"
+    },
+    {
+      "kind": "chunk",
+      "name": "[unassigned]",
+      "type": "other",
+      "format": "other",
+      "uncompressed": 225,
+      "gzip": 0,
+      "brotli": 84,
+      "parent": "dist/jsdoc-BbXJQGBL.js"
+    },
+    {
+      "kind": "chunk",
+      "name": "[unassigned]",
+      "type": "other",
+      "format": "other",
+      "uncompressed": 126,
+      "gzip": 0,
+      "brotli": 72,
+      "parent": "dist/json-B1YjY9ed.js"
+    },
+    {
+      "kind": "chunk",
+      "name": "[unassigned]",
+      "type": "other",
+      "format": "other",
+      "uncompressed": 259,
+      "gzip": 0,
+      "brotli": 88,
+      "parent": "dist/leanpub-md-C6FTGjMZ.js"
+    },
+    {
+      "kind": "chunk",
+      "name": "[unassigned]",
+      "type": "other",
+      "format": "other",
+      "uncompressed": 137,
+      "gzip": 0,
+      "brotli": 74,
+      "parent": "dist/log-C89tvDiU.js"
+    },
+    {
+      "kind": "chunk",
+      "name": "[unassigned]",
+      "type": "other",
+      "format": "other",
+      "uncompressed": 139,
+      "gzip": 0,
+      "brotli": 77,
+      "parent": "dist/lua-DChoWFAU.js"
+    },
+    {
+      "kind": "chunk",
+      "name": "[unassigned]",
+      "type": "other",
+      "format": "other",
+      "uncompressed": 152,
+      "gzip": 0,
+      "brotli": 78,
+      "parent": "dist/make-6dP4GZxe.js"
+    },
+    {
+      "kind": "chunk",
+      "name": "[unassigned]",
+      "type": "other",
+      "format": "other",
+      "uncompressed": 203,
+      "gzip": 0,
+      "brotli": 82,
+      "parent": "dist/md-DvaShtM_.js"
+    },
+    {
+      "kind": "chunk",
+      "name": "[unassigned]",
+      "type": "other",
+      "format": "other",
+      "uncompressed": 2148,
+      "gzip": 0,
+      "brotli": 253,
+      "parent": "dist/micromark-extension-directive-CIWJMWiY.js"
+    },
+    {
+      "kind": "chunk",
+      "name": "[unassigned]",
+      "type": "other",
+      "format": "other",
+      "uncompressed": 1203,
+      "gzip": 0,
+      "brotli": 229,
       "parent": "dist/micromark-extension-gfm-table-DTaYeBnk.js"
     },
     {
@@ -81,9 +301,9 @@
       "name": "[unassigned]",
       "type": "other",
       "format": "other",
-      "uncompressed": 334,
+      "uncompressed": 273,
       "gzip": 0,
-      "brotli": 130,
+      "brotli": 113,
       "parent": "dist/micromark-factory-space-Cq-2i9SZ.js"
     },
     {
@@ -91,105 +311,1090 @@
       "name": "[unassigned]",
       "type": "other",
       "format": "other",
-      "uncompressed": 339,
+      "uncompressed": 273,
       "gzip": 0,
-      "brotli": 153,
+      "brotli": 131,
       "parent": "dist/micromark-factory-whitespace-DvA2Lja_.js"
     },
     {
-      "kind": "asset",
-      "name": "dist/dist-DgSeMFwB.js",
-      "type": "script",
-      "uncompressed": 28777,
+      "kind": "chunk",
+      "name": "[unassigned]",
+      "type": "other",
+      "format": "other",
+      "uncompressed": 137,
       "gzip": 0,
-      "brotli": 8149
+      "brotli": 76,
+      "parent": "dist/pl-D-icLzBp.js"
+    },
+    {
+      "kind": "chunk",
+      "name": "[unassigned]",
+      "type": "other",
+      "format": "other",
+      "uncompressed": 107,
+      "gzip": 0,
+      "brotli": 70,
+      "parent": "dist/plain-CKkAWdMi.js"
+    },
+    {
+      "kind": "chunk",
+      "name": "[unassigned]",
+      "type": "other",
+      "format": "other",
+      "uncompressed": 182,
+      "gzip": 0,
+      "brotli": 88,
+      "parent": "dist/py-ChyNH1Ow.js"
+    },
+    {
+      "kind": "chunk",
+      "name": "[unassigned]",
+      "type": "other",
+      "format": "other",
+      "uncompressed": 153,
+      "gzip": 0,
+      "brotli": 78,
+      "parent": "dist/regex-CDvdT5xr.js"
+    },
+    {
+      "kind": "chunk",
+      "name": "[unassigned]",
+      "type": "other",
+      "format": "other",
+      "uncompressed": 144,
+      "gzip": 0,
+      "brotli": 82,
+      "parent": "dist/rs-B4sYrwTu.js"
+    },
+    {
+      "kind": "chunk",
+      "name": "[unassigned]",
+      "type": "other",
+      "format": "other",
+      "uncompressed": 150,
+      "gzip": 0,
+      "brotli": 82,
+      "parent": "dist/sql-DsYRlcMF.js"
+    },
+    {
+      "kind": "chunk",
+      "name": "[unassigned]",
+      "type": "other",
+      "format": "other",
+      "uncompressed": 149,
+      "gzip": 0,
+      "brotli": 78,
+      "parent": "dist/todo-CGLS57ju.js"
+    },
+    {
+      "kind": "chunk",
+      "name": "[unassigned]",
+      "type": "other",
+      "format": "other",
+      "uncompressed": 152,
+      "gzip": 0,
+      "brotli": 82,
+      "parent": "dist/toml-Dyf4QHlN.js"
+    },
+    {
+      "kind": "chunk",
+      "name": "[unassigned]",
+      "type": "other",
+      "format": "other",
+      "uncompressed": 282,
+      "gzip": 0,
+      "brotli": 88,
+      "parent": "dist/ts-CHR2kmGf.js"
+    },
+    {
+      "kind": "chunk",
+      "name": "[unassigned]",
+      "type": "other",
+      "format": "other",
+      "uncompressed": 143,
+      "gzip": 0,
+      "brotli": 75,
+      "parent": "dist/uri-837VxUwj.js"
+    },
+    {
+      "kind": "chunk",
+      "name": "[unassigned]",
+      "type": "other",
+      "format": "other",
+      "uncompressed": 280,
+      "gzip": 0,
+      "brotli": 106,
+      "parent": "dist/xml-CItgL9jR.js"
+    },
+    {
+      "kind": "chunk",
+      "name": "[unassigned]",
+      "type": "other",
+      "format": "other",
+      "uncompressed": 146,
+      "gzip": 0,
+      "brotli": 80,
+      "parent": "dist/yaml-B6q2zAjl.js"
+    },
+    {
+      "kind": "asset",
+      "name": "dist/asm-BlBFo9kg.js",
+      "type": "script",
+      "uncompressed": 458,
+      "gzip": 0,
+      "brotli": 242
+    },
+    {
+      "kind": "asset",
+      "name": "dist/bash-DBdZzU-Z.js",
+      "type": "script",
+      "uncompressed": 916,
+      "gzip": 0,
+      "brotli": 455
+    },
+    {
+      "kind": "asset",
+      "name": "dist/bf-DyrOHY0l.js",
+      "type": "script",
+      "uncompressed": 305,
+      "gzip": 0,
+      "brotli": 180
+    },
+    {
+      "kind": "asset",
+      "name": "dist/c-Du-5HtYA.js",
+      "type": "script",
+      "uncompressed": 909,
+      "gzip": 0,
+      "brotli": 452
+    },
+    {
+      "kind": "asset",
+      "name": "dist/css-BnMjXUr8.js",
+      "type": "script",
+      "uncompressed": 870,
+      "gzip": 0,
+      "brotli": 398
+    },
+    {
+      "kind": "asset",
+      "name": "dist/csv-CEW8W5c_.js",
+      "type": "script",
+      "uncompressed": 173,
+      "gzip": 0,
+      "brotli": 120
+    },
+    {
+      "kind": "asset",
+      "name": "dist/diff-XVkHtLNu.js",
+      "type": "script",
+      "uncompressed": 319,
+      "gzip": 0,
+      "brotli": 190
+    },
+    {
+      "kind": "asset",
+      "name": "dist/dist-DRv2xTzQ.js",
+      "type": "script",
+      "uncompressed": 4983,
+      "gzip": 0,
+      "brotli": 1785
+    },
+    {
+      "kind": "asset",
+      "name": "dist/docker-PIn81DgH.js",
+      "type": "script",
+      "uncompressed": 1081,
+      "gzip": 0,
+      "brotli": 553
     },
     {
       "kind": "asset",
       "name": "dist/dpuse-tool-micromark-markdown-parser.es.js",
       "type": "script",
-      "uncompressed": 75958,
+      "uncompressed": 75905,
       "gzip": 0,
-      "brotli": 16578
+      "brotli": 16498
     },
     {
       "kind": "asset",
-      "name": "dist/github-dark-BQgApYrA.js",
+      "name": "dist/git-ByN02Eg5.js",
       "type": "script",
-      "uncompressed": 1785,
+      "uncompressed": 497,
       "gzip": 0,
-      "brotli": 686
+      "brotli": 234
     },
     {
       "kind": "asset",
-      "name": "dist/github-light-CYQxR7sx.js",
+      "name": "dist/github-dark-CTHfNL12.js",
       "type": "script",
-      "uncompressed": 1714,
+      "uncompressed": 1769,
       "gzip": 0,
-      "brotli": 656
+      "brotli": 669
     },
     {
       "kind": "asset",
-      "name": "dist/micromark-extension-directive-DufZgUDE.js",
+      "name": "dist/github-light-OLdb5Tfn.js",
       "type": "script",
-      "uncompressed": 18927,
+      "uncompressed": 1697,
       "gzip": 0,
-      "brotli": 4514
+      "brotli": 646
+    },
+    {
+      "kind": "asset",
+      "name": "dist/go-X8dsnhRi.js",
+      "type": "script",
+      "uncompressed": 656,
+      "gzip": 0,
+      "brotli": 343
+    },
+    {
+      "kind": "asset",
+      "name": "dist/html-BfuFQfc8.js",
+      "type": "script",
+      "uncompressed": 1872,
+      "gzip": 0,
+      "brotli": 671
+    },
+    {
+      "kind": "asset",
+      "name": "dist/http-BAlZb4g1.js",
+      "type": "script",
+      "uncompressed": 1996,
+      "gzip": 0,
+      "brotli": 962
+    },
+    {
+      "kind": "asset",
+      "name": "dist/ini-BRzSgkFu.js",
+      "type": "script",
+      "uncompressed": 358,
+      "gzip": 0,
+      "brotli": 212
+    },
+    {
+      "kind": "asset",
+      "name": "dist/java-iDtrcWRK.js",
+      "type": "script",
+      "uncompressed": 883,
+      "gzip": 0,
+      "brotli": 452
+    },
+    {
+      "kind": "asset",
+      "name": "dist/js-BYQ9mm_M.js",
+      "type": "script",
+      "uncompressed": 1774,
+      "gzip": 0,
+      "brotli": 783
+    },
+    {
+      "kind": "asset",
+      "name": "dist/jsdoc-BbXJQGBL.js",
+      "type": "script",
+      "uncompressed": 633,
+      "gzip": 0,
+      "brotli": 289
+    },
+    {
+      "kind": "asset",
+      "name": "dist/json-B1YjY9ed.js",
+      "type": "script",
+      "uncompressed": 341,
+      "gzip": 0,
+      "brotli": 205
+    },
+    {
+      "kind": "asset",
+      "name": "dist/languages-Cl_wXK_z.js",
+      "type": "script",
+      "uncompressed": 1572,
+      "gzip": 0,
+      "brotli": 613
+    },
+    {
+      "kind": "asset",
+      "name": "dist/leanpub-md-C6FTGjMZ.js",
+      "type": "script",
+      "uncompressed": 2812,
+      "gzip": 0,
+      "brotli": 1160
+    },
+    {
+      "kind": "asset",
+      "name": "dist/log-C89tvDiU.js",
+      "type": "script",
+      "uncompressed": 482,
+      "gzip": 0,
+      "brotli": 248
+    },
+    {
+      "kind": "asset",
+      "name": "dist/lua-DChoWFAU.js",
+      "type": "script",
+      "uncompressed": 535,
+      "gzip": 0,
+      "brotli": 300
+    },
+    {
+      "kind": "asset",
+      "name": "dist/make-6dP4GZxe.js",
+      "type": "script",
+      "uncompressed": 496,
+      "gzip": 0,
+      "brotli": 251
+    },
+    {
+      "kind": "asset",
+      "name": "dist/md-DvaShtM_.js",
+      "type": "script",
+      "uncompressed": 2266,
+      "gzip": 0,
+      "brotli": 1066
+    },
+    {
+      "kind": "asset",
+      "name": "dist/micromark-extension-directive-CIWJMWiY.js",
+      "type": "script",
+      "uncompressed": 18889,
+      "gzip": 0,
+      "brotli": 4478
     },
     {
       "kind": "asset",
       "name": "dist/micromark-extension-gfm-table-DTaYeBnk.js",
       "type": "script",
-      "uncompressed": 9882,
+      "uncompressed": 9815,
       "gzip": 0,
-      "brotli": 2549
+      "brotli": 2520
     },
     {
       "kind": "asset",
       "name": "dist/micromark-factory-space-Cq-2i9SZ.js",
       "type": "script",
-      "uncompressed": 1063,
+      "uncompressed": 1002,
       "gzip": 0,
-      "brotli": 451
+      "brotli": 425
     },
     {
       "kind": "asset",
       "name": "dist/micromark-factory-whitespace-DvA2Lja_.js",
       "type": "script",
-      "uncompressed": 737,
+      "uncompressed": 671,
       "gzip": 0,
-      "brotli": 385
+      "brotli": 355
+    },
+    {
+      "kind": "asset",
+      "name": "dist/pl-D-icLzBp.js",
+      "type": "script",
+      "uncompressed": 607,
+      "gzip": 0,
+      "brotli": 345
+    },
+    {
+      "kind": "asset",
+      "name": "dist/plain-CKkAWdMi.js",
+      "type": "script",
+      "uncompressed": 142,
+      "gzip": 0,
+      "brotli": 102
+    },
+    {
+      "kind": "asset",
+      "name": "dist/py-ChyNH1Ow.js",
+      "type": "script",
+      "uncompressed": 932,
+      "gzip": 0,
+      "brotli": 440
+    },
+    {
+      "kind": "asset",
+      "name": "dist/regex-CDvdT5xr.js",
+      "type": "script",
+      "uncompressed": 392,
+      "gzip": 0,
+      "brotli": 218
+    },
+    {
+      "kind": "asset",
+      "name": "dist/rs-B4sYrwTu.js",
+      "type": "script",
+      "uncompressed": 788,
+      "gzip": 0,
+      "brotli": 429
+    },
+    {
+      "kind": "asset",
+      "name": "dist/sql-DsYRlcMF.js",
+      "type": "script",
+      "uncompressed": 3210,
+      "gzip": 0,
+      "brotli": 1626
+    },
+    {
+      "kind": "asset",
+      "name": "dist/todo-CGLS57ju.js",
+      "type": "script",
+      "uncompressed": 397,
+      "gzip": 0,
+      "brotli": 211
+    },
+    {
+      "kind": "asset",
+      "name": "dist/toml-Dyf4QHlN.js",
+      "type": "script",
+      "uncompressed": 533,
+      "gzip": 0,
+      "brotli": 279
+    },
+    {
+      "kind": "asset",
+      "name": "dist/ts-CHR2kmGf.js",
+      "type": "script",
+      "uncompressed": 2001,
+      "gzip": 0,
+      "brotli": 858
+    },
+    {
+      "kind": "asset",
+      "name": "dist/uri-837VxUwj.js",
+      "type": "script",
+      "uncompressed": 409,
+      "gzip": 0,
+      "brotli": 215
+    },
+    {
+      "kind": "asset",
+      "name": "dist/xml-CItgL9jR.js",
+      "type": "script",
+      "uncompressed": 1236,
+      "gzip": 0,
+      "brotli": 556
+    },
+    {
+      "kind": "asset",
+      "name": "dist/yaml-B6q2zAjl.js",
+      "type": "script",
+      "uncompressed": 468,
+      "gzip": 0,
+      "brotli": 252
     },
     {
       "kind": "filesystem",
       "name": "node_modules/@speed-highlight/core/dist/index.js",
       "type": "script",
       "format": "esm",
-      "uncompressed": 23164
+      "uncompressed": 4203
     },
     {
       "kind": "chunk",
       "name": "node_modules/@speed-highlight/core/dist/index.js",
       "type": "script",
       "format": "esm",
-      "uncompressed": 25869,
+      "uncompressed": 4578,
       "gzip": 0,
-      "brotli": 7990,
-      "parent": "dist/dist-DgSeMFwB.js"
+      "brotli": 1641,
+      "parent": "dist/dist-DRv2xTzQ.js"
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/asm.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 284
+    },
+    {
+      "kind": "chunk",
+      "name": "node_modules/@speed-highlight/core/dist/languages/asm.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 311,
+      "gzip": 0,
+      "brotli": 161,
+      "parent": "dist/asm-BlBFo9kg.js"
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/bash.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 707
+    },
+    {
+      "kind": "chunk",
+      "name": "node_modules/@speed-highlight/core/dist/languages/bash.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 754,
+      "gzip": 0,
+      "brotli": 375,
+      "parent": "dist/bash-DBdZzU-Z.js"
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/bf.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 167
+    },
+    {
+      "kind": "chunk",
+      "name": "node_modules/@speed-highlight/core/dist/languages/bf.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 175,
+      "gzip": 0,
+      "brotli": 108,
+      "parent": "dist/bf-DyrOHY0l.js"
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/c.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 682
+    },
+    {
+      "kind": "chunk",
+      "name": "node_modules/@speed-highlight/core/dist/languages/c.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 734,
+      "gzip": 0,
+      "brotli": 375,
+      "parent": "dist/c-Du-5HtYA.js"
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/css.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 622
+    },
+    {
+      "kind": "chunk",
+      "name": "node_modules/@speed-highlight/core/dist/languages/css.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 682,
+      "gzip": 0,
+      "brotli": 311,
+      "parent": "dist/css-BnMjXUr8.js"
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/csv.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 76
+    },
+    {
+      "kind": "chunk",
+      "name": "node_modules/@speed-highlight/core/dist/languages/csv.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 66,
+      "gzip": 0,
+      "brotli": 54,
+      "parent": "dist/csv-CEW8W5c_.js"
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/diff.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 183
+    },
+    {
+      "kind": "chunk",
+      "name": "node_modules/@speed-highlight/core/dist/languages/diff.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 189,
+      "gzip": 0,
+      "brotli": 110,
+      "parent": "dist/diff-XVkHtLNu.js"
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/docker.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 871
+    },
+    {
+      "kind": "chunk",
+      "name": "node_modules/@speed-highlight/core/dist/languages/docker.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 911,
+      "gzip": 0,
+      "brotli": 464,
+      "parent": "dist/docker-PIn81DgH.js"
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/git.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 330
+    },
+    {
+      "kind": "chunk",
+      "name": "node_modules/@speed-highlight/core/dist/languages/git.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 347,
+      "gzip": 0,
+      "brotli": 161,
+      "parent": "dist/git-ByN02Eg5.js"
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/go.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 484
+    },
+    {
+      "kind": "chunk",
+      "name": "node_modules/@speed-highlight/core/dist/languages/go.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 512,
+      "gzip": 0,
+      "brotli": 260,
+      "parent": "dist/go-X8dsnhRi.js"
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/html.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 1426
+    },
+    {
+      "kind": "chunk",
+      "name": "node_modules/@speed-highlight/core/dist/languages/html.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 1505,
+      "gzip": 0,
+      "brotli": 575,
+      "parent": "dist/html-BfuFQfc8.js"
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/http.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 1707
+    },
+    {
+      "kind": "chunk",
+      "name": "node_modules/@speed-highlight/core/dist/languages/http.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 1836,
+      "gzip": 0,
+      "brotli": 882,
+      "parent": "dist/http-BAlZb4g1.js"
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/index.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 1552
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/ini.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 207
+    },
+    {
+      "kind": "chunk",
+      "name": "node_modules/@speed-highlight/core/dist/languages/ini.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 221,
+      "gzip": 0,
+      "brotli": 130,
+      "parent": "dist/ini-BRzSgkFu.js"
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/java.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 709
+    },
+    {
+      "kind": "chunk",
+      "name": "node_modules/@speed-highlight/core/dist/languages/java.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 737,
+      "gzip": 0,
+      "brotli": 371,
+      "parent": "dist/java-iDtrcWRK.js"
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/js.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 1352
+    },
+    {
+      "kind": "chunk",
+      "name": "node_modules/@speed-highlight/core/dist/languages/js.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 1504,
+      "gzip": 0,
+      "brotli": 695,
+      "parent": "dist/js-BYQ9mm_M.js"
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/jsdoc.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 380
+    },
+    {
+      "kind": "chunk",
+      "name": "node_modules/@speed-highlight/core/dist/languages/jsdoc.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 408,
+      "gzip": 0,
+      "brotli": 205,
+      "parent": "dist/jsdoc-BbXJQGBL.js"
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/json.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 207
+    },
+    {
+      "kind": "chunk",
+      "name": "node_modules/@speed-highlight/core/dist/languages/json.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 215,
+      "gzip": 0,
+      "brotli": 133,
+      "parent": "dist/json-B1YjY9ed.js"
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/leanpub-md.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 2365
+    },
+    {
+      "kind": "chunk",
+      "name": "node_modules/@speed-highlight/core/dist/languages/leanpub-md.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 2553,
+      "gzip": 0,
+      "brotli": 1072,
+      "parent": "dist/leanpub-md-C6FTGjMZ.js"
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/log.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 325
+    },
+    {
+      "kind": "chunk",
+      "name": "node_modules/@speed-highlight/core/dist/languages/log.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 345,
+      "gzip": 0,
+      "brotli": 174,
+      "parent": "dist/log-C89tvDiU.js"
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/lua.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 374
+    },
+    {
+      "kind": "chunk",
+      "name": "node_modules/@speed-highlight/core/dist/languages/lua.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 396,
+      "gzip": 0,
+      "brotli": 223,
+      "parent": "dist/lua-DChoWFAU.js"
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/make.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 310
+    },
+    {
+      "kind": "chunk",
+      "name": "node_modules/@speed-highlight/core/dist/languages/make.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 344,
+      "gzip": 0,
+      "brotli": 173,
+      "parent": "dist/make-6dP4GZxe.js"
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/md.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 1900
+    },
+    {
+      "kind": "chunk",
+      "name": "node_modules/@speed-highlight/core/dist/languages/md.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 2063,
+      "gzip": 0,
+      "brotli": 984,
+      "parent": "dist/md-DvaShtM_.js"
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/pl.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 452
+    },
+    {
+      "kind": "chunk",
+      "name": "node_modules/@speed-highlight/core/dist/languages/pl.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 470,
+      "gzip": 0,
+      "brotli": 269,
+      "parent": "dist/pl-D-icLzBp.js"
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/plain.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 51
+    },
+    {
+      "kind": "chunk",
+      "name": "node_modules/@speed-highlight/core/dist/languages/plain.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 35,
+      "gzip": 0,
+      "brotli": 32,
+      "parent": "dist/plain-CKkAWdMi.js"
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/py.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 694
+    },
+    {
+      "kind": "chunk",
+      "name": "node_modules/@speed-highlight/core/dist/languages/py.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 750,
+      "gzip": 0,
+      "brotli": 352,
+      "parent": "dist/py-ChyNH1Ow.js"
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/regex.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 226
+    },
+    {
+      "kind": "chunk",
+      "name": "node_modules/@speed-highlight/core/dist/languages/regex.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 239,
+      "gzip": 0,
+      "brotli": 140,
+      "parent": "dist/regex-CDvdT5xr.js"
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/rs.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 616
+    },
+    {
+      "kind": "chunk",
+      "name": "node_modules/@speed-highlight/core/dist/languages/rs.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 644,
+      "gzip": 0,
+      "brotli": 347,
+      "parent": "dist/rs-B4sYrwTu.js"
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/sql.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 3030
+    },
+    {
+      "kind": "chunk",
+      "name": "node_modules/@speed-highlight/core/dist/languages/sql.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 3060,
+      "gzip": 0,
+      "brotli": 1544,
+      "parent": "dist/sql-DsYRlcMF.js"
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/todo.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 237
+    },
+    {
+      "kind": "chunk",
+      "name": "node_modules/@speed-highlight/core/dist/languages/todo.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 248,
+      "gzip": 0,
+      "brotli": 133,
+      "parent": "dist/todo-CGLS57ju.js"
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/toml.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 347
+    },
+    {
+      "kind": "chunk",
+      "name": "node_modules/@speed-highlight/core/dist/languages/toml.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 381,
+      "gzip": 0,
+      "brotli": 197,
+      "parent": "dist/toml-Dyf4QHlN.js"
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/ts.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 1568
+    },
+    {
+      "kind": "chunk",
+      "name": "node_modules/@speed-highlight/core/dist/languages/ts.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 1719,
+      "gzip": 0,
+      "brotli": 770,
+      "parent": "dist/ts-CHR2kmGf.js"
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/uri.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 246
+    },
+    {
+      "kind": "chunk",
+      "name": "node_modules/@speed-highlight/core/dist/languages/uri.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 266,
+      "gzip": 0,
+      "brotli": 140,
+      "parent": "dist/uri-837VxUwj.js"
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/xml.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 991
+    },
+    {
+      "kind": "chunk",
+      "name": "node_modules/@speed-highlight/core/dist/languages/xml.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 956,
+      "gzip": 0,
+      "brotli": 450,
+      "parent": "dist/xml-CItgL9jR.js"
+    },
+    {
+      "kind": "filesystem",
+      "name": "node_modules/@speed-highlight/core/dist/languages/yaml.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 294
+    },
+    {
+      "kind": "chunk",
+      "name": "node_modules/@speed-highlight/core/dist/languages/yaml.js",
+      "type": "script",
+      "format": "esm",
+      "uncompressed": 322,
+      "gzip": 0,
+      "brotli": 172,
+      "parent": "dist/yaml-B6q2zAjl.js"
     },
     {
       "kind": "filesystem",
       "name": "node_modules/@speed-highlight/core/dist/themes/github-dark.css?raw",
       "type": "other",
       "format": "other",
-      "uncompressed": 1626
+      "uncompressed": 1659
     },
     {
       "kind": "filesystem",
       "name": "node_modules/@speed-highlight/core/dist/themes/github-light.css?raw",
       "type": "other",
       "format": "other",
-      "uncompressed": 1553
+      "uncompressed": 1586
     },
     {
       "kind": "filesystem",
@@ -205,8 +1410,8 @@
       "format": "esm",
       "uncompressed": 656,
       "gzip": 0,
-      "brotli": 283,
-      "parent": "dist/micromark-extension-directive-DufZgUDE.js"
+      "brotli": 281,
+      "parent": "dist/micromark-extension-directive-CIWJMWiY.js"
     },
     {
       "kind": "filesystem",
@@ -222,8 +1427,8 @@
       "format": "esm",
       "uncompressed": 332,
       "gzip": 0,
-      "brotli": 111,
-      "parent": "dist/micromark-extension-directive-DufZgUDE.js"
+      "brotli": 110,
+      "parent": "dist/micromark-extension-directive-CIWJMWiY.js"
     },
     {
       "kind": "filesystem",
@@ -239,7 +1444,7 @@
       "format": "esm",
       "uncompressed": 196,
       "gzip": 0,
-      "brotli": 121,
+      "brotli": 118,
       "parent": "dist/micromark-factory-whitespace-DvA2Lja_.js"
     },
     {
@@ -256,8 +1461,8 @@
       "format": "esm",
       "uncompressed": 120,
       "gzip": 0,
-      "brotli": 71,
-      "parent": "dist/micromark-extension-directive-DufZgUDE.js"
+      "brotli": 70,
+      "parent": "dist/micromark-extension-directive-CIWJMWiY.js"
     },
     {
       "kind": "filesystem",
@@ -273,8 +1478,8 @@
       "format": "esm",
       "uncompressed": 39,
       "gzip": 0,
-      "brotli": 34,
-      "parent": "dist/micromark-extension-directive-DufZgUDE.js"
+      "brotli": 33,
+      "parent": "dist/micromark-extension-directive-CIWJMWiY.js"
     },
     {
       "kind": "filesystem",
@@ -290,8 +1495,8 @@
       "format": "esm",
       "uncompressed": 97,
       "gzip": 0,
-      "brotli": 71,
-      "parent": "dist/micromark-extension-directive-DufZgUDE.js"
+      "brotli": 70,
+      "parent": "dist/micromark-extension-directive-CIWJMWiY.js"
     },
     {
       "kind": "filesystem",
@@ -308,7 +1513,7 @@
       "uncompressed": 142,
       "gzip": 0,
       "brotli": 88,
-      "parent": "dist/micromark-extension-directive-DufZgUDE.js"
+      "parent": "dist/micromark-extension-directive-CIWJMWiY.js"
     },
     {
       "kind": "filesystem",
@@ -331,7 +1536,7 @@
       "format": "esm",
       "uncompressed": 2440,
       "gzip": 0,
-      "brotli": 538,
+      "brotli": 536,
       "parent": "dist/dpuse-tool-micromark-markdown-parser.es.js"
     },
     {
@@ -348,7 +1553,7 @@
       "format": "esm",
       "uncompressed": 1264,
       "gzip": 0,
-      "brotli": 268,
+      "brotli": 267,
       "parent": "dist/dpuse-tool-micromark-markdown-parser.es.js"
     },
     {
@@ -365,7 +1570,7 @@
       "format": "esm",
       "uncompressed": 198,
       "gzip": 0,
-      "brotli": 93,
+      "brotli": 92,
       "parent": "dist/dpuse-tool-micromark-markdown-parser.es.js"
     },
     {
@@ -382,7 +1587,7 @@
       "format": "esm",
       "uncompressed": 852,
       "gzip": 0,
-      "brotli": 224,
+      "brotli": 223,
       "parent": "dist/dpuse-tool-micromark-markdown-parser.es.js"
     },
     {
@@ -433,7 +1638,7 @@
       "format": "esm",
       "uncompressed": 2700,
       "gzip": 0,
-      "brotli": 494,
+      "brotli": 492,
       "parent": "dist/dpuse-tool-micromark-markdown-parser.es.js"
     },
     {
@@ -450,7 +1655,7 @@
       "format": "esm",
       "uncompressed": 1015,
       "gzip": 0,
-      "brotli": 261,
+      "brotli": 260,
       "parent": "dist/dpuse-tool-micromark-markdown-parser.es.js"
     },
     {
@@ -467,7 +1672,7 @@
       "format": "esm",
       "uncompressed": 1604,
       "gzip": 0,
-      "brotli": 376,
+      "brotli": 375,
       "parent": "dist/dpuse-tool-micromark-markdown-parser.es.js"
     },
     {
@@ -484,7 +1689,7 @@
       "format": "esm",
       "uncompressed": 1057,
       "gzip": 0,
-      "brotli": 296,
+      "brotli": 295,
       "parent": "dist/dpuse-tool-micromark-markdown-parser.es.js"
     },
     {
@@ -501,7 +1706,7 @@
       "format": "esm",
       "uncompressed": 1287,
       "gzip": 0,
-      "brotli": 294,
+      "brotli": 293,
       "parent": "dist/dpuse-tool-micromark-markdown-parser.es.js"
     },
     {
@@ -535,7 +1740,7 @@
       "format": "esm",
       "uncompressed": 1329,
       "gzip": 0,
-      "brotli": 325,
+      "brotli": 324,
       "parent": "dist/dpuse-tool-micromark-markdown-parser.es.js"
     },
     {
@@ -552,7 +1757,7 @@
       "format": "esm",
       "uncompressed": 4422,
       "gzip": 0,
-      "brotli": 756,
+      "brotli": 753,
       "parent": "dist/dpuse-tool-micromark-markdown-parser.es.js"
     },
     {
@@ -569,7 +1774,7 @@
       "format": "esm",
       "uncompressed": 3082,
       "gzip": 0,
-      "brotli": 457,
+      "brotli": 456,
       "parent": "dist/dpuse-tool-micromark-markdown-parser.es.js"
     },
     {
@@ -586,7 +1791,7 @@
       "format": "esm",
       "uncompressed": 3706,
       "gzip": 0,
-      "brotli": 730,
+      "brotli": 728,
       "parent": "dist/dpuse-tool-micromark-markdown-parser.es.js"
     },
     {
@@ -654,7 +1859,7 @@
       "format": "esm",
       "uncompressed": 2985,
       "gzip": 0,
-      "brotli": 555,
+      "brotli": 553,
       "parent": "dist/dpuse-tool-micromark-markdown-parser.es.js"
     },
     {
@@ -671,7 +1876,7 @@
       "format": "esm",
       "uncompressed": 1340,
       "gzip": 0,
-      "brotli": 368,
+      "brotli": 367,
       "parent": "dist/dpuse-tool-micromark-markdown-parser.es.js"
     },
     {
@@ -688,7 +1893,7 @@
       "format": "esm",
       "uncompressed": 479,
       "gzip": 0,
-      "brotli": 162,
+      "brotli": 161,
       "parent": "dist/dpuse-tool-micromark-markdown-parser.es.js"
     },
     {
@@ -712,8 +1917,8 @@
       "format": "esm",
       "uncompressed": 3244,
       "gzip": 0,
-      "brotli": 656,
-      "parent": "dist/micromark-extension-directive-DufZgUDE.js"
+      "brotli": 652,
+      "parent": "dist/micromark-extension-directive-CIWJMWiY.js"
     },
     {
       "kind": "filesystem",
@@ -729,8 +1934,8 @@
       "format": "esm",
       "uncompressed": 1177,
       "gzip": 0,
-      "brotli": 271,
-      "parent": "dist/micromark-extension-directive-DufZgUDE.js"
+      "brotli": 269,
+      "parent": "dist/micromark-extension-directive-CIWJMWiY.js"
     },
     {
       "kind": "filesystem",
@@ -746,8 +1951,8 @@
       "format": "esm",
       "uncompressed": 1157,
       "gzip": 0,
-      "brotli": 277,
-      "parent": "dist/micromark-extension-directive-DufZgUDE.js"
+      "brotli": 276,
+      "parent": "dist/micromark-extension-directive-CIWJMWiY.js"
     },
     {
       "kind": "filesystem",
@@ -763,8 +1968,8 @@
       "format": "esm",
       "uncompressed": 2347,
       "gzip": 0,
-      "brotli": 474,
-      "parent": "dist/micromark-extension-directive-DufZgUDE.js"
+      "brotli": 471,
+      "parent": "dist/micromark-extension-directive-CIWJMWiY.js"
     },
     {
       "kind": "filesystem",
@@ -780,8 +1985,8 @@
       "format": "esm",
       "uncompressed": 842,
       "gzip": 0,
-      "brotli": 270,
-      "parent": "dist/micromark-extension-directive-DufZgUDE.js"
+      "brotli": 269,
+      "parent": "dist/micromark-extension-directive-CIWJMWiY.js"
     },
     {
       "kind": "filesystem",
@@ -797,8 +2002,8 @@
       "format": "esm",
       "uncompressed": 324,
       "gzip": 0,
-      "brotli": 129,
-      "parent": "dist/micromark-extension-directive-DufZgUDE.js"
+      "brotli": 128,
+      "parent": "dist/micromark-extension-directive-CIWJMWiY.js"
     },
     {
       "kind": "filesystem",
@@ -814,8 +2019,8 @@
       "format": "esm",
       "uncompressed": 3013,
       "gzip": 0,
-      "brotli": 550,
-      "parent": "dist/micromark-extension-directive-DufZgUDE.js"
+      "brotli": 547,
+      "parent": "dist/micromark-extension-directive-CIWJMWiY.js"
     },
     {
       "kind": "filesystem",
@@ -832,7 +2037,7 @@
       "uncompressed": 67,
       "gzip": 0,
       "brotli": 52,
-      "parent": "dist/micromark-extension-directive-DufZgUDE.js"
+      "parent": "dist/micromark-extension-directive-CIWJMWiY.js"
     },
     {
       "kind": "filesystem",
@@ -855,7 +2060,7 @@
       "format": "esm",
       "uncompressed": 671,
       "gzip": 0,
-      "brotli": 280,
+      "brotli": 279,
       "parent": "dist/micromark-extension-gfm-table-DTaYeBnk.js"
     },
     {
@@ -872,7 +2077,7 @@
       "format": "esm",
       "uncompressed": 1755,
       "gzip": 0,
-      "brotli": 452,
+      "brotli": 451,
       "parent": "dist/micromark-extension-gfm-table-DTaYeBnk.js"
     },
     {
@@ -887,9 +2092,9 @@
       "name": "node_modules/micromark-extension-gfm-table/lib/infer.js",
       "type": "script",
       "format": "esm",
-      "uncompressed": 501,
+      "uncompressed": 505,
       "gzip": 0,
-      "brotli": 200,
+      "brotli": 201,
       "parent": "dist/micromark-extension-gfm-table-DTaYeBnk.js"
     },
     {
@@ -906,7 +2111,7 @@
       "format": "esm",
       "uncompressed": 5681,
       "gzip": 0,
-      "brotli": 1365,
+      "brotli": 1360,
       "parent": "dist/micromark-extension-gfm-table-DTaYeBnk.js"
     },
     {
@@ -923,7 +2128,7 @@
       "format": "esm",
       "uncompressed": 1128,
       "gzip": 0,
-      "brotli": 252,
+      "brotli": 251,
       "parent": "dist/dpuse-tool-micromark-markdown-parser.es.js"
     },
     {
@@ -940,7 +2145,7 @@
       "format": "esm",
       "uncompressed": 773,
       "gzip": 0,
-      "brotli": 220,
+      "brotli": 219,
       "parent": "dist/dpuse-tool-micromark-markdown-parser.es.js"
     },
     {
@@ -957,7 +2162,7 @@
       "format": "esm",
       "uncompressed": 215,
       "gzip": 0,
-      "brotli": 130,
+      "brotli": 126,
       "parent": "dist/micromark-factory-space-Cq-2i9SZ.js"
     },
     {
@@ -974,7 +2179,7 @@
       "format": "esm",
       "uncompressed": 726,
       "gzip": 0,
-      "brotli": 203,
+      "brotli": 202,
       "parent": "dist/dpuse-tool-micromark-markdown-parser.es.js"
     },
     {
@@ -991,7 +2196,7 @@
       "format": "esm",
       "uncompressed": 202,
       "gzip": 0,
-      "brotli": 110,
+      "brotli": 107,
       "parent": "dist/micromark-factory-whitespace-DvA2Lja_.js"
     },
     {
@@ -1008,7 +2213,7 @@
       "format": "esm",
       "uncompressed": 514,
       "gzip": 0,
-      "brotli": 191,
+      "brotli": 186,
       "parent": "dist/micromark-factory-space-Cq-2i9SZ.js"
     },
     {
@@ -1059,7 +2264,7 @@
       "format": "esm",
       "uncompressed": 690,
       "gzip": 0,
-      "brotli": 194,
+      "brotli": 193,
       "parent": "dist/dpuse-tool-micromark-markdown-parser.es.js"
     },
     {
@@ -1076,7 +2281,7 @@
       "format": "esm",
       "uncompressed": 269,
       "gzip": 0,
-      "brotli": 107,
+      "brotli": 106,
       "parent": "dist/dpuse-tool-micromark-markdown-parser.es.js"
     },
     {
@@ -1178,7 +2383,7 @@
       "format": "esm",
       "uncompressed": 2224,
       "gzip": 0,
-      "brotli": 582,
+      "brotli": 580,
       "parent": "dist/dpuse-tool-micromark-markdown-parser.es.js"
     },
     {
@@ -1193,9 +2398,9 @@
       "name": "node_modules/micromark-util-subtokenize/lib/splice-buffer.js",
       "type": "script",
       "format": "esm",
-      "uncompressed": 1769,
+      "uncompressed": 1767,
       "gzip": 0,
-      "brotli": 361,
+      "brotli": 360,
       "parent": "dist/dpuse-tool-micromark-markdown-parser.es.js"
     },
     {
@@ -1229,7 +2434,7 @@
       "format": "esm",
       "uncompressed": 8201,
       "gzip": 0,
-      "brotli": 1592,
+      "brotli": 1587,
       "parent": "dist/dpuse-tool-micromark-markdown-parser.es.js"
     },
     {
@@ -1263,7 +2468,7 @@
       "format": "esm",
       "uncompressed": 3713,
       "gzip": 0,
-      "brotli": 932,
+      "brotli": 929,
       "parent": "dist/dpuse-tool-micromark-markdown-parser.es.js"
     },
     {
@@ -1297,7 +2502,7 @@
       "format": "esm",
       "uncompressed": 2670,
       "gzip": 0,
-      "brotli": 626,
+      "brotli": 624,
       "parent": "dist/dpuse-tool-micromark-markdown-parser.es.js"
     },
     {
@@ -1314,7 +2519,7 @@
       "format": "esm",
       "uncompressed": 548,
       "gzip": 0,
-      "brotli": 146,
+      "brotli": 145,
       "parent": "dist/dpuse-tool-micromark-markdown-parser.es.js"
     },
     {
@@ -1331,7 +2536,7 @@
       "format": "esm",
       "uncompressed": 1893,
       "gzip": 0,
-      "brotli": 552,
+      "brotli": 550,
       "parent": "dist/dpuse-tool-micromark-markdown-parser.es.js"
     },
     {
@@ -1348,7 +2553,7 @@
       "format": "esm",
       "uncompressed": 254,
       "gzip": 0,
-      "brotli": 107,
+      "brotli": 106,
       "parent": "dist/dpuse-tool-micromark-markdown-parser.es.js"
     },
     {
@@ -1382,7 +2587,7 @@
       "format": "esm",
       "uncompressed": 842,
       "gzip": 0,
-      "brotli": 306,
+      "brotli": 305,
       "parent": "dist/dpuse-tool-micromark-markdown-parser.es.js"
     },
     {
@@ -1404,10 +2609,10 @@
       "name": "node_modules/parse-entities/lib/index.js",
       "type": "script",
       "format": "esm",
-      "uncompressed": 3186,
+      "uncompressed": 3184,
       "gzip": 0,
-      "brotli": 913,
-      "parent": "dist/micromark-extension-directive-DufZgUDE.js"
+      "brotli": 909,
+      "parent": "dist/micromark-extension-directive-CIWJMWiY.js"
     },
     {
       "kind": "filesystem",
@@ -1423,7 +2628,7 @@
       "format": "esm",
       "uncompressed": 1919,
       "gzip": 0,
-      "brotli": 456,
+      "brotli": 455,
       "parent": "dist/dpuse-tool-micromark-markdown-parser.es.js"
     },
     {
@@ -1440,11 +2645,221 @@
       "format": "esm",
       "uncompressed": 3830,
       "gzip": 0,
-      "brotli": 938,
+      "brotli": 937,
       "parent": "dist/dpuse-tool-micromark-markdown-parser.es.js"
     }
   ],
   "connections": [
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/asm.js",
+      "original": null
+    },
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/bash.js",
+      "original": null
+    },
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/bf.js",
+      "original": null
+    },
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/c.js",
+      "original": null
+    },
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/css.js",
+      "original": null
+    },
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/csv.js",
+      "original": null
+    },
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/diff.js",
+      "original": null
+    },
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/docker.js",
+      "original": null
+    },
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/git.js",
+      "original": null
+    },
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/go.js",
+      "original": null
+    },
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/html.js",
+      "original": null
+    },
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/http.js",
+      "original": null
+    },
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/index.js",
+      "original": null
+    },
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/ini.js",
+      "original": null
+    },
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/java.js",
+      "original": null
+    },
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/js.js",
+      "original": null
+    },
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/jsdoc.js",
+      "original": null
+    },
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/json.js",
+      "original": null
+    },
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/leanpub-md.js",
+      "original": null
+    },
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/log.js",
+      "original": null
+    },
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/lua.js",
+      "original": null
+    },
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/make.js",
+      "original": null
+    },
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/md.js",
+      "original": null
+    },
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/pl.js",
+      "original": null
+    },
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/plain.js",
+      "original": null
+    },
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/py.js",
+      "original": null
+    },
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/regex.js",
+      "original": null
+    },
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/rs.js",
+      "original": null
+    },
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/sql.js",
+      "original": null
+    },
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/todo.js",
+      "original": null
+    },
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/toml.js",
+      "original": null
+    },
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/ts.js",
+      "original": null
+    },
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/uri.js",
+      "original": null
+    },
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/xml.js",
+      "original": null
+    },
+    {
+      "kind": "dynamic-import",
+      "source": "node_modules/@speed-highlight/core/dist/index.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/yaml.js",
+      "original": null
+    },
     {
       "kind": "dynamic-import",
       "source": "src/index.ts",
@@ -1483,25 +2898,157 @@
     },
     {
       "kind": "entrypoint",
-      "source": "dist/dist-DgSeMFwB.js",
+      "source": "dist/asm-BlBFo9kg.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/asm.js",
+      "original": null
+    },
+    {
+      "kind": "entrypoint",
+      "source": "dist/bash-DBdZzU-Z.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/bash.js",
+      "original": null
+    },
+    {
+      "kind": "entrypoint",
+      "source": "dist/bf-DyrOHY0l.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/bf.js",
+      "original": null
+    },
+    {
+      "kind": "entrypoint",
+      "source": "dist/c-Du-5HtYA.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/c.js",
+      "original": null
+    },
+    {
+      "kind": "entrypoint",
+      "source": "dist/css-BnMjXUr8.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/css.js",
+      "original": null
+    },
+    {
+      "kind": "entrypoint",
+      "source": "dist/csv-CEW8W5c_.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/csv.js",
+      "original": null
+    },
+    {
+      "kind": "entrypoint",
+      "source": "dist/diff-XVkHtLNu.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/diff.js",
+      "original": null
+    },
+    {
+      "kind": "entrypoint",
+      "source": "dist/dist-DRv2xTzQ.js",
       "target": "node_modules/@speed-highlight/core/dist/index.js",
       "original": null
     },
     {
       "kind": "entrypoint",
-      "source": "dist/github-dark-BQgApYrA.js",
+      "source": "dist/docker-PIn81DgH.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/docker.js",
+      "original": null
+    },
+    {
+      "kind": "entrypoint",
+      "source": "dist/git-ByN02Eg5.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/git.js",
+      "original": null
+    },
+    {
+      "kind": "entrypoint",
+      "source": "dist/github-dark-CTHfNL12.js",
       "target": "node_modules/@speed-highlight/core/dist/themes/github-dark.css?raw",
       "original": null
     },
     {
       "kind": "entrypoint",
-      "source": "dist/github-light-CYQxR7sx.js",
+      "source": "dist/github-light-OLdb5Tfn.js",
       "target": "node_modules/@speed-highlight/core/dist/themes/github-light.css?raw",
       "original": null
     },
     {
       "kind": "entrypoint",
-      "source": "dist/micromark-extension-directive-DufZgUDE.js",
+      "source": "dist/go-X8dsnhRi.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/go.js",
+      "original": null
+    },
+    {
+      "kind": "entrypoint",
+      "source": "dist/html-BfuFQfc8.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/html.js",
+      "original": null
+    },
+    {
+      "kind": "entrypoint",
+      "source": "dist/http-BAlZb4g1.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/http.js",
+      "original": null
+    },
+    {
+      "kind": "entrypoint",
+      "source": "dist/ini-BRzSgkFu.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/ini.js",
+      "original": null
+    },
+    {
+      "kind": "entrypoint",
+      "source": "dist/java-iDtrcWRK.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/java.js",
+      "original": null
+    },
+    {
+      "kind": "entrypoint",
+      "source": "dist/js-BYQ9mm_M.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/js.js",
+      "original": null
+    },
+    {
+      "kind": "entrypoint",
+      "source": "dist/jsdoc-BbXJQGBL.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/jsdoc.js",
+      "original": null
+    },
+    {
+      "kind": "entrypoint",
+      "source": "dist/json-B1YjY9ed.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/json.js",
+      "original": null
+    },
+    {
+      "kind": "entrypoint",
+      "source": "dist/leanpub-md-C6FTGjMZ.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/leanpub-md.js",
+      "original": null
+    },
+    {
+      "kind": "entrypoint",
+      "source": "dist/log-C89tvDiU.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/log.js",
+      "original": null
+    },
+    {
+      "kind": "entrypoint",
+      "source": "dist/lua-DChoWFAU.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/lua.js",
+      "original": null
+    },
+    {
+      "kind": "entrypoint",
+      "source": "dist/make-6dP4GZxe.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/make.js",
+      "original": null
+    },
+    {
+      "kind": "entrypoint",
+      "source": "dist/md-DvaShtM_.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/md.js",
+      "original": null
+    },
+    {
+      "kind": "entrypoint",
+      "source": "dist/micromark-extension-directive-CIWJMWiY.js",
       "target": "node_modules/micromark-extension-directive/index.js",
       "original": null
     },
@@ -1509,6 +3056,78 @@
       "kind": "entrypoint",
       "source": "dist/micromark-extension-gfm-table-DTaYeBnk.js",
       "target": "node_modules/micromark-extension-gfm-table/index.js",
+      "original": null
+    },
+    {
+      "kind": "entrypoint",
+      "source": "dist/pl-D-icLzBp.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/pl.js",
+      "original": null
+    },
+    {
+      "kind": "entrypoint",
+      "source": "dist/plain-CKkAWdMi.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/plain.js",
+      "original": null
+    },
+    {
+      "kind": "entrypoint",
+      "source": "dist/py-ChyNH1Ow.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/py.js",
+      "original": null
+    },
+    {
+      "kind": "entrypoint",
+      "source": "dist/regex-CDvdT5xr.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/regex.js",
+      "original": null
+    },
+    {
+      "kind": "entrypoint",
+      "source": "dist/rs-B4sYrwTu.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/rs.js",
+      "original": null
+    },
+    {
+      "kind": "entrypoint",
+      "source": "dist/sql-DsYRlcMF.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/sql.js",
+      "original": null
+    },
+    {
+      "kind": "entrypoint",
+      "source": "dist/todo-CGLS57ju.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/todo.js",
+      "original": null
+    },
+    {
+      "kind": "entrypoint",
+      "source": "dist/toml-Dyf4QHlN.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/toml.js",
+      "original": null
+    },
+    {
+      "kind": "entrypoint",
+      "source": "dist/ts-CHR2kmGf.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/ts.js",
+      "original": null
+    },
+    {
+      "kind": "entrypoint",
+      "source": "dist/uri-837VxUwj.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/uri.js",
+      "original": null
+    },
+    {
+      "kind": "entrypoint",
+      "source": "dist/xml-CItgL9jR.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/xml.js",
+      "original": null
+    },
+    {
+      "kind": "entrypoint",
+      "source": "dist/yaml-B6q2zAjl.js",
+      "target": "node_modules/@speed-highlight/core/dist/languages/yaml.js",
       "original": null
     }
   ],

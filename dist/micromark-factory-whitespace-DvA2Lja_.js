@@ -18,5 +18,3 @@ function a(r, i) {
 }
 //#endregion
 export { i as n, a as t };
-
-//# sourceMappingURL=micromark-factory-whitespace-DvA2Lja_.js.map

@@ -323,5 +323,3 @@ function h(e, t) {
 }
 //#endregion
 export { u as gfmTable, a as gfmTableHtml };
-
-//# sourceMappingURL=micromark-extension-gfm-table-DTaYeBnk.js.map

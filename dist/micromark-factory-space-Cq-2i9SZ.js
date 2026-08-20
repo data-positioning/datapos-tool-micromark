@@ -34,5 +34,3 @@ function p(e, t, n, r) {
 }
 //#endregion
 export { r as a, o as c, l as d, u as f, n as i, s as l, e as n, i as o, d as p, t as r, a as s, p as t, c as u };
-
-//# sourceMappingURL=micromark-factory-space-Cq-2i9SZ.js.map

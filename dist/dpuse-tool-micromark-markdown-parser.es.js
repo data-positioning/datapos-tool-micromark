@@ -1057,12 +1057,14 @@ var Se = class {
 		this.setCursor(0), Y(this.right, e.reverse());
 	}
 	setCursor(e) {
-		if (!(e === this.left.length || e > this.left.length && this.right.length === 0 || e < 0 && this.left.length === 0)) if (e < this.left.length) {
-			let t = this.left.splice(e, Infinity);
-			Y(this.right, t.reverse());
-		} else {
-			let t = this.right.splice(this.left.length + this.right.length - e, Infinity);
-			Y(this.left, t.reverse());
+		if (!(e === this.left.length || e > this.left.length && this.right.length === 0 || e < 0 && this.left.length === 0)) {
+			if (e < this.left.length) {
+				let t = this.left.splice(e, Infinity);
+				Y(this.right, t.reverse());
+			} else {
+				let t = this.right.splice(this.left.length + this.right.length - e, Infinity);
+				Y(this.left, t.reverse());
+			}
 		}
 	}
 };
@@ -2456,7 +2458,7 @@ var tn = {
 		let n = [], r = [nn];
 		if (t?.directives ?? !1) {
 			$.directiveExtensionPromise ??= (async () => {
-				let e = await import("./micromark-extension-directive-DufZgUDE.js");
+				let e = await import("./micromark-extension-directive-CIWJMWiY.js");
 				return {
 					extension: e.directive(),
 					htmlExtension: e.directiveHtml({ note: sn })
@@ -2561,14 +2563,12 @@ function ln(e) {
 async function un() {
 	return $.speedHighlight ? $.speedHighlight : ($.speedHighlightPromise ??= (async () => {
 		let [e, t, n] = await Promise.all([
-			import("./dist-DgSeMFwB.js"),
-			import("./github-dark-BQgApYrA.js"),
-			import("./github-light-CYQxR7sx.js")
+			import("./dist-DRv2xTzQ.js"),
+			import("./github-dark-CTHfNL12.js"),
+			import("./github-light-OLdb5Tfn.js")
 		]);
 		return $.speedHighlight = e, $.darkThemeCssText = t.default, $.lightThemeCssText = n.default, cn(), $.speedHighlightPromise = void 0, e;
 	})(), $.speedHighlightPromise);
 }
 //#endregion
 export { rn as MicromarkTool };
-
-//# sourceMappingURL=dpuse-tool-micromark-markdown-parser.es.js.map
